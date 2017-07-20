@@ -45,8 +45,8 @@ int Game::Load()
 	//纹理对象初始化
 	//****************************
 	button_start = new Button(0,0,160,50,"Resource/start.png",renderer);
-	button_help = new Button(0,60,160,50,"Resource/help.png",renderer);
-	background.LoadTexture("Resource/background.jpg", renderer);
+	button_help = new Button(0,60,160,50,"Resource/start.png",renderer);
+	background.LoadTexture("Resource/background.bmp", renderer);
 	//button_start.LoadTexture("Resource/start.png", renderer);
 	//button_help.LoadTexture("Resource/help.png", renderer);
 	//*****************************

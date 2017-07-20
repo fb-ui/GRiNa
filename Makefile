@@ -1,16 +1,17 @@
 #	Standard Makefile Template
 #	mpsk
-#	2017/07/04
+#	2017/07/20
 
 ifeq ($(OS),Windows_NT)
 LDFLAGS=-lfreeglut -lopengl32 -lGLEW -Wl,--subsystem,windows
 EXECUTABLE=GRiNa.exe
 else
-LDFLAGS=-lGL -lglut -lGLEW
+INCFLAGS=-I/usr/local/include/SDL2 -D_REENTRANT
+LDFLAGS=-L/usr/local/lib -Wl,-rpath,/usr/local/lib -Wl,--enable-new-dtags -lSDL2
 EXECUTABLE=GRiNA
 endif
 
-LDFLAGS_EXSDL=-lSDL2 -lSDL2_image
+LDFLAGS_EXSDLIMG=-lSDL2_image
 
 SRC_PATH = src/
 BIN_PATH = bin/
@@ -23,7 +24,7 @@ SRC = ${wildcard $(SRC_PATH)*.cpp}
 OBJ = ${patsubst %.cpp, %.o, $(SRC)}
 
 all:$(OBJ)
-	$(CXX) $(CXXFLAGS) -o $(BIN_PATH)$(EXECUTABLE) $(OBJ) $(LDFLAGS) $(LDFLAGS_EXSDL)
+	$(CXX) $(CXXFLAGS) -o $(BIN_PATH)$(EXECUTABLE) $(OBJ) $(INCFLAGS) $(LDFLAGS) $(LDFLAGS_EXSDLIMG)
 
 $(OBJ):%.o:%.cpp
 	$(CXX) $(CXXFLAGS) $(INCFLAGS_CV2) -o $@ -c $<

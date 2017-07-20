@@ -4,8 +4,8 @@
 #include <iostream> 
 #include <thread>
 
-#include "SDL/SDL.h"
-#include "SDL_image/SDL_image.h"
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
 
 #include "Particle.h"
 #include "Button.h"
@@ -32,8 +32,8 @@ class Game
 		SDL_Window *window;
 		SDL_Renderer *renderer;
 		SDL_Event event;
-		int SCREEN_WIDTH  = 640;		//画面分辨率 
-		int SCREEN_HEIGHT = 480;
+		int SCREEN_WIDTH  = 1280;		//画面分辨率 
+		int SCREEN_HEIGHT = 720;
 		ParticleSys particles;
 		Background background;
 		Button *button_start;
