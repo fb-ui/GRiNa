@@ -1,0 +1,370 @@
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking target system type... x86_64-unknown-linux-gnu
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking for style of include used by make... GNU
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking dependency style of gcc... gcc3
+checking for ar... ar
+checking the archiver (ar) interface... ar
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert x86_64-unknown-linux-gnu file names to x86_64-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking whether gcc and cc understand -c and -o together... yes
+checking whether make supports nested variables... (cached) yes
+checking whether gcc supports -Wall... yes
+checking whether gcc supports -Wdeclaration-after-statement... yes
+checking whether gcc supports -Wextra... yes
+checking whether gcc supports -Wmissing-declarations... yes
+checking whether gcc supports -Wmissing-prototypes... yes
+checking whether gcc supports -Wold-style-definition... yes
+checking whether gcc supports -Wshadow... yes
+checking whether gcc supports -Wunused-but-set-variable... yes
+checking whether gcc supports -Wunused... yes
+checking whether gcc supports -Wvla... yes
+configure: checking for threading support...
+checking for the pthreads library -lpthreads... no
+checking whether pthreads work without any flags... no
+checking whether pthreads work with -Kthread... no
+checking whether pthreads work with -kthread... no
+checking for the pthreads library -llthread... no
+checking whether pthreads work with -pthread... yes
+checking for joinable pthread attribute... PTHREAD_CREATE_JOINABLE
+checking if more special flags are required for pthreads... no
+checking for PTHREAD_PRIO_INHERIT... yes
+configure: checking if threading is enabled... yes
+checking GL/glut.h usability... yes
+checking GL/glut.h presence... yes
+checking for GL/glut.h... yes
+checking for library containing glBegin... -lGL
+checking for library containing glutMainLoop... -lglut
+checking for libpng-config... /usr/local/bin/libpng-config
+checking png.h usability... yes
+checking png.h presence... yes
+checking for png.h... yes
+checking for library containing png_get_libpng_ver... none required
+checking jpeglib.h usability... yes
+checking jpeglib.h presence... yes
+checking for jpeglib.h... yes
+checking for jpeg_set_defaults in -ljpeg... yes
+checking tiffio.h usability... yes
+checking tiffio.h presence... yes
+checking for tiffio.h... yes
+checking for TIFFGetVersion in -ltiff... yes
+checking gif_lib.h usability... no
+checking gif_lib.h presence... no
+checking for gif_lib.h... no
+checking if --enable-swap-16bit-csp option is specified... no
+checking if --enable-experimental option is specified... no
+checking whether libwebpmux is to be built... no
+checking whether libwebpdemux is to be built... no
+checking whether decoder library is to be built... no
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating man/Makefile
+config.status: creating examples/Makefile
+config.status: creating src/dec/Makefile
+config.status: creating src/enc/Makefile
+config.status: creating src/dsp/Makefile
+config.status: creating src/demux/Makefile
+config.status: creating src/mux/Makefile
+config.status: creating src/utils/Makefile
+config.status: creating src/libwebp.pc
+config.status: creating src/libwebpdecoder.pc
+config.status: creating src/demux/libwebpdemux.pc
+config.status: creating src/mux/libwebpmux.pc
+config.status: creating config.h
+config.status: config.h is unchanged
+config.status: executing depfiles commands
+config.status: executing libtool commands
+configure:
+WebP Configuration Summary
+--------------------------
+
+Shared libraries: yes
+Static libraries: yes
+Threaded decode: yes
+libwebp: yes
+libwebpdecoder: no
+libwebpdemux: no
+libwebpmux: no
+
+Tools:
+cwebp : yes
+  Input format support
+  ====================
+  JPEG : yes
+  PNG  : yes
+  TIFF : yes
+  WIC  : no
+dwebp : yes
+  Output format support
+  =====================
+  PNG  : yes
+  WIC  : no
+gif2webp : no
+webpmux  : no
+vwebp    : no
+
+make  all-recursive
+make[1]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0'
+Making all in src
+make[2]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src'
+Making all in dec
+make[3]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/dec'
+  CC       libwebpdecode_la-alpha.lo
+  CC       libwebpdecode_la-frame.lo
+  CC       libwebpdecode_la-buffer.lo
+  CC       libwebpdecode_la-idec.lo
+  CC       libwebpdecode_la-io.lo
+  CC       libwebpdecode_la-layer.lo
+  CC       libwebpdecode_la-quant.lo
+  CC       libwebpdecode_la-tree.lo
+  CC       libwebpdecode_la-vp8.lo
+  CC       libwebpdecode_la-vp8l.lo
+  CC       libwebpdecode_la-webp.lo
+  CCLD     libwebpdecode.la
+make[3]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/dec'
+Making all in enc
+make[3]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/enc'
+  CC       libwebpencode_la-alpha.lo
+  CC       libwebpencode_la-analysis.lo
+  CC       libwebpencode_la-backward_references.lo
+  CC       libwebpencode_la-config.lo
+  CC       libwebpencode_la-cost.lo
+  CC       libwebpencode_la-filter.lo
+  CC       libwebpencode_la-frame.lo
+  CC       libwebpencode_la-histogram.lo
+  CC       libwebpencode_la-iterator.lo
+  CC       libwebpencode_la-layer.lo
+  CC       libwebpencode_la-picture.lo
+  CC       libwebpencode_la-quant.lo
+  CC       libwebpencode_la-syntax.lo
+  CC       libwebpencode_la-token.lo
+  CC       libwebpencode_la-tree.lo
+  CC       libwebpencode_la-vp8l.lo
+  CC       libwebpencode_la-webpenc.lo
+  CCLD     libwebpencode.la
+make[3]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/enc'
+Making all in dsp
+make[3]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/dsp'
+  CC       libwebpdsp_la-cpu.lo
+  CC       libwebpdsp_la-dec.lo
+  CC       libwebpdsp_la-dec_neon.lo
+  CC       libwebpdsp_la-dec_sse2.lo
+  CC       libwebpdsp_la-lossless.lo
+  CC       libwebpdsp_la-upsampling.lo
+  CC       libwebpdsp_la-upsampling_neon.lo
+  CC       libwebpdsp_la-upsampling_sse2.lo
+  CC       libwebpdsp_la-yuv.lo
+  CC       libwebpdsp_la-enc.lo
+  CC       libwebpdsp_la-enc_neon.lo
+  CC       libwebpdsp_la-enc_sse2.lo
+  CCLD     libwebpdsp.la
+make[3]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/dsp'
+Making all in utils
+make[3]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/utils'
+  CC       bit_reader.lo
+  CC       huffman.lo
+  CC       filters.lo
+  CC       color_cache.lo
+  CC       quant_levels_dec.lo
+  CC       rescaler.lo
+  CC       thread.lo
+  CC       utils.lo
+  CC       bit_writer.lo
+  CC       huffman_encode.lo
+  CC       quant_levels.lo
+  CCLD     libwebputils.la
+make[3]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/utils'
+Making all in .
+make[3]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src'
+  CCLD     libwebp.la
+make[3]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src'
+make[2]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src'
+Making all in examples
+make[2]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/examples'
+  CC       example_util.lo
+  CC       dwebp-dwebp.o
+  CC       cwebp-metadata.o
+  CC       cwebp-cwebp.o
+  CC       cwebp-jpegdec.o
+  CC       cwebp-pngdec.o
+  CC       cwebp-tiffdec.o
+  CC       cwebp-wicdec.o
+  CCLD     libexampleutil.la
+  CCLD     dwebp
+  CCLD     cwebp
+make[2]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/examples'
+Making all in man
+make[2]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/man'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/man'
+make[2]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0'
+make[2]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0'
+make[1]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0'
+Making install in src
+make[1]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src'
+Making install in dec
+make[2]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/dec'
+make[3]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/dec'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/usr/local/include/webp'
+ /usr/bin/install -c -m 644 ../webp/decode.h ../webp/types.h '/usr/local/include/webp'
+make[3]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/dec'
+make[2]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/dec'
+Making install in enc
+make[2]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/enc'
+make[3]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/enc'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/usr/local/include/webp'
+ /usr/bin/install -c -m 644 ../webp/encode.h ../webp/types.h '/usr/local/include/webp'
+make[3]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/enc'
+make[2]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/enc'
+Making install in dsp
+make[2]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/dsp'
+make[3]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/dsp'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/usr/local/include/webp'
+ /usr/bin/install -c -m 644 ../webp/types.h '/usr/local/include/webp'
+make[3]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/dsp'
+make[2]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/dsp'
+Making install in utils
+make[2]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/utils'
+make[3]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/utils'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/usr/local/include/webp'
+ /usr/bin/install -c -m 644 ../webp/types.h '/usr/local/include/webp'
+make[3]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/utils'
+make[2]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/utils'
+Making install in .
+make[2]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src'
+make[3]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src'
+ /bin/mkdir -p '/usr/local/lib'
+ /bin/bash ../libtool   --mode=install /usr/bin/install -c   libwebp.la '/usr/local/lib'
+libtool: install: /usr/bin/install -c .libs/libwebp.so.4.0.2 /usr/local/lib/libwebp.so.4.0.2
+libtool: install: (cd /usr/local/lib && { ln -s -f libwebp.so.4.0.2 libwebp.so.4 || { rm -f libwebp.so.4 && ln -s libwebp.so.4.0.2 libwebp.so.4; }; })
+libtool: install: (cd /usr/local/lib && { ln -s -f libwebp.so.4.0.2 libwebp.so || { rm -f libwebp.so && ln -s libwebp.so.4.0.2 libwebp.so; }; })
+libtool: install: /usr/bin/install -c .libs/libwebp.lai /usr/local/lib/libwebp.la
+libtool: install: /usr/bin/install -c .libs/libwebp.a /usr/local/lib/libwebp.a
+libtool: install: chmod 644 /usr/local/lib/libwebp.a
+libtool: install: ranlib /usr/local/lib/libwebp.a
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:/sbin" ldconfig -n /usr/local/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/local/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+ /bin/mkdir -p '/usr/local/include/webp'
+ /usr/bin/install -c -m 644 webp/decode.h webp/types.h '/usr/local/include/webp'
+ /bin/mkdir -p '/usr/local/include/webp'
+ /usr/bin/install -c -m 644 webp/encode.h '/usr/local/include/webp'
+ /bin/mkdir -p '/usr/local/lib/pkgconfig'
+ /usr/bin/install -c -m 644 libwebp.pc '/usr/local/lib/pkgconfig'
+make[3]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src'
+make[2]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src'
+make[1]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src'
+Making install in examples
+make[1]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/examples'
+make[2]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/examples'
+ /bin/mkdir -p '/usr/local/bin'
+  /bin/bash ../libtool   --mode=install /usr/bin/install -c dwebp cwebp '/usr/local/bin'
+libtool: install: /usr/bin/install -c .libs/dwebp /usr/local/bin/dwebp
+libtool: install: /usr/bin/install -c .libs/cwebp /usr/local/bin/cwebp
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/examples'
+make[1]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/examples'
+Making install in man
+make[1]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/man'
+make[2]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/man'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/usr/local/share/man/man1'
+ /usr/bin/install -c -m 644 cwebp.1 dwebp.1 '/usr/local/share/man/man1'
+make[2]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/man'
+make[1]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/man'
+make[1]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0'
+make[2]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0'
+make[1]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0'

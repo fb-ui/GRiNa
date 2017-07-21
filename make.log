@@ -1,0 +1,1805 @@
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking how to print strings... printf
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert x86_64-unknown-linux-gnu file names to x86_64-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking for gawk... no
+checking for mawk... mawk
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+rm -rf build
+rm -rf gen
+if test -f test/Makefile; then (cd test; make clean); fi
+/bin/bash build-scripts/mkinstalldirs build
+/bin/bash build-scripts/updaterev.sh
+  CC     build/SDL_assert.lo
+  CC     build/SDL_error.lo
+mkdir -p -- build
+  CC     build/SDL_hints.lo
+  CC     build/SDL_log.lo
+  CC     build/SDL_atomic.lo
+  CC     build/SDL_spinlock.lo
+  CC     build/SDL_audio.lo
+  CC     build/SDL_audiocvt.lo
+  CC     build/SDL_audiodev.lo
+  CC     build/SDL_audiotypecvt.lo
+Makefile:280: recipe for target 'build/SDL_audiodev.lo' failed
+Makefile:274: recipe for target 'build/SDL_audio.lo' failed
+Makefile:277: recipe for target 'build/SDL_audiocvt.lo' failed
+Makefile:283: recipe for target 'build/SDL_audiotypecvt.lo' failed
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking how to print strings... printf
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert x86_64-unknown-linux-gnu file names to x86_64-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking for gawk... no
+checking for mawk... mawk
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking for gcc... (cached) gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to accept ISO C89... (cached) none needed
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking how to run the C++ preprocessor... g++ -E
+checking for ld used by g++... /usr/bin/ld -m elf_x86_64
+checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking for g++ option to produce PIC... -fPIC -DPIC
+checking if g++ PIC flag -fPIC -DPIC works... yes
+checking if g++ static flag -static works... yes
+checking if g++ supports -c -o file.o... yes
+checking if g++ supports -c -o file.o... (cached) yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether make sets $(MAKE)... yes
+checking for windres... no
+checking for an ANSI C-conforming const... yes
+checking for inline... inline
+checking for working volatile... yes
+checking for GCC -MMD -MT option... yes
+checking for linker option --no-undefined... yes
+checking for ANSI C header files... (cached) yes
+checking for sys/types.h... (cached) yes
+checking stdio.h usability... yes
+checking stdio.h presence... yes
+checking for stdio.h... yes
+checking for stdlib.h... (cached) yes
+checking stddef.h usability... yes
+checking stddef.h presence... yes
+checking for stddef.h... yes
+checking stdarg.h usability... yes
+checking stdarg.h presence... yes
+checking for stdarg.h... yes
+checking malloc.h usability... yes
+checking malloc.h presence... yes
+checking for malloc.h... yes
+checking for memory.h... (cached) yes
+checking for string.h... (cached) yes
+checking for strings.h... (cached) yes
+checking for inttypes.h... (cached) yes
+checking for stdint.h... (cached) yes
+checking ctype.h usability... yes
+checking ctype.h presence... yes
+checking for ctype.h... yes
+checking math.h usability... yes
+checking math.h presence... yes
+checking for math.h... yes
+checking iconv.h usability... yes
+checking iconv.h presence... yes
+checking for iconv.h... yes
+checking signal.h usability... yes
+checking signal.h presence... yes
+checking for signal.h... yes
+checking for size_t... yes
+checking for M_PI in math.h... yes
+checking for working alloca.h... yes
+checking for alloca... yes
+checking for working memcmp... yes
+checking for working strtod... yes
+checking for mprotect... yes
+checking for malloc... yes
+checking for calloc... yes
+checking for realloc... yes
+checking for free... yes
+checking for getenv... yes
+checking for setenv... yes
+checking for putenv... yes
+checking for unsetenv... yes
+checking for qsort... yes
+checking for abs... yes
+checking for bcopy... yes
+checking for memset... yes
+checking for memcpy... yes
+checking for memmove... yes
+checking for strlen... yes
+checking for strlcpy... no
+checking for strlcat... no
+checking for strdup... yes
+checking for _strrev... no
+checking for _strupr... no
+checking for _strlwr... no
+checking for strchr... yes
+checking for strrchr... yes
+checking for strstr... yes
+checking for itoa... no
+checking for _ltoa... no
+checking for _uitoa... no
+checking for _ultoa... no
+checking for strtol... yes
+checking for strtoul... yes
+checking for _i64toa... no
+checking for _ui64toa... no
+checking for strtoll... yes
+checking for strtoull... yes
+checking for atoi... yes
+checking for atof... yes
+checking for strcmp... yes
+checking for strncmp... yes
+checking for _stricmp... no
+checking for strcasecmp... yes
+checking for _strnicmp... no
+checking for strncasecmp... yes
+checking for vsscanf... yes
+checking for vsnprintf... yes
+checking for fseeko... yes
+checking for fseeko64... yes
+checking for sigaction... yes
+checking for setjmp... yes
+checking for nanosleep... yes
+checking for sysconf... yes
+checking for sysctlbyname... no
+checking for pow in -lm... yes
+checking for atan... yes
+checking for atan2... yes
+checking for acos... yes
+checking for asin... yes
+checking for ceil... yes
+checking for copysign... yes
+checking for cos... yes
+checking for cosf... yes
+checking for fabs... yes
+checking for floor... yes
+checking for log... yes
+checking for pow... yes
+checking for scalbn... yes
+checking for sin... yes
+checking for sinf... yes
+checking for sqrt... yes
+checking for sqrtf... yes
+checking for tan... yes
+checking for tanf... yes
+checking for iconv_open in -liconv... no
+checking for iconv... yes
+checking for struct sigaction.sa_sigaction... yes
+checking for GCC builtin atomic operations... yes
+checking for GCC -mmmx option... yes
+checking for GCC -m3dnow option... yes
+checking for GCC -msse option... yes
+checking for GCC -msse2 option... yes
+checking for Altivec with GCC altivec.h and -maltivec option... no
+checking for Altivec with GCC -maltivec option... no
+checking for Altivec with GCC altivec.h and -faltivec option... no
+checking for Altivec with GCC -faltivec option... no
+checking for GCC -Wall option... yes
+checking for necessary GCC -Wno-multichar option... no
+checking for GCC -fvisibility=hidden option... yes
+checking for GCC -Wdeclaration-after-statement option... yes
+checking for dlopen... yes
+checking for dlopen in -lc... no
+checking for dlopen in -ldl... yes
+checking for OSS audio support... yes
+checking for ALSA CFLAGS... 
+checking for ALSA LDFLAGS...  -lasound -lm -ldl -lpthread
+checking for libasound headers version >= 1.0.11... not present.
+checking for snd_ctl_open in -lasound... no
+checking for pkg-config... /usr/bin/pkg-config
+checking for PulseAudio 0.9 support... no
+checking for artsc-config... no
+checking for esd-config... no
+checking for ESD - version >= 0.2.8... no
+*** The esd-config script installed by ESD could not be found
+*** If ESD was installed in PREFIX, make sure PREFIX/bin is in
+*** your path, or set the ESD_CONFIG environment variable to the
+*** full path to esd-config.
+checking audio/audiolib.h usability... no
+checking audio/audiolib.h presence... no
+checking for audio/audiolib.h... no
+checking for AuOpenServer in -laudio... no
+checking for NAS audio support... no
+checking sndio.h usability... no
+checking sndio.h presence... no
+checking for sndio.h... no
+checking for sio_open in -lsndio... no
+checking for sndio audio support... no
+checking for X... libraries , headers 
+checking for gethostbyname... yes
+checking for connect... yes
+checking for remove... yes
+checking for shmat... yes
+checking for IceConnectionNumber in -lICE... yes
+checking for X11/extensions/Xext.h... yes
+-- dynamic libX11 -> libX11.so.6
+-- dynamic libX11ext -> libXext.so.6
+checking for const parameter to XextAddDisplay... yes
+checking for XGenericEvent... yes
+checking for XkbKeycodeToKeysym in -lX11... yes
+checking for X11/Xcursor/Xcursor.h... yes
+-- dynamic libXcursor -> libXcursor.so.1
+checking for X11/extensions/Xdbe.h... yes
+checking for X11/extensions/Xinerama.h... yes
+-- dynamic libXinerama -> libXinerama.so.1
+checking for X11/extensions/XInput2.h... yes
+-- dynamic libXi -> libXi.so.6
+checking for xinput2 multitouch... yes
+-- dynamic libXrandr -> libXrandr.so.2
+checking for X11/extensions/scrnsaver.h... no
+checking for X11/extensions/shape.h... yes
+checking for X11/extensions/xf86vmode.h... yes
+-- dynamic libXxf86vm -> libXxf86vm.so.1
+checking for OpenGL (GLX) support... yes
+checking for EGL support... no
+checking for OpenGL ES v1 headers... no
+checking for OpenGL ES v2 headers... no
+checking for pkg-config... (cached) /usr/bin/pkg-config
+checking for Mir support... no
+checking for pkg-config... (cached) /usr/bin/pkg-config
+checking for Wayland support... no
+checking libudev.h usability... no
+checking libudev.h presence... no
+checking for libudev.h... no
+checking for pkg-config... (cached) /usr/bin/pkg-config
+checking dbus/dbus.h usability... no
+checking dbus/dbus.h presence... no
+checking for dbus/dbus.h... no
+checking for pkg-config... (cached) /usr/bin/pkg-config
+checking ibus-1.0/ibus.h usability... no
+checking ibus-1.0/ibus.h presence... no
+checking for ibus-1.0/ibus.h... no
+checking sys/inotify.h usability... yes
+checking sys/inotify.h presence... yes
+checking for sys/inotify.h... yes
+checking for pkg-config... (cached) /usr/bin/pkg-config
+checking fcitx/frontend.h usability... no
+checking fcitx/frontend.h presence... no
+checking for fcitx/frontend.h... no
+checking for Linux 2.4 unified input interface... yes
+checking for Linux kd.h... yes
+checking for Touchscreen library support... no
+checking for pthreads... yes
+checking for recursive mutexes... yes
+checking for pthread semaphores... yes
+checking for sem_timedwait... yes
+checking for pthread_np.h... no
+checking for pthread_setname_np... yes
+checking for pthread_set_name_np... no
+checking for clock_gettime in -lrt... yes
+checking linux/version.h usability... yes
+checking linux/version.h presence... yes
+checking for linux/version.h... yes
+checking for Vivante VDK API... no
+checking for Vivante FB API... no
+checking for linker option --enable-new-dtags... yes
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating sdl2-config
+config.status: creating sdl2-config.cmake
+config.status: creating SDL2.spec
+config.status: creating sdl2.pc
+config.status: creating include/SDL_config.h
+config.status: include/SDL_config.h is unchanged
+config.status: executing libtool commands
+config.status: executing sdl2_config commands
+config.status: executing summary commands
+SDL2 Configure Summary:
+Building Shared Libraries
+Building Static Libraries
+Enabled modules : atomic audio video render events joystick haptic power filesystem threads timers file loadso cpuinfo assembly
+Assembly Math   : mmx 3dnow sse sse2
+Audio drivers   : disk dummy oss
+Video drivers   : dummy x11(dynamic) opengl
+X11 libraries   : xcursor xdbe xinerama xinput2 xinput2_multitouch xrandr xshape xvidmode
+Input drivers   : linuxev linuxkd
+Using libudev   : YES
+Using dbus      : NO
+Using ime       : YES
+Using ibus      : NO
+Using fcitx     : NO
+rm -rf build
+rm -rf gen
+if test -f test/Makefile; then (cd test; make clean); fi
+/bin/bash build-scripts/mkinstalldirs build
+/bin/bash build-scripts/updaterev.sh
+  CC     build/SDL_error.lo
+  CC     build/SDL_assert.lo
+mkdir -p -- build
+  CC     build/SDL_hints.lo
+  CC     build/SDL_log.lo
+  CC     build/SDL_atomic.lo
+  CC     build/SDL_spinlock.lo
+  CC     build/SDL_audio.lo
+  CC     build/SDL_audiocvt.lo
+  CC     build/SDL_audiodev.lo
+  CC     build/SDL_audiotypecvt.lo
+  CC     build/SDL_mixer.lo
+  CC     build/SDL_wave.lo
+  CC     build/SDL_cpuinfo.lo
+  CC     build/SDL_dynapi.lo
+  CC     build/SDL_clipboardevents.lo
+  CC     build/SDL_dropevents.lo
+  CC     build/SDL_events.lo
+  CC     build/SDL_gesture.lo
+  CC     build/SDL_keyboard.lo
+  CC     build/SDL_mouse.lo
+  CC     build/SDL_quit.lo
+  CC     build/SDL_touch.lo
+  CC     build/SDL_windowevents.lo
+  CC     build/SDL_rwops.lo
+  CC     build/SDL_haptic.lo
+  CC     build/SDL_gamecontroller.lo
+  CC     build/SDL_joystick.lo
+  CC     build/e_atan2.lo
+  CC     build/e_log.lo
+  CC     build/e_pow.lo
+  CC     build/e_rem_pio2.lo
+  CC     build/e_sqrt.lo
+  CC     build/k_cos.lo
+  CC     build/k_rem_pio2.lo
+  CC     build/k_sin.lo
+  CC     build/k_tan.lo
+  CC     build/s_atan.lo
+  CC     build/s_copysign.lo
+  CC     build/s_cos.lo
+  CC     build/s_fabs.lo
+  CC     build/s_floor.lo
+  CC     build/s_scalbn.lo
+  CC     build/s_sin.lo
+  CC     build/s_tan.lo
+  CC     build/SDL_power.lo
+  CC     build/SDL_d3dmath.lo
+  CC     build/SDL_render.lo
+  CC     build/SDL_yuv_mmx.lo
+  CC     build/SDL_yuv_sw.lo
+  CC     build/SDL_render_d3d.lo
+  CC     build/SDL_render_d3d11.lo
+  CC     build/SDL_render_gl.lo
+  CC     build/SDL_shaders_gl.lo
+  CC     build/SDL_render_gles.lo
+  CC     build/SDL_render_gles2.lo
+  CC     build/SDL_shaders_gles2.lo
+  CC     build/SDL_render_psp.lo
+  CC     build/SDL_blendfillrect.lo
+  CC     build/SDL_blendline.lo
+  CC     build/SDL_blendpoint.lo
+  CC     build/SDL_drawline.lo
+  CC     build/SDL_drawpoint.lo
+  CC     build/SDL_render_sw.lo
+  CC     build/SDL_rotate.lo
+  CC     build/SDL_getenv.lo
+  CC     build/SDL_iconv.lo
+  CC     build/SDL_malloc.lo
+  CC     build/SDL_qsort.lo
+  CC     build/SDL_stdlib.lo
+  CC     build/SDL_string.lo
+  CC     build/SDL_thread.lo
+  CC     build/SDL_timer.lo
+  CC     build/SDL_RLEaccel.lo
+  CC     build/SDL_blit.lo
+  CC     build/SDL_blit_0.lo
+  CC     build/SDL_blit_1.lo
+  CC     build/SDL_blit_A.lo
+  CC     build/SDL_blit_N.lo
+  CC     build/SDL_blit_auto.lo
+  CC     build/SDL_blit_copy.lo
+  CC     build/SDL_blit_slow.lo
+  CC     build/SDL_bmp.lo
+  CC     build/SDL_clipboard.lo
+  CC     build/SDL_egl.lo
+  CC     build/SDL_fillrect.lo
+  CC     build/SDL_pixels.lo
+  CC     build/SDL_rect.lo
+  CC     build/SDL_shape.lo
+  CC     build/SDL_stretch.lo
+  CC     build/SDL_surface.lo
+  CC     build/SDL_video.lo
+  CC     build/SDL_nullevents.lo
+  CC     build/SDL_nullframebuffer.lo
+  CC     build/SDL_nullvideo.lo
+  CC     build/SDL_diskaudio.lo
+  CC     build/SDL_dummyaudio.lo
+  CC     build/SDL_sysloadso.lo
+  CC     build/SDL_dspaudio.lo
+  CC     build/SDL_x11clipboard.lo
+  CC     build/SDL_x11dyn.lo
+  CC     build/SDL_x11events.lo
+  CC     build/SDL_x11framebuffer.lo
+  CC     build/SDL_x11keyboard.lo
+  CC     build/SDL_x11messagebox.lo
+  CC     build/SDL_x11modes.lo
+  CC     build/SDL_x11mouse.lo
+  CC     build/SDL_x11opengl.lo
+  CC     build/SDL_x11opengles.lo
+  CC     build/SDL_x11shape.lo
+  CC     build/SDL_x11touch.lo
+  CC     build/SDL_x11video.lo
+  CC     build/SDL_x11window.lo
+  CC     build/SDL_x11xinput2.lo
+  CC     build/edid-parse.lo
+  CC     build/imKStoUCS.lo
+  CC     build/SDL_ime.lo
+  CC     build/SDL_systhread.lo
+  CC     build/SDL_syssem.lo
+  CC     build/SDL_sysmutex.lo
+  CC     build/SDL_syscond.lo
+  CC     build/SDL_systls.lo
+  CC     build/SDL_sysjoystick.lo
+  CC     build/SDL_syshaptic.lo
+  CC     build/SDL_syspower.lo
+  CC     build/SDL_sysfilesystem.lo
+  CC     build/SDL_systimer.lo
+  CC     build/SDL_evdev.lo
+  CC     build/SDL_dummy_main.o
+  CC     build/SDL_test_assert.o
+  CC     build/SDL_test_common.o
+  CC     build/SDL_test_compare.o
+  CC     build/SDL_test_crc32.o
+  CC     build/SDL_test_font.o
+  CC     build/SDL_test_fuzzer.o
+  CC     build/SDL_test_harness.o
+  CC     build/SDL_test_imageBlit.o
+  CC     build/SDL_test_imageBlitBlend.o
+  CC     build/SDL_test_imageFace.o
+  CC     build/SDL_test_imagePrimitives.o
+  CC     build/SDL_test_imagePrimitivesBlend.o
+  CC     build/SDL_test_log.o
+  CC     build/SDL_test_md5.o
+  CC     build/SDL_test_random.o
+  CC     build/SDL.lo
+  AR     build/libSDL2main.a
+  RANLIB build/libSDL2main.a
+  AR     build/libSDL2_test.a
+  RANLIB build/libSDL2_test.a
+  LTLINK build/libSDL2.la
+/bin/bash build-scripts/updaterev.sh
+/bin/bash build-scripts/mkinstalldirs /usr/local/bin
+/usr/bin/install -c -m 755 sdl2-config /usr/local/bin/sdl2-config
+/bin/bash build-scripts/mkinstalldirs /usr/local/include/SDL2
+for file in SDL.h SDL_assert.h SDL_atomic.h SDL_audio.h SDL_bits.h SDL_blendmode.h SDL_clipboard.h SDL_cpuinfo.h SDL_egl.h SDL_endian.h SDL_error.h SDL_events.h SDL_filesystem.h SDL_gamecontroller.h SDL_gesture.h SDL_haptic.h SDL_hints.h SDL_joystick.h SDL_keyboard.h SDL_keycode.h SDL_loadso.h SDL_log.h SDL_main.h SDL_messagebox.h SDL_mouse.h SDL_mutex.h SDL_name.h SDL_opengl.h SDL_opengl_glext.h SDL_opengles.h SDL_opengles2_gl2ext.h SDL_opengles2_gl2.h SDL_opengles2_gl2platform.h SDL_opengles2.h SDL_opengles2_khrplatform.h SDL_pixels.h SDL_platform.h SDL_power.h SDL_quit.h SDL_rect.h SDL_render.h SDL_rwops.h SDL_scancode.h SDL_shape.h SDL_stdinc.h SDL_surface.h SDL_system.h SDL_syswm.h SDL_thread.h SDL_timer.h SDL_touch.h SDL_types.h SDL_version.h SDL_video.h begin_code.h close_code.h SDL_test_assert.h SDL_test_common.h SDL_test_compare.h SDL_test_crc32.h SDL_test_font.h SDL_test_fuzzer.h SDL_test.h SDL_test_harness.h SDL_test_images.h SDL_test_log.h SDL_test_md5.h SDL_test_random.h; do \
+    /usr/bin/install -c -m 644 /home/mpsk/data/GRiNa/required/SDL2/include/$file /usr/local/include/SDL2/$file; \
+done
+/usr/bin/install -c -m 644 include/SDL_config.h /usr/local/include/SDL2/SDL_config.h
+if test -f include/SDL_revision.h; then \
+    /usr/bin/install -c -m 644 include/SDL_revision.h /usr/local/include/SDL2/SDL_revision.h; \
+else \
+    /usr/bin/install -c -m 644 /home/mpsk/data/GRiNa/required/SDL2/include/SDL_revision.h /usr/local/include/SDL2/SDL_revision.h; \
+fi
+/bin/bash build-scripts/mkinstalldirs /usr/local/lib
+/bin/bash ./libtool --quiet --mode=install /usr/bin/install -c build/libSDL2.la /usr/local/lib/libSDL2.la
+/usr/bin/install -c -m 644 build/libSDL2main.a /usr/local/lib/libSDL2main.a
+ranlib /usr/local/lib/libSDL2main.a
+/usr/bin/install -c -m 644 build/libSDL2_test.a /usr/local/lib/libSDL2_test.a
+ranlib /usr/local/lib/libSDL2_test.a
+/bin/bash build-scripts/mkinstalldirs /usr/local/share/aclocal
+/usr/bin/install -c -m 644 /home/mpsk/data/GRiNa/required/SDL2/sdl2.m4 /usr/local/share/aclocal/sdl2.m4
+/bin/bash build-scripts/mkinstalldirs /usr/local/lib/pkgconfig
+/usr/bin/install -c -m 644 sdl2.pc /usr/local/lib/pkgconfig
+/bin/bash build-scripts/mkinstalldirs /usr/local/lib/cmake/SDL2
+/usr/bin/install -c -m 644 sdl2-config.cmake /usr/local/lib/cmake/SDL2
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking target system type... x86_64-unknown-linux-gnu
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make supports nested variables... (cached) yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking for style of include used by make... GNU
+checking dependency style of gcc... gcc3
+checking for gcc option to accept ISO C99... none needed
+checking for gcc option to accept ISO Standard C... (cached) none needed
+checking how to run the C preprocessor... gcc -E
+checking whether make sets $(MAKE)... (cached) yes
+checking whether ln -s works... yes
+checking for ar... ar
+checking the archiver (ar) interface... ar
+checking if LD -Wl,--version-script works... yes
+checking for function prototypes... yes
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking stddef.h usability... yes
+checking stddef.h presence... yes
+checking for stddef.h... yes
+checking for stdlib.h... (cached) yes
+checking locale.h usability... yes
+checking locale.h presence... yes
+checking for locale.h... yes
+checking for string.h... (cached) yes
+checking for size_t... yes
+checking for type unsigned char... yes
+checking for type unsigned short... yes
+checking for type void... yes
+checking for an ANSI C-conforming const... yes
+checking for inline... __inline__
+checking for broken incomplete types... ok
+checking for short external names... ok
+checking to see if char is signed... yes
+checking to see if right shift is signed... yes
+checking to see if fopen accepts b spec... yes
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for fgrep... /bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert x86_64-unknown-linux-gnu file names to x86_64-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... dlltool
+checking how to associate runtime and link libraries... printf %s\n
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking libjpeg version number... 9:0:0
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating jconfig.h
+config.status: jconfig.h is unchanged
+config.status: executing depfiles commands
+config.status: executing libtool commands
+ rm -f cjpeg djpeg jpegtran rdjpgcom wrjpgcom
+test -z "testout.ppm testout.bmp testout.jpg testoutp.ppm testoutp.jpg testoutt.jpg" || rm -f testout.ppm testout.bmp testout.jpg testoutp.ppm testoutp.jpg testoutt.jpg
+test -z "libjpeg.la" || rm -f libjpeg.la
+rm -f ./so_locations
+rm -rf .libs _libs
+rm -f *.o
+rm -f *.lo
+make  all-am
+make[1]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/jpeg-9'
+  CC       jaricom.lo
+  CC       jcapistd.lo
+  CC       jcapimin.lo
+  CC       jcarith.lo
+  CC       jccoefct.lo
+  CC       jccolor.lo
+  CC       jcdctmgr.lo
+  CC       jchuff.lo
+  CC       jcinit.lo
+  CC       jcmainct.lo
+  CC       jcmarker.lo
+  CC       jcmaster.lo
+  CC       jcomapi.lo
+  CC       jcparam.lo
+  CC       jcprepct.lo
+  CC       jcsample.lo
+  CC       jctrans.lo
+  CC       jdapimin.lo
+  CC       jdapistd.lo
+  CC       jdarith.lo
+  CC       jdatadst.lo
+  CC       jdatasrc.lo
+  CC       jdcoefct.lo
+  CC       jdcolor.lo
+  CC       jddctmgr.lo
+  CC       jdhuff.lo
+  CC       jdinput.lo
+  CC       jdmainct.lo
+  CC       jdmarker.lo
+  CC       jdmaster.lo
+  CC       jdmerge.lo
+  CC       jdpostct.lo
+  CC       jdsample.lo
+  CC       jdtrans.lo
+  CC       jerror.lo
+  CC       jfdctflt.lo
+  CC       jfdctfst.lo
+  CC       jfdctint.lo
+  CC       jidctflt.lo
+  CC       jidctfst.lo
+  CC       jidctint.lo
+  CC       jquant1.lo
+  CC       jquant2.lo
+  CC       jutils.lo
+  CC       jmemmgr.lo
+  CC       jmemnobs.lo
+  CC       cjpeg.o
+  CC       rdppm.o
+  CC       rdgif.o
+  CC       rdtarga.o
+  CC       rdrle.o
+  CC       rdbmp.o
+  CC       rdswitch.o
+  CC       cdjpeg.o
+  CC       djpeg.o
+  CC       wrppm.o
+  CC       wrgif.o
+  CC       wrtarga.o
+  CC       wrrle.o
+  CC       wrbmp.o
+  CC       rdcolmap.o
+  CC       jpegtran.o
+  CC       transupp.o
+  CC       rdjpgcom.o
+  CC       wrjpgcom.o
+  CCLD     rdjpgcom
+  CCLD     wrjpgcom
+  CCLD     libjpeg.la
+  CCLD     djpeg
+  CCLD     cjpeg
+  CCLD     jpegtran
+make[1]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/jpeg-9'
+make[1]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/jpeg-9'
+ /bin/mkdir -p '/usr/local/lib'
+ /bin/bash ./libtool   --mode=install /usr/bin/install -c   libjpeg.la '/usr/local/lib'
+libtool: install: /usr/bin/install -c .libs/libjpeg.so.9.0.0 /usr/local/lib/libjpeg.so.9.0.0
+libtool: install: (cd /usr/local/lib && { ln -s -f libjpeg.so.9.0.0 libjpeg.so.9 || { rm -f libjpeg.so.9 && ln -s libjpeg.so.9.0.0 libjpeg.so.9; }; })
+libtool: install: (cd /usr/local/lib && { ln -s -f libjpeg.so.9.0.0 libjpeg.so || { rm -f libjpeg.so && ln -s libjpeg.so.9.0.0 libjpeg.so; }; })
+libtool: install: /usr/bin/install -c .libs/libjpeg.lai /usr/local/lib/libjpeg.la
+libtool: install: /usr/bin/install -c .libs/libjpeg.a /usr/local/lib/libjpeg.a
+libtool: install: chmod 644 /usr/local/lib/libjpeg.a
+libtool: install: ranlib /usr/local/lib/libjpeg.a
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:/sbin" ldconfig -n /usr/local/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/local/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+ /bin/mkdir -p '/usr/local/bin'
+  /bin/bash ./libtool   --mode=install /usr/bin/install -c cjpeg djpeg jpegtran rdjpgcom wrjpgcom '/usr/local/bin'
+libtool: install: /usr/bin/install -c .libs/cjpeg /usr/local/bin/cjpeg
+libtool: install: /usr/bin/install -c .libs/djpeg /usr/local/bin/djpeg
+libtool: install: /usr/bin/install -c .libs/jpegtran /usr/local/bin/jpegtran
+libtool: install: /usr/bin/install -c rdjpgcom /usr/local/bin/rdjpgcom
+libtool: install: /usr/bin/install -c wrjpgcom /usr/local/bin/wrjpgcom
+/bin/bash /home/mpsk/data/GRiNa/required/SDL2_image/external/jpeg-9/install-sh -d /usr/local/include
+/usr/bin/install -c -m 644 jconfig.h /usr/local/include/jconfig.h
+ /bin/mkdir -p '/usr/local/include'
+ /usr/bin/install -c -m 644 jerror.h jmorecfg.h jpeglib.h '/usr/local/include'
+ /bin/mkdir -p '/usr/local/share/man/man1'
+ /usr/bin/install -c -m 644 cjpeg.1 djpeg.1 jpegtran.1 rdjpgcom.1 wrjpgcom.1 '/usr/local/share/man/man1'
+make[1]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/jpeg-9'
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking for style of include used by make... GNU
+checking dependency style of gcc... gcc3
+checking dependency style of gcc... gcc3
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking how to print strings... printf
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking how to run the C preprocessor... gcc -E
+checking for gawk... (cached) mawk
+checking whether ln -s works... yes
+checking whether make sets $(MAKE)... (cached) yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert x86_64-unknown-linux-gnu file names to x86_64-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking that AWK works... ok
+checking for ANSI C header files... (cached) yes
+checking for an ANSI C-conforming const... yes
+checking for size_t... yes
+checking whether struct tm is in sys/time.h or time.h... time.h
+checking for C/C++ restrict keyword... __restrict
+checking for working strtod... yes
+checking for memset... yes
+checking for pow... no
+checking for pow in -lm... yes
+checking for zlibVersion in -lz... yes
+checking for feenableexcept in -lm... yes
+checking for feenableexcept... yes
+checking if using Solaris linker... no
+checking if libraries can be versioned... yes
+checking for symbol prefix... 
+configure: pkgconfig directory is ${libdir}/pkgconfig
+configure: Extra options for compiler: 
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating libpng.pc
+config.status: creating libpng-config
+config.status: creating config.h
+config.status: config.h is unchanged
+config.status: executing depfiles commands
+config.status: executing libtool commands
+ rm -f pngtest pngunknown pngstest pngvalid
+test -z "*.tf? pngout.png libpng16.pc libpng16-config libpng.vers libpng.sym check.new pnglibconf.* pngprefix.h symbols.new pngtest-log.txt scripts/*.out scripts/*.chk scripts/pnglibconf.dfn" || rm -f *.tf? pngout.png libpng16.pc libpng16-config libpng.vers libpng.sym check.new pnglibconf.* pngprefix.h symbols.new pngtest-log.txt scripts/*.out scripts/*.chk scripts/pnglibconf.dfn
+test -z "libpng16.la" || rm -f libpng16.la
+rm -f ./so_locations
+rm -rf .libs _libs
+rm -f *.o
+test -z "tests/pngtest.log tests/pngvalid-gamma-16-to-8.log tests/pngvalid-gamma-alpha-mode.log tests/pngvalid-gamma-background.log tests/pngvalid-gamma-expand16-alpha-mode.log tests/pngvalid-gamma-expand16-background.log tests/pngvalid-gamma-expand16-transform.log tests/pngvalid-gamma-sbit.log tests/pngvalid-gamma-threshold.log tests/pngvalid-gamma-transform.log tests/pngvalid-progressive-interlace-size.log tests/pngvalid-progressive-interlace-standard.log tests/pngvalid-progressive-interlace-transform.log tests/pngvalid-progressive-standard.log tests/pngvalid-standard.log tests/pngstest-0g01.log tests/pngstest-0g02.log tests/pngstest-0g04.log tests/pngstest-0g08.log tests/pngstest-0g16.log tests/pngstest-2c08.log tests/pngstest-2c16.log tests/pngstest-3p01.log tests/pngstest-3p02.log tests/pngstest-3p04.log tests/pngstest-3p08.log tests/pngstest-4a08.log tests/pngstest-4a16.log tests/pngstest-6a08.log tests/pngstest-6a16.log tests/pngstest-error.log tests/pngunknown-IDAT.log tests/pngunknown-discard.log tests/pngunknown-if-safe.log tests/pngunknown-sAPI.log tests/pngunknown-sTER.log tests/pngunknown-save.log tests/pngunknown-vpAg.log" || rm -f tests/pngtest.log tests/pngvalid-gamma-16-to-8.log tests/pngvalid-gamma-alpha-mode.log tests/pngvalid-gamma-background.log tests/pngvalid-gamma-expand16-alpha-mode.log tests/pngvalid-gamma-expand16-background.log tests/pngvalid-gamma-expand16-transform.log tests/pngvalid-gamma-sbit.log tests/pngvalid-gamma-threshold.log tests/pngvalid-gamma-transform.log tests/pngvalid-progressive-interlace-size.log tests/pngvalid-progressive-interlace-standard.log tests/pngvalid-progressive-interlace-transform.log tests/pngvalid-progressive-standard.log tests/pngvalid-standard.log tests/pngstest-0g01.log tests/pngstest-0g02.log tests/pngstest-0g04.log tests/pngstest-0g08.log tests/pngstest-0g16.log tests/pngstest-2c08.log tests/pngstest-2c16.log tests/pngstest-3p01.log tests/pngstest-3p02.log tests/pngstest-3p04.log tests/pngstest-3p08.log tests/pngstest-4a08.log tests/pngstest-4a16.log tests/pngstest-6a08.log tests/pngstest-6a16.log tests/pngstest-error.log tests/pngunknown-IDAT.log tests/pngunknown-discard.log tests/pngunknown-if-safe.log tests/pngunknown-sAPI.log tests/pngunknown-sTER.log tests/pngunknown-save.log tests/pngunknown-vpAg.log
+test -z "tests/pngtest.trs tests/pngvalid-gamma-16-to-8.trs tests/pngvalid-gamma-alpha-mode.trs tests/pngvalid-gamma-background.trs tests/pngvalid-gamma-expand16-alpha-mode.trs tests/pngvalid-gamma-expand16-background.trs tests/pngvalid-gamma-expand16-transform.trs tests/pngvalid-gamma-sbit.trs tests/pngvalid-gamma-threshold.trs tests/pngvalid-gamma-transform.trs tests/pngvalid-progressive-interlace-size.trs tests/pngvalid-progressive-interlace-standard.trs tests/pngvalid-progressive-interlace-transform.trs tests/pngvalid-progressive-standard.trs tests/pngvalid-standard.trs tests/pngstest-0g01.trs tests/pngstest-0g02.trs tests/pngstest-0g04.trs tests/pngstest-0g08.trs tests/pngstest-0g16.trs tests/pngstest-2c08.trs tests/pngstest-2c16.trs tests/pngstest-3p01.trs tests/pngstest-3p02.trs tests/pngstest-3p04.trs tests/pngstest-3p08.trs tests/pngstest-4a08.trs tests/pngstest-4a16.trs tests/pngstest-6a08.trs tests/pngstest-6a16.trs tests/pngstest-error.trs tests/pngunknown-IDAT.trs tests/pngunknown-discard.trs tests/pngunknown-if-safe.trs tests/pngunknown-sAPI.trs tests/pngunknown-sTER.trs tests/pngunknown-save.trs tests/pngunknown-vpAg.trs" || rm -f tests/pngtest.trs tests/pngvalid-gamma-16-to-8.trs tests/pngvalid-gamma-alpha-mode.trs tests/pngvalid-gamma-background.trs tests/pngvalid-gamma-expand16-alpha-mode.trs tests/pngvalid-gamma-expand16-background.trs tests/pngvalid-gamma-expand16-transform.trs tests/pngvalid-gamma-sbit.trs tests/pngvalid-gamma-threshold.trs tests/pngvalid-gamma-transform.trs tests/pngvalid-progressive-interlace-size.trs tests/pngvalid-progressive-interlace-standard.trs tests/pngvalid-progressive-interlace-transform.trs tests/pngvalid-progressive-standard.trs tests/pngvalid-standard.trs tests/pngstest-0g01.trs tests/pngstest-0g02.trs tests/pngstest-0g04.trs tests/pngstest-0g08.trs tests/pngstest-0g16.trs tests/pngstest-2c08.trs tests/pngstest-2c16.trs tests/pngstest-3p01.trs tests/pngstest-3p02.trs tests/pngstest-3p04.trs tests/pngstest-3p08.trs tests/pngstest-4a08.trs tests/pngstest-4a16.trs tests/pngstest-6a08.trs tests/pngstest-6a16.trs tests/pngstest-error.trs tests/pngunknown-IDAT.trs tests/pngunknown-discard.trs tests/pngunknown-if-safe.trs tests/pngunknown-sAPI.trs tests/pngunknown-sTER.trs tests/pngunknown-save.trs tests/pngunknown-vpAg.trs
+test -z "test-suite.log" || rm -f test-suite.log
+rm -f *.lo
+make  all-am
+make[1]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libpng-1.6.2'
+rm -f pnglibconf.dfn pnglibconf.tf[45]
+mawk -f ./scripts/options.awk out=pnglibconf.tf4 version=search\
+    ./pngconf.h ./scripts/pnglibconf.dfa\
+    ./pngusr.dfa  1>&2
+:>pngprefix.h
+cp libpng-config libpng16-config
+cp libpng.pc libpng16.pc
+mawk -f ./scripts/options.awk out=pnglibconf.tf5 pnglibconf.tf4 1>&2
+rm pnglibconf.tf4
+mv pnglibconf.tf5 pnglibconf.dfn
+rm -f pnglibconf.out pnglibconf.c pnglibconf.tf[12]
+test -d scripts || mkdir scripts || test -d scripts
+echo '#include "pnglibconf.dfn"' >pnglibconf.c
+gcc -E -DHAVE_CONFIG_H -I. \
+     -DPNGLIB_LIBNAME='PNG16_0' -DPNGLIB_VERSION='1.6.2' -DSYMBOL_PREFIX='' -DPNG_NO_USE_READ_MACROS -DPNG_BUILDING_SYMBOL_TABLE  pnglibconf.c > pnglibconf.tf1
+mawk -f "./scripts/dfn.awk" out="pnglibconf.tf2" pnglibconf.tf1 1>&2
+rm -f pnglibconf.c pnglibconf.tf1
+mv pnglibconf.tf2 pnglibconf.out
+rm -f pnglibconf.h
+cp pnglibconf.out pnglibconf.h
+/bin/bash ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.     -g -O2 -MT png.lo -MD -MP -MF .deps/png.Tpo -c -o png.lo png.c
+/bin/bash ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.     -g -O2 -MT pngerror.lo -MD -MP -MF .deps/pngerror.Tpo -c -o pngerror.lo pngerror.c
+/bin/bash ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.     -g -O2 -MT pngget.lo -MD -MP -MF .deps/pngget.Tpo -c -o pngget.lo pngget.c
+/bin/bash ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.     -g -O2 -MT pngmem.lo -MD -MP -MF .deps/pngmem.Tpo -c -o pngmem.lo pngmem.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -g -O2 -MT pngget.lo -MD -MP -MF .deps/pngget.Tpo -c pngget.c  -fPIC -DPIC -o .libs/pngget.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -g -O2 -MT png.lo -MD -MP -MF .deps/png.Tpo -c png.c  -fPIC -DPIC -o .libs/png.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -g -O2 -MT pngerror.lo -MD -MP -MF .deps/pngerror.Tpo -c pngerror.c  -fPIC -DPIC -o .libs/pngerror.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -g -O2 -MT pngmem.lo -MD -MP -MF .deps/pngmem.Tpo -c pngmem.c  -fPIC -DPIC -o .libs/pngmem.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -g -O2 -MT pngmem.lo -MD -MP -MF .deps/pngmem.Tpo -c pngmem.c -o pngmem.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -g -O2 -MT pngerror.lo -MD -MP -MF .deps/pngerror.Tpo -c pngerror.c -o pngerror.o >/dev/null 2>&1
+mv -f .deps/pngmem.Tpo .deps/pngmem.Plo
+/bin/bash ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.     -g -O2 -MT pngpread.lo -MD -MP -MF .deps/pngpread.Tpo -c -o pngpread.lo pngpread.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -g -O2 -MT pngpread.lo -MD -MP -MF .deps/pngpread.Tpo -c pngpread.c  -fPIC -DPIC -o .libs/pngpread.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -g -O2 -MT pngget.lo -MD -MP -MF .deps/pngget.Tpo -c pngget.c -o pngget.o >/dev/null 2>&1
+mv -f .deps/pngerror.Tpo .deps/pngerror.Plo
+/bin/bash ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.     -g -O2 -MT pngread.lo -MD -MP -MF .deps/pngread.Tpo -c -o pngread.lo pngread.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -g -O2 -MT pngread.lo -MD -MP -MF .deps/pngread.Tpo -c pngread.c  -fPIC -DPIC -o .libs/pngread.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -g -O2 -MT pngpread.lo -MD -MP -MF .deps/pngpread.Tpo -c pngpread.c -o pngpread.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -g -O2 -MT png.lo -MD -MP -MF .deps/png.Tpo -c png.c -o png.o >/dev/null 2>&1
+mv -f .deps/pngget.Tpo .deps/pngget.Plo
+/bin/bash ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.     -g -O2 -MT pngrio.lo -MD -MP -MF .deps/pngrio.Tpo -c -o pngrio.lo pngrio.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -g -O2 -MT pngrio.lo -MD -MP -MF .deps/pngrio.Tpo -c pngrio.c  -fPIC -DPIC -o .libs/pngrio.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -g -O2 -MT pngrio.lo -MD -MP -MF .deps/pngrio.Tpo -c pngrio.c -o pngrio.o >/dev/null 2>&1
+mv -f .deps/pngrio.Tpo .deps/pngrio.Plo
+/bin/bash ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.     -g -O2 -MT pngrtran.lo -MD -MP -MF .deps/pngrtran.Tpo -c -o pngrtran.lo pngrtran.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -g -O2 -MT pngrtran.lo -MD -MP -MF .deps/pngrtran.Tpo -c pngrtran.c  -fPIC -DPIC -o .libs/pngrtran.o
+mv -f .deps/pngpread.Tpo .deps/pngpread.Plo
+/bin/bash ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.     -g -O2 -MT pngrutil.lo -MD -MP -MF .deps/pngrutil.Tpo -c -o pngrutil.lo pngrutil.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -g -O2 -MT pngrutil.lo -MD -MP -MF .deps/pngrutil.Tpo -c pngrutil.c  -fPIC -DPIC -o .libs/pngrutil.o
+mv -f .deps/png.Tpo .deps/png.Plo
+/bin/bash ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.     -g -O2 -MT pngset.lo -MD -MP -MF .deps/pngset.Tpo -c -o pngset.lo pngset.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -g -O2 -MT pngset.lo -MD -MP -MF .deps/pngset.Tpo -c pngset.c  -fPIC -DPIC -o .libs/pngset.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -g -O2 -MT pngread.lo -MD -MP -MF .deps/pngread.Tpo -c pngread.c -o pngread.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -g -O2 -MT pngset.lo -MD -MP -MF .deps/pngset.Tpo -c pngset.c -o pngset.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -g -O2 -MT pngrutil.lo -MD -MP -MF .deps/pngrutil.Tpo -c pngrutil.c -o pngrutil.o >/dev/null 2>&1
+mv -f .deps/pngset.Tpo .deps/pngset.Plo
+/bin/bash ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.     -g -O2 -MT pngtrans.lo -MD -MP -MF .deps/pngtrans.Tpo -c -o pngtrans.lo pngtrans.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -g -O2 -MT pngrtran.lo -MD -MP -MF .deps/pngrtran.Tpo -c pngrtran.c -o pngrtran.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -g -O2 -MT pngtrans.lo -MD -MP -MF .deps/pngtrans.Tpo -c pngtrans.c  -fPIC -DPIC -o .libs/pngtrans.o
+mv -f .deps/pngread.Tpo .deps/pngread.Plo
+/bin/bash ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.     -g -O2 -MT pngwio.lo -MD -MP -MF .deps/pngwio.Tpo -c -o pngwio.lo pngwio.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -g -O2 -MT pngwio.lo -MD -MP -MF .deps/pngwio.Tpo -c pngwio.c  -fPIC -DPIC -o .libs/pngwio.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -g -O2 -MT pngwio.lo -MD -MP -MF .deps/pngwio.Tpo -c pngwio.c -o pngwio.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -g -O2 -MT pngtrans.lo -MD -MP -MF .deps/pngtrans.Tpo -c pngtrans.c -o pngtrans.o >/dev/null 2>&1
+mv -f .deps/pngwio.Tpo .deps/pngwio.Plo
+/bin/bash ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.     -g -O2 -MT pngwrite.lo -MD -MP -MF .deps/pngwrite.Tpo -c -o pngwrite.lo pngwrite.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -g -O2 -MT pngwrite.lo -MD -MP -MF .deps/pngwrite.Tpo -c pngwrite.c  -fPIC -DPIC -o .libs/pngwrite.o
+mv -f .deps/pngtrans.Tpo .deps/pngtrans.Plo
+/bin/bash ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.     -g -O2 -MT pngwtran.lo -MD -MP -MF .deps/pngwtran.Tpo -c -o pngwtran.lo pngwtran.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -g -O2 -MT pngwtran.lo -MD -MP -MF .deps/pngwtran.Tpo -c pngwtran.c  -fPIC -DPIC -o .libs/pngwtran.o
+mv -f .deps/pngrutil.Tpo .deps/pngrutil.Plo
+/bin/bash ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.     -g -O2 -MT pngwutil.lo -MD -MP -MF .deps/pngwutil.Tpo -c -o pngwutil.lo pngwutil.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -g -O2 -MT pngwutil.lo -MD -MP -MF .deps/pngwutil.Tpo -c pngwutil.c  -fPIC -DPIC -o .libs/pngwutil.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -g -O2 -MT pngwtran.lo -MD -MP -MF .deps/pngwtran.Tpo -c pngwtran.c -o pngwtran.o >/dev/null 2>&1
+mv -f .deps/pngwtran.Tpo .deps/pngwtran.Plo
+rm -f scripts/vers.out scripts/vers.c scripts/vers.tf[12]
+test -d scripts || mkdir scripts || test -d scripts
+echo '#include "scripts/vers.dfn"' >scripts/vers.c
+gcc -E -DHAVE_CONFIG_H -I. \
+     -DPNGLIB_LIBNAME='PNG16_0' -DPNGLIB_VERSION='1.6.2' -DSYMBOL_PREFIX='' -DPNG_NO_USE_READ_MACROS -DPNG_BUILDING_SYMBOL_TABLE  scripts/vers.c > scripts/vers.tf1
+mawk -f "./scripts/dfn.awk" out="scripts/vers.tf2" scripts/vers.tf1 1>&2
+rm -f scripts/vers.c scripts/vers.tf1
+mv scripts/vers.tf2 scripts/vers.out
+rm -f libpng.vers
+cp scripts/vers.out libpng.vers
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -g -O2 -MT pngwrite.lo -MD -MP -MF .deps/pngwrite.Tpo -c pngwrite.c -o pngwrite.o >/dev/null 2>&1
+mv -f .deps/pngrtran.Tpo .deps/pngrtran.Plo
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -g -O2 -MT pngwutil.lo -MD -MP -MF .deps/pngwutil.Tpo -c pngwutil.c -o pngwutil.o >/dev/null 2>&1
+mv -f .deps/pngwrite.Tpo .deps/pngwrite.Plo
+mv -f .deps/pngwutil.Tpo .deps/pngwutil.Plo
+/bin/bash ./libtool  --tag=CC   --mode=link gcc  -g -O2 -no-undefined -export-dynamic -version-number 16:2:0  -Wl,--version-script=libpng.vers   -o libpng16.la -rpath /usr/local/lib png.lo pngerror.lo pngget.lo pngmem.lo pngpread.lo pngread.lo pngrio.lo pngrtran.lo pngrutil.lo pngset.lo pngtrans.lo pngwio.lo pngwrite.lo pngwtran.lo pngwutil.lo    -lm -lz -lm 
+libtool: link: gcc -shared  -fPIC -DPIC  .libs/png.o .libs/pngerror.o .libs/pngget.o .libs/pngmem.o .libs/pngpread.o .libs/pngread.o .libs/pngrio.o .libs/pngrtran.o .libs/pngrutil.o .libs/pngset.o .libs/pngtrans.o .libs/pngwio.o .libs/pngwrite.o .libs/pngwtran.o .libs/pngwutil.o   -lz -lm  -O2 -Wl,--version-script=libpng.vers   -Wl,-soname -Wl,libpng16.so.16 -o .libs/libpng16.so.16.2.0
+libtool: link: (cd ".libs" && rm -f "libpng16.so.16" && ln -s "libpng16.so.16.2.0" "libpng16.so.16")
+libtool: link: (cd ".libs" && rm -f "libpng16.so" && ln -s "libpng16.so.16.2.0" "libpng16.so")
+libtool: link: ar cru .libs/libpng16.a  png.o pngerror.o pngget.o pngmem.o pngpread.o pngread.o pngrio.o pngrtran.o pngrutil.o pngset.o pngtrans.o pngwio.o pngwrite.o pngwtran.o pngwutil.o
+libtool: link: ranlib .libs/libpng16.a
+libtool: link: ( cd ".libs" && rm -f "libpng16.la" && ln -s "../libpng16.la" "libpng16.la" )
+make[1]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libpng-1.6.2'
+make[1]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libpng-1.6.2'
+ /bin/mkdir -p '/usr/local/bin'
+ /usr/bin/install -c libpng16-config '/usr/local/bin'
+ /bin/mkdir -p '/usr/local/lib'
+ /bin/bash ./libtool   --mode=install /usr/bin/install -c   libpng16.la '/usr/local/lib'
+libtool: install: /usr/bin/install -c .libs/libpng16.so.16.2.0 /usr/local/lib/libpng16.so.16.2.0
+libtool: install: (cd /usr/local/lib && { ln -s -f libpng16.so.16.2.0 libpng16.so.16 || { rm -f libpng16.so.16 && ln -s libpng16.so.16.2.0 libpng16.so.16; }; })
+libtool: install: (cd /usr/local/lib && { ln -s -f libpng16.so.16.2.0 libpng16.so || { rm -f libpng16.so && ln -s libpng16.so.16.2.0 libpng16.so; }; })
+libtool: install: /usr/bin/install -c .libs/libpng16.lai /usr/local/lib/libpng16.la
+libtool: install: /usr/bin/install -c .libs/libpng16.a /usr/local/lib/libpng16.a
+libtool: install: chmod 644 /usr/local/lib/libpng16.a
+libtool: install: ranlib /usr/local/lib/libpng16.a
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:/sbin" ldconfig -n /usr/local/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/local/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make  install-exec-hook
+make[2]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libpng-1.6.2'
+cd '/usr/local/bin'; rm -f libpng-config
+cd '/usr/local/bin';\
+   ln -s libpng16-config libpng-config
+make[2]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libpng-1.6.2'
+ /bin/mkdir -p '/usr/local/share/man/man3'
+ /usr/bin/install -c -m 644 libpng.3 libpngpf.3 '/usr/local/share/man/man3'
+ /bin/mkdir -p '/usr/local/share/man/man5'
+ /usr/bin/install -c -m 644 png.5 '/usr/local/share/man/man5'
+ /bin/mkdir -p '/usr/local/include/libpng16'
+ /usr/bin/install -c -m 644 pnglibconf.h '/usr/local/include/libpng16'
+ /bin/mkdir -p '/usr/local/lib/pkgconfig'
+ /usr/bin/install -c -m 644 libpng16.pc '/usr/local/lib/pkgconfig'
+ /bin/mkdir -p '/usr/local/include/libpng16'
+ /usr/bin/install -c -m 644 png.h pngconf.h '/usr/local/include/libpng16'
+make  install-data-hook
+make[2]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libpng-1.6.2'
+cd '/usr/local/include'; rm -f png.h pngconf.h pnglibconf.h
+cd '/usr/local/include'; ln -s libpng16/png.h png.h
+cd '/usr/local/include'; ln -s libpng16/pngconf.h \
+	pngconf.h
+cd '/usr/local/include'; ln -s libpng16/pnglibconf.h \
+	pnglibconf.h
+cd '/usr/local/lib/pkgconfig'; rm -f libpng.pc
+cd '/usr/local/lib/pkgconfig'; ln -s libpng16.pc libpng.pc
+make[2]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libpng-1.6.2'
+make[1]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libpng-1.6.2'
+Checking for gcc...
+Checking for shared library support...
+Building shared library libz.so.1.2.8 with gcc.
+Checking for off64_t... Yes.
+Checking for fseeko... Yes.
+Checking for strerror... Yes.
+Checking for unistd.h... Yes.
+Checking for stdarg.h... Yes.
+Checking whether to use vs[n]printf() or s[n]printf()... using vs[n]printf().
+Checking for vsnprintf() in stdio.h... Yes.
+Checking for return value of vsnprintf()... Yes.
+Checking for attribute(visibility) support... Yes.
+rm -f *.o *.lo *~ \
+   example minigzip examplesh minigzipsh \
+   example64 minigzip64 \
+   infcover \
+   libz.* foo.gz so_locations \
+   _match.s maketree contrib/infback9/*.o
+rm -rf objs
+rm -f *.gcda *.gcno *.gcov
+rm -f contrib/infback9/*.gcda contrib/infback9/*.gcno contrib/infback9/*.gcov
+gcc -O3  -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -I. -c -o example.o test/example.c
+gcc -O3  -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN   -c -o adler32.o adler32.c
+gcc -O3  -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN   -c -o crc32.o crc32.c
+gcc -O3  -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN   -c -o deflate.o deflate.c
+gcc -O3  -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN   -c -o infback.o infback.c
+gcc -O3  -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN   -c -o inffast.o inffast.c
+gcc -O3  -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN   -c -o inflate.o inflate.c
+gcc -O3  -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN   -c -o inftrees.o inftrees.c
+gcc -O3  -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN   -c -o trees.o trees.c
+gcc -O3  -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN   -c -o zutil.o zutil.c
+gcc -O3  -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN   -c -o compress.o compress.c
+gcc -O3  -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN   -c -o uncompr.o uncompr.c
+gcc -O3  -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN   -c -o gzclose.o gzclose.c
+gcc -O3  -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN   -c -o gzlib.o gzlib.c
+gcc -O3  -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN   -c -o gzread.o gzread.c
+gcc -O3  -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN   -c -o gzwrite.o gzwrite.c
+gcc -O3  -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -I. -c -o minigzip.o test/minigzip.c
+gcc -O3  -fPIC -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -DPIC -c -o objs/adler32.o adler32.c
+gcc -O3  -fPIC -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -DPIC -c -o objs/crc32.o crc32.c
+gcc -O3  -fPIC -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -DPIC -c -o objs/deflate.o deflate.c
+gcc -O3  -fPIC -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -DPIC -c -o objs/infback.o infback.c
+gcc -O3  -fPIC -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -DPIC -c -o objs/inffast.o inffast.c
+gcc -O3  -fPIC -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -DPIC -c -o objs/inflate.o inflate.c
+gcc -O3  -fPIC -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -DPIC -c -o objs/inftrees.o inftrees.c
+gcc -O3  -fPIC -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -DPIC -c -o objs/trees.o trees.c
+gcc -O3  -fPIC -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -DPIC -c -o objs/zutil.o zutil.c
+gcc -O3  -fPIC -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -DPIC -c -o objs/compress.o compress.c
+gcc -O3  -fPIC -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -DPIC -c -o objs/uncompr.o uncompr.c
+gcc -O3  -fPIC -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -DPIC -c -o objs/gzlib.o gzlib.c
+gcc -O3  -fPIC -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -DPIC -c -o objs/gzclose.o gzclose.c
+gcc -O3  -fPIC -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -DPIC -c -o objs/gzread.o gzread.c
+gcc -O3  -fPIC -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -DPIC -c -o objs/gzwrite.o gzwrite.c
+gcc -O3  -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -I. -D_FILE_OFFSET_BITS=64 -c -o example64.o test/example.c
+gcc -O3  -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -I. -D_FILE_OFFSET_BITS=64 -c -o minigzip64.o test/minigzip.c
+ar rc libz.a adler32.o crc32.o deflate.o infback.o inffast.o inflate.o inftrees.o trees.o zutil.o compress.o uncompr.o gzclose.o gzlib.o gzread.o gzwrite.o 
+gcc -O3  -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -o example example.o -L. libz.a
+gcc -O3  -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -o minigzip minigzip.o -L. libz.a
+gcc -O3  -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -o example64 example64.o -L. libz.a
+gcc -shared -Wl,-soname,libz.so.1,--version-script,zlib.map -O3  -fPIC -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -o libz.so.1.2.8 adler32.lo crc32.lo deflate.lo infback.lo inffast.lo inflate.lo inftrees.lo trees.lo zutil.lo compress.lo uncompr.lo gzclose.lo gzlib.lo gzread.lo gzwrite.lo  -lc 
+gcc -O3  -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -o minigzip64 minigzip64.o -L. libz.a
+rm -f libz.so libz.so.1
+ln -s libz.so.1.2.8 libz.so
+ln -s libz.so.1.2.8 libz.so.1
+gcc -O3  -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -o examplesh example.o -L. libz.so.1.2.8
+gcc -O3  -D_LARGEFILE64_SOURCE=1 -DHAVE_HIDDEN -o minigzipsh minigzip.o -L. libz.so.1.2.8
+cp libz.a /usr/local/lib
+chmod 644 /usr/local/lib/libz.a
+cp libz.so.1.2.8 /usr/local/lib
+chmod 755 /usr/local/lib/libz.so.1.2.8
+cp zlib.3 /usr/local/share/man/man3
+chmod 644 /usr/local/share/man/man3/zlib.3
+cp zlib.pc /usr/local/lib/pkgconfig
+chmod 644 /usr/local/lib/pkgconfig/zlib.pc
+cp zlib.h zconf.h /usr/local/include
+chmod 644 /usr/local/include/zlib.h /usr/local/include/zconf.h
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking target system type... x86_64-unknown-linux-gnu
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking for style of include used by make... GNU
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking dependency style of gcc... gcc3
+checking for ar... ar
+checking the archiver (ar) interface... ar
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert x86_64-unknown-linux-gnu file names to x86_64-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking whether gcc and cc understand -c and -o together... yes
+checking whether make supports nested variables... (cached) yes
+checking whether gcc supports -Wall... yes
+checking whether gcc supports -Wdeclaration-after-statement... yes
+checking whether gcc supports -Wextra... yes
+checking whether gcc supports -Wmissing-declarations... yes
+checking whether gcc supports -Wmissing-prototypes... yes
+checking whether gcc supports -Wold-style-definition... yes
+checking whether gcc supports -Wshadow... yes
+checking whether gcc supports -Wunused-but-set-variable... yes
+checking whether gcc supports -Wunused... yes
+checking whether gcc supports -Wvla... yes
+configure: checking for threading support...
+checking for the pthreads library -lpthreads... no
+checking whether pthreads work without any flags... no
+checking whether pthreads work with -Kthread... no
+checking whether pthreads work with -kthread... no
+checking for the pthreads library -llthread... no
+checking whether pthreads work with -pthread... yes
+checking for joinable pthread attribute... PTHREAD_CREATE_JOINABLE
+checking if more special flags are required for pthreads... no
+checking for PTHREAD_PRIO_INHERIT... yes
+configure: checking if threading is enabled... yes
+checking GL/glut.h usability... yes
+checking GL/glut.h presence... yes
+checking for GL/glut.h... yes
+checking for library containing glBegin... -lGL
+checking for library containing glutMainLoop... -lglut
+checking for libpng-config... /usr/local/bin/libpng-config
+checking png.h usability... yes
+checking png.h presence... yes
+checking for png.h... yes
+checking for library containing png_get_libpng_ver... none required
+checking jpeglib.h usability... yes
+checking jpeglib.h presence... yes
+checking for jpeglib.h... yes
+checking for jpeg_set_defaults in -ljpeg... yes
+checking tiffio.h usability... yes
+checking tiffio.h presence... yes
+checking for tiffio.h... yes
+checking for TIFFGetVersion in -ltiff... yes
+checking gif_lib.h usability... no
+checking gif_lib.h presence... no
+checking for gif_lib.h... no
+checking if --enable-swap-16bit-csp option is specified... no
+checking if --enable-experimental option is specified... no
+checking whether libwebpmux is to be built... no
+checking whether libwebpdemux is to be built... no
+checking whether decoder library is to be built... no
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating man/Makefile
+config.status: creating examples/Makefile
+config.status: creating src/dec/Makefile
+config.status: creating src/enc/Makefile
+config.status: creating src/dsp/Makefile
+config.status: creating src/demux/Makefile
+config.status: creating src/mux/Makefile
+config.status: creating src/utils/Makefile
+config.status: creating src/libwebp.pc
+config.status: creating src/libwebpdecoder.pc
+config.status: creating src/demux/libwebpdemux.pc
+config.status: creating src/mux/libwebpmux.pc
+config.status: creating config.h
+config.status: config.h is unchanged
+config.status: executing depfiles commands
+config.status: executing libtool commands
+configure:
+WebP Configuration Summary
+--------------------------
+
+Shared libraries: yes
+Static libraries: yes
+Threaded decode: yes
+libwebp: yes
+libwebpdecoder: no
+libwebpdemux: no
+libwebpmux: no
+
+Tools:
+cwebp : yes
+  Input format support
+  ====================
+  JPEG : yes
+  PNG  : yes
+  TIFF : yes
+  WIC  : no
+dwebp : yes
+  Output format support
+  =====================
+  PNG  : yes
+  WIC  : no
+gif2webp : no
+webpmux  : no
+vwebp    : no
+
+Making clean in src
+make[1]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src'
+Making clean in dec
+make[2]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/dec'
+rm -rf .libs _libs
+test -z "libwebpdecode.la" || rm -f libwebpdecode.la
+rm -f ./so_locations
+rm -f *.o
+rm -f *.lo
+make[2]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/dec'
+Making clean in enc
+make[2]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/enc'
+rm -rf .libs _libs
+test -z "libwebpencode.la" || rm -f libwebpencode.la
+rm -f ./so_locations
+rm -f *.o
+rm -f *.lo
+make[2]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/enc'
+Making clean in dsp
+make[2]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/dsp'
+rm -rf .libs _libs
+test -z "libwebpdsp.la " || rm -f libwebpdsp.la 
+rm -f ./so_locations
+rm -f *.o
+rm -f *.lo
+make[2]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/dsp'
+Making clean in utils
+make[2]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/utils'
+rm -rf .libs _libs
+test -z "libwebputils.la " || rm -f libwebputils.la 
+rm -f ./so_locations
+rm -f *.o
+rm -f *.lo
+make[2]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/utils'
+Making clean in .
+make[2]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src'
+test -z "libwebp.la " || rm -f libwebp.la 
+rm -f ./so_locations
+rm -rf .libs _libs
+rm -f *.o
+rm -f *.lo
+make[2]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src'
+make[1]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src'
+Making clean in examples
+make[1]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/examples'
+ rm -f dwebp cwebp
+rm -rf .libs _libs
+test -z "libexampleutil.la" || rm -f libexampleutil.la
+rm -f ./so_locations
+rm -f *.o
+rm -f *.lo
+make[1]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/examples'
+Making clean in man
+make[1]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/man'
+rm -rf .libs _libs
+rm -f *.lo
+make[1]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/man'
+make[1]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0'
+rm -rf .libs _libs
+rm -f *.lo
+make[1]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0'
+make  all-recursive
+make[1]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0'
+Making all in src
+make[2]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src'
+Making all in dec
+make[3]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/dec'
+  CC       libwebpdecode_la-alpha.lo
+  CC       libwebpdecode_la-buffer.lo
+  CC       libwebpdecode_la-frame.lo
+  CC       libwebpdecode_la-idec.lo
+  CC       libwebpdecode_la-io.lo
+  CC       libwebpdecode_la-layer.lo
+  CC       libwebpdecode_la-quant.lo
+  CC       libwebpdecode_la-tree.lo
+  CC       libwebpdecode_la-vp8.lo
+  CC       libwebpdecode_la-vp8l.lo
+  CC       libwebpdecode_la-webp.lo
+  CCLD     libwebpdecode.la
+make[3]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/dec'
+Making all in enc
+make[3]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/enc'
+  CC       libwebpencode_la-alpha.lo
+  CC       libwebpencode_la-analysis.lo
+  CC       libwebpencode_la-config.lo
+  CC       libwebpencode_la-backward_references.lo
+  CC       libwebpencode_la-cost.lo
+  CC       libwebpencode_la-filter.lo
+  CC       libwebpencode_la-frame.lo
+  CC       libwebpencode_la-histogram.lo
+  CC       libwebpencode_la-iterator.lo
+  CC       libwebpencode_la-layer.lo
+  CC       libwebpencode_la-picture.lo
+  CC       libwebpencode_la-quant.lo
+  CC       libwebpencode_la-syntax.lo
+  CC       libwebpencode_la-token.lo
+  CC       libwebpencode_la-tree.lo
+  CC       libwebpencode_la-vp8l.lo
+  CC       libwebpencode_la-webpenc.lo
+  CCLD     libwebpencode.la
+make[3]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/enc'
+Making all in dsp
+make[3]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/dsp'
+  CC       libwebpdsp_la-cpu.lo
+  CC       libwebpdsp_la-dec.lo
+  CC       libwebpdsp_la-dec_neon.lo
+  CC       libwebpdsp_la-dec_sse2.lo
+  CC       libwebpdsp_la-lossless.lo
+  CC       libwebpdsp_la-upsampling.lo
+  CC       libwebpdsp_la-upsampling_neon.lo
+  CC       libwebpdsp_la-upsampling_sse2.lo
+  CC       libwebpdsp_la-enc.lo
+  CC       libwebpdsp_la-yuv.lo
+  CC       libwebpdsp_la-enc_neon.lo
+  CC       libwebpdsp_la-enc_sse2.lo
+  CCLD     libwebpdsp.la
+make[3]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/dsp'
+Making all in utils
+make[3]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/utils'
+  CC       color_cache.lo
+  CC       filters.lo
+  CC       huffman.lo
+  CC       bit_reader.lo
+  CC       quant_levels_dec.lo
+  CC       rescaler.lo
+  CC       thread.lo
+  CC       utils.lo
+  CC       bit_writer.lo
+  CC       huffman_encode.lo
+  CC       quant_levels.lo
+  CCLD     libwebputils.la
+make[3]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/utils'
+Making all in .
+make[3]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src'
+  CCLD     libwebp.la
+make[3]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src'
+make[2]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src'
+Making all in examples
+make[2]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/examples'
+  CC       example_util.lo
+  CC       dwebp-dwebp.o
+  CC       cwebp-cwebp.o
+  CC       cwebp-metadata.o
+  CC       cwebp-jpegdec.o
+  CC       cwebp-pngdec.o
+  CC       cwebp-tiffdec.o
+  CC       cwebp-wicdec.o
+  CCLD     libexampleutil.la
+  CCLD     dwebp
+  CCLD     cwebp
+make[2]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/examples'
+Making all in man
+make[2]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/man'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/man'
+make[2]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0'
+make[2]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0'
+make[1]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0'
+Making install in src
+make[1]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src'
+Making install in dec
+make[2]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/dec'
+make[3]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/dec'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/usr/local/include/webp'
+ /usr/bin/install -c -m 644 ../webp/decode.h ../webp/types.h '/usr/local/include/webp'
+make[3]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/dec'
+make[2]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/dec'
+Making install in enc
+make[2]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/enc'
+make[3]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/enc'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/usr/local/include/webp'
+ /usr/bin/install -c -m 644 ../webp/encode.h ../webp/types.h '/usr/local/include/webp'
+make[3]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/enc'
+make[2]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/enc'
+Making install in dsp
+make[2]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/dsp'
+make[3]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/dsp'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/usr/local/include/webp'
+ /usr/bin/install -c -m 644 ../webp/types.h '/usr/local/include/webp'
+make[3]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/dsp'
+make[2]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/dsp'
+Making install in utils
+make[2]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/utils'
+make[3]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/utils'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/usr/local/include/webp'
+ /usr/bin/install -c -m 644 ../webp/types.h '/usr/local/include/webp'
+make[3]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/utils'
+make[2]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src/utils'
+Making install in .
+make[2]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src'
+make[3]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src'
+ /bin/mkdir -p '/usr/local/lib'
+ /bin/bash ../libtool   --mode=install /usr/bin/install -c   libwebp.la '/usr/local/lib'
+libtool: install: /usr/bin/install -c .libs/libwebp.so.4.0.2 /usr/local/lib/libwebp.so.4.0.2
+libtool: install: (cd /usr/local/lib && { ln -s -f libwebp.so.4.0.2 libwebp.so.4 || { rm -f libwebp.so.4 && ln -s libwebp.so.4.0.2 libwebp.so.4; }; })
+libtool: install: (cd /usr/local/lib && { ln -s -f libwebp.so.4.0.2 libwebp.so || { rm -f libwebp.so && ln -s libwebp.so.4.0.2 libwebp.so; }; })
+libtool: install: /usr/bin/install -c .libs/libwebp.lai /usr/local/lib/libwebp.la
+libtool: install: /usr/bin/install -c .libs/libwebp.a /usr/local/lib/libwebp.a
+libtool: install: chmod 644 /usr/local/lib/libwebp.a
+libtool: install: ranlib /usr/local/lib/libwebp.a
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:/sbin" ldconfig -n /usr/local/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/local/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+ /bin/mkdir -p '/usr/local/include/webp'
+ /usr/bin/install -c -m 644 webp/decode.h webp/types.h '/usr/local/include/webp'
+ /bin/mkdir -p '/usr/local/include/webp'
+ /usr/bin/install -c -m 644 webp/encode.h '/usr/local/include/webp'
+ /bin/mkdir -p '/usr/local/lib/pkgconfig'
+ /usr/bin/install -c -m 644 libwebp.pc '/usr/local/lib/pkgconfig'
+make[3]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src'
+make[2]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src'
+make[1]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/src'
+Making install in examples
+make[1]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/examples'
+make[2]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/examples'
+ /bin/mkdir -p '/usr/local/bin'
+  /bin/bash ../libtool   --mode=install /usr/bin/install -c dwebp cwebp '/usr/local/bin'
+libtool: install: /usr/bin/install -c .libs/dwebp /usr/local/bin/dwebp
+libtool: install: /usr/bin/install -c .libs/cwebp /usr/local/bin/cwebp
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/examples'
+make[1]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/examples'
+Making install in man
+make[1]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/man'
+make[2]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/man'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/usr/local/share/man/man1'
+ /usr/bin/install -c -m 644 cwebp.1 dwebp.1 '/usr/local/share/man/man1'
+make[2]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/man'
+make[1]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0/man'
+make[1]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0'
+make[2]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0'
+make[1]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image/external/libwebp-0.3.0'
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for ar... ar
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking for style of include used by make... GNU
+checking whether make supports nested variables... yes
+checking dependency style of gcc... gcc3
+checking for gcc... (cached) gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to accept ISO C89... (cached) none needed
+checking for gcc... gcc
+checking whether we are using the GNU Objective C compiler... no
+checking whether gcc accepts -g... no
+checking dependency style of gcc... gcc3
+checking for inline... inline
+checking whether make sets $(MAKE)... (cached) yes
+checking for windres... no
+checking for linux-gnu-windres... no
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for SDL... yes
+checking for ImageIO support... 
+checking jpeglib.h usability... yes
+checking jpeglib.h presence... yes
+checking for jpeglib.h... yes
+checking for jpeg_CreateDecompress in -ljpeg... yes
+checking for LIBPNG... yes
+checking tiffio.h usability... yes
+checking tiffio.h presence... yes
+checking for tiffio.h... yes
+checking for TIFFClientOpen in -ltiff... yes
+checking for LIBWEBP... yes
+-- dynamic libwebp -> libwebp.so.4
+-- dynamic libtiff -> libtiff.so.5
+-- dynamic libjpeg -> libjpeg.so.9
+-- dynamic libpng -> libpng16.so.16
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating SDL2_image.spec
+config.status: creating SDL2_image.pc
+config.status: executing libtool commands
+config.status: executing depfiles commands
+/bin/bash ./libtool  --tag=CC   --mode=compile gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DPACKAGE=\"SDL2_image\" -DVERSION=\"2.0.1\" -DLOAD_JPG=1 -DLOAD_PNG=1 -DLOAD_TIF=1 -DLOAD_WEBP=1 -DLOAD_BMP=1 -DLOAD_GIF=1 -DLOAD_LBM=1 -DLOAD_PCX=1 -DLOAD_PNM=1 -DLOAD_TGA=1 -DLOAD_XCF=1 -DLOAD_XPM=1 -DLOAD_XV=1 -DLOAD_WEBP_DYNAMIC=\"libwebp.so.4\" -DLOAD_TIF_DYNAMIC=\"libtiff.so.5\" -DLOAD_JPG_DYNAMIC=\"libjpeg.so.9\" -DLOAD_PNG_DYNAMIC=\"libpng16.so.16\" -I.     -I/usr/local/include -I/usr/local/include/libpng16 -g -O2 -D_REENTRANT -I/usr/local/include/SDL2 -MT IMG.lo -MD -MP -MF .deps/IMG.Tpo -c -o IMG.lo IMG.c
+/bin/bash ./libtool  --tag=CC   --mode=compile gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DPACKAGE=\"SDL2_image\" -DVERSION=\"2.0.1\" -DLOAD_JPG=1 -DLOAD_PNG=1 -DLOAD_TIF=1 -DLOAD_WEBP=1 -DLOAD_BMP=1 -DLOAD_GIF=1 -DLOAD_LBM=1 -DLOAD_PCX=1 -DLOAD_PNM=1 -DLOAD_TGA=1 -DLOAD_XCF=1 -DLOAD_XPM=1 -DLOAD_XV=1 -DLOAD_WEBP_DYNAMIC=\"libwebp.so.4\" -DLOAD_TIF_DYNAMIC=\"libtiff.so.5\" -DLOAD_JPG_DYNAMIC=\"libjpeg.so.9\" -DLOAD_PNG_DYNAMIC=\"libpng16.so.16\" -I.     -I/usr/local/include -I/usr/local/include/libpng16 -g -O2 -D_REENTRANT -I/usr/local/include/SDL2 -MT IMG_bmp.lo -MD -MP -MF .deps/IMG_bmp.Tpo -c -o IMG_bmp.lo IMG_bmp.c
+/bin/bash ./libtool  --tag=CC   --mode=compile gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DPACKAGE=\"SDL2_image\" -DVERSION=\"2.0.1\" -DLOAD_JPG=1 -DLOAD_PNG=1 -DLOAD_TIF=1 -DLOAD_WEBP=1 -DLOAD_BMP=1 -DLOAD_GIF=1 -DLOAD_LBM=1 -DLOAD_PCX=1 -DLOAD_PNM=1 -DLOAD_TGA=1 -DLOAD_XCF=1 -DLOAD_XPM=1 -DLOAD_XV=1 -DLOAD_WEBP_DYNAMIC=\"libwebp.so.4\" -DLOAD_TIF_DYNAMIC=\"libtiff.so.5\" -DLOAD_JPG_DYNAMIC=\"libjpeg.so.9\" -DLOAD_PNG_DYNAMIC=\"libpng16.so.16\" -I.     -I/usr/local/include -I/usr/local/include/libpng16 -g -O2 -D_REENTRANT -I/usr/local/include/SDL2 -MT IMG_gif.lo -MD -MP -MF .deps/IMG_gif.Tpo -c -o IMG_gif.lo IMG_gif.c
+/bin/bash ./libtool  --tag=CC   --mode=compile gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DPACKAGE=\"SDL2_image\" -DVERSION=\"2.0.1\" -DLOAD_JPG=1 -DLOAD_PNG=1 -DLOAD_TIF=1 -DLOAD_WEBP=1 -DLOAD_BMP=1 -DLOAD_GIF=1 -DLOAD_LBM=1 -DLOAD_PCX=1 -DLOAD_PNM=1 -DLOAD_TGA=1 -DLOAD_XCF=1 -DLOAD_XPM=1 -DLOAD_XV=1 -DLOAD_WEBP_DYNAMIC=\"libwebp.so.4\" -DLOAD_TIF_DYNAMIC=\"libtiff.so.5\" -DLOAD_JPG_DYNAMIC=\"libjpeg.so.9\" -DLOAD_PNG_DYNAMIC=\"libpng16.so.16\" -I.     -I/usr/local/include -I/usr/local/include/libpng16 -g -O2 -D_REENTRANT -I/usr/local/include/SDL2 -MT IMG_jpg.lo -MD -MP -MF .deps/IMG_jpg.Tpo -c -o IMG_jpg.lo IMG_jpg.c
+libtool: compile:  gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DPACKAGE=\"SDL2_image\" -DVERSION=\"2.0.1\" -DLOAD_JPG=1 -DLOAD_PNG=1 -DLOAD_TIF=1 -DLOAD_WEBP=1 -DLOAD_BMP=1 -DLOAD_GIF=1 -DLOAD_LBM=1 -DLOAD_PCX=1 -DLOAD_PNM=1 -DLOAD_TGA=1 -DLOAD_XCF=1 -DLOAD_XPM=1 -DLOAD_XV=1 -DLOAD_WEBP_DYNAMIC=\"libwebp.so.4\" -DLOAD_TIF_DYNAMIC=\"libtiff.so.5\" -DLOAD_JPG_DYNAMIC=\"libjpeg.so.9\" -DLOAD_PNG_DYNAMIC=\"libpng16.so.16\" -I. -I/usr/local/include -I/usr/local/include/libpng16 -g -O2 -D_REENTRANT -I/usr/local/include/SDL2 -MT IMG_bmp.lo -MD -MP -MF .deps/IMG_bmp.Tpo -c IMG_bmp.c  -fPIC -DPIC -o .libs/IMG_bmp.o
+libtool: compile:  gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DPACKAGE=\"SDL2_image\" -DVERSION=\"2.0.1\" -DLOAD_JPG=1 -DLOAD_PNG=1 -DLOAD_TIF=1 -DLOAD_WEBP=1 -DLOAD_BMP=1 -DLOAD_GIF=1 -DLOAD_LBM=1 -DLOAD_PCX=1 -DLOAD_PNM=1 -DLOAD_TGA=1 -DLOAD_XCF=1 -DLOAD_XPM=1 -DLOAD_XV=1 -DLOAD_WEBP_DYNAMIC=\"libwebp.so.4\" -DLOAD_TIF_DYNAMIC=\"libtiff.so.5\" -DLOAD_JPG_DYNAMIC=\"libjpeg.so.9\" -DLOAD_PNG_DYNAMIC=\"libpng16.so.16\" -I. -I/usr/local/include -I/usr/local/include/libpng16 -g -O2 -D_REENTRANT -I/usr/local/include/SDL2 -MT IMG.lo -MD -MP -MF .deps/IMG.Tpo -c IMG.c  -fPIC -DPIC -o .libs/IMG.o
+libtool: compile:  gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DPACKAGE=\"SDL2_image\" -DVERSION=\"2.0.1\" -DLOAD_JPG=1 -DLOAD_PNG=1 -DLOAD_TIF=1 -DLOAD_WEBP=1 -DLOAD_BMP=1 -DLOAD_GIF=1 -DLOAD_LBM=1 -DLOAD_PCX=1 -DLOAD_PNM=1 -DLOAD_TGA=1 -DLOAD_XCF=1 -DLOAD_XPM=1 -DLOAD_XV=1 -DLOAD_WEBP_DYNAMIC=\"libwebp.so.4\" -DLOAD_TIF_DYNAMIC=\"libtiff.so.5\" -DLOAD_JPG_DYNAMIC=\"libjpeg.so.9\" -DLOAD_PNG_DYNAMIC=\"libpng16.so.16\" -I. -I/usr/local/include -I/usr/local/include/libpng16 -g -O2 -D_REENTRANT -I/usr/local/include/SDL2 -MT IMG_jpg.lo -MD -MP -MF .deps/IMG_jpg.Tpo -c IMG_jpg.c  -fPIC -DPIC -o .libs/IMG_jpg.o
+libtool: compile:  gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DPACKAGE=\"SDL2_image\" -DVERSION=\"2.0.1\" -DLOAD_JPG=1 -DLOAD_PNG=1 -DLOAD_TIF=1 -DLOAD_WEBP=1 -DLOAD_BMP=1 -DLOAD_GIF=1 -DLOAD_LBM=1 -DLOAD_PCX=1 -DLOAD_PNM=1 -DLOAD_TGA=1 -DLOAD_XCF=1 -DLOAD_XPM=1 -DLOAD_XV=1 -DLOAD_WEBP_DYNAMIC=\"libwebp.so.4\" -DLOAD_TIF_DYNAMIC=\"libtiff.so.5\" -DLOAD_JPG_DYNAMIC=\"libjpeg.so.9\" -DLOAD_PNG_DYNAMIC=\"libpng16.so.16\" -I. -I/usr/local/include -I/usr/local/include/libpng16 -g -O2 -D_REENTRANT -I/usr/local/include/SDL2 -MT IMG_gif.lo -MD -MP -MF .deps/IMG_gif.Tpo -c IMG_gif.c  -fPIC -DPIC -o .libs/IMG_gif.o
+libtool: compile:  gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DPACKAGE=\"SDL2_image\" -DVERSION=\"2.0.1\" -DLOAD_JPG=1 -DLOAD_PNG=1 -DLOAD_TIF=1 -DLOAD_WEBP=1 -DLOAD_BMP=1 -DLOAD_GIF=1 -DLOAD_LBM=1 -DLOAD_PCX=1 -DLOAD_PNM=1 -DLOAD_TGA=1 -DLOAD_XCF=1 -DLOAD_XPM=1 -DLOAD_XV=1 -DLOAD_WEBP_DYNAMIC=\"libwebp.so.4\" -DLOAD_TIF_DYNAMIC=\"libtiff.so.5\" -DLOAD_JPG_DYNAMIC=\"libjpeg.so.9\" -DLOAD_PNG_DYNAMIC=\"libpng16.so.16\" -I. -I/usr/local/include -I/usr/local/include/libpng16 -g -O2 -D_REENTRANT -I/usr/local/include/SDL2 -MT IMG.lo -MD -MP -MF .deps/IMG.Tpo -c IMG.c -o IMG.o >/dev/null 2>&1
+libtool: compile:  gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DPACKAGE=\"SDL2_image\" -DVERSION=\"2.0.1\" -DLOAD_JPG=1 -DLOAD_PNG=1 -DLOAD_TIF=1 -DLOAD_WEBP=1 -DLOAD_BMP=1 -DLOAD_GIF=1 -DLOAD_LBM=1 -DLOAD_PCX=1 -DLOAD_PNM=1 -DLOAD_TGA=1 -DLOAD_XCF=1 -DLOAD_XPM=1 -DLOAD_XV=1 -DLOAD_WEBP_DYNAMIC=\"libwebp.so.4\" -DLOAD_TIF_DYNAMIC=\"libtiff.so.5\" -DLOAD_JPG_DYNAMIC=\"libjpeg.so.9\" -DLOAD_PNG_DYNAMIC=\"libpng16.so.16\" -I. -I/usr/local/include -I/usr/local/include/libpng16 -g -O2 -D_REENTRANT -I/usr/local/include/SDL2 -MT IMG_jpg.lo -MD -MP -MF .deps/IMG_jpg.Tpo -c IMG_jpg.c -o IMG_jpg.o >/dev/null 2>&1
+libtool: compile:  gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DPACKAGE=\"SDL2_image\" -DVERSION=\"2.0.1\" -DLOAD_JPG=1 -DLOAD_PNG=1 -DLOAD_TIF=1 -DLOAD_WEBP=1 -DLOAD_BMP=1 -DLOAD_GIF=1 -DLOAD_LBM=1 -DLOAD_PCX=1 -DLOAD_PNM=1 -DLOAD_TGA=1 -DLOAD_XCF=1 -DLOAD_XPM=1 -DLOAD_XV=1 -DLOAD_WEBP_DYNAMIC=\"libwebp.so.4\" -DLOAD_TIF_DYNAMIC=\"libtiff.so.5\" -DLOAD_JPG_DYNAMIC=\"libjpeg.so.9\" -DLOAD_PNG_DYNAMIC=\"libpng16.so.16\" -I. -I/usr/local/include -I/usr/local/include/libpng16 -g -O2 -D_REENTRANT -I/usr/local/include/SDL2 -MT IMG_bmp.lo -MD -MP -MF .deps/IMG_bmp.Tpo -c IMG_bmp.c -o IMG_bmp.o >/dev/null 2>&1
+libtool: compile:  gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DPACKAGE=\"SDL2_image\" -DVERSION=\"2.0.1\" -DLOAD_JPG=1 -DLOAD_PNG=1 -DLOAD_TIF=1 -DLOAD_WEBP=1 -DLOAD_BMP=1 -DLOAD_GIF=1 -DLOAD_LBM=1 -DLOAD_PCX=1 -DLOAD_PNM=1 -DLOAD_TGA=1 -DLOAD_XCF=1 -DLOAD_XPM=1 -DLOAD_XV=1 -DLOAD_WEBP_DYNAMIC=\"libwebp.so.4\" -DLOAD_TIF_DYNAMIC=\"libtiff.so.5\" -DLOAD_JPG_DYNAMIC=\"libjpeg.so.9\" -DLOAD_PNG_DYNAMIC=\"libpng16.so.16\" -I. -I/usr/local/include -I/usr/local/include/libpng16 -g -O2 -D_REENTRANT -I/usr/local/include/SDL2 -MT IMG_gif.lo -MD -MP -MF .deps/IMG_gif.Tpo -c IMG_gif.c -o IMG_gif.o >/dev/null 2>&1
+mv -f .deps/IMG.Tpo .deps/IMG.Plo
+/bin/bash ./libtool  --tag=CC   --mode=compile gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DPACKAGE=\"SDL2_image\" -DVERSION=\"2.0.1\" -DLOAD_JPG=1 -DLOAD_PNG=1 -DLOAD_TIF=1 -DLOAD_WEBP=1 -DLOAD_BMP=1 -DLOAD_GIF=1 -DLOAD_LBM=1 -DLOAD_PCX=1 -DLOAD_PNM=1 -DLOAD_TGA=1 -DLOAD_XCF=1 -DLOAD_XPM=1 -DLOAD_XV=1 -DLOAD_WEBP_DYNAMIC=\"libwebp.so.4\" -DLOAD_TIF_DYNAMIC=\"libtiff.so.5\" -DLOAD_JPG_DYNAMIC=\"libjpeg.so.9\" -DLOAD_PNG_DYNAMIC=\"libpng16.so.16\" -I.     -I/usr/local/include -I/usr/local/include/libpng16 -g -O2 -D_REENTRANT -I/usr/local/include/SDL2 -MT IMG_lbm.lo -MD -MP -MF .deps/IMG_lbm.Tpo -c -o IMG_lbm.lo IMG_lbm.c
+mv -f .deps/IMG_jpg.Tpo .deps/IMG_jpg.Plo
+/bin/bash ./libtool  --tag=CC   --mode=compile gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DPACKAGE=\"SDL2_image\" -DVERSION=\"2.0.1\" -DLOAD_JPG=1 -DLOAD_PNG=1 -DLOAD_TIF=1 -DLOAD_WEBP=1 -DLOAD_BMP=1 -DLOAD_GIF=1 -DLOAD_LBM=1 -DLOAD_PCX=1 -DLOAD_PNM=1 -DLOAD_TGA=1 -DLOAD_XCF=1 -DLOAD_XPM=1 -DLOAD_XV=1 -DLOAD_WEBP_DYNAMIC=\"libwebp.so.4\" -DLOAD_TIF_DYNAMIC=\"libtiff.so.5\" -DLOAD_JPG_DYNAMIC=\"libjpeg.so.9\" -DLOAD_PNG_DYNAMIC=\"libpng16.so.16\" -I.     -I/usr/local/include -I/usr/local/include/libpng16 -g -O2 -D_REENTRANT -I/usr/local/include/SDL2 -MT IMG_pcx.lo -MD -MP -MF .deps/IMG_pcx.Tpo -c -o IMG_pcx.lo IMG_pcx.c
+libtool: compile:  gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DPACKAGE=\"SDL2_image\" -DVERSION=\"2.0.1\" -DLOAD_JPG=1 -DLOAD_PNG=1 -DLOAD_TIF=1 -DLOAD_WEBP=1 -DLOAD_BMP=1 -DLOAD_GIF=1 -DLOAD_LBM=1 -DLOAD_PCX=1 -DLOAD_PNM=1 -DLOAD_TGA=1 -DLOAD_XCF=1 -DLOAD_XPM=1 -DLOAD_XV=1 -DLOAD_WEBP_DYNAMIC=\"libwebp.so.4\" -DLOAD_TIF_DYNAMIC=\"libtiff.so.5\" -DLOAD_JPG_DYNAMIC=\"libjpeg.so.9\" -DLOAD_PNG_DYNAMIC=\"libpng16.so.16\" -I. -I/usr/local/include -I/usr/local/include/libpng16 -g -O2 -D_REENTRANT -I/usr/local/include/SDL2 -MT IMG_pcx.lo -MD -MP -MF .deps/IMG_pcx.Tpo -c IMG_pcx.c  -fPIC -DPIC -o .libs/IMG_pcx.o
+mv -f .deps/IMG_gif.Tpo .deps/IMG_gif.Plo
+/bin/bash ./libtool  --tag=CC   --mode=compile gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DPACKAGE=\"SDL2_image\" -DVERSION=\"2.0.1\" -DLOAD_JPG=1 -DLOAD_PNG=1 -DLOAD_TIF=1 -DLOAD_WEBP=1 -DLOAD_BMP=1 -DLOAD_GIF=1 -DLOAD_LBM=1 -DLOAD_PCX=1 -DLOAD_PNM=1 -DLOAD_TGA=1 -DLOAD_XCF=1 -DLOAD_XPM=1 -DLOAD_XV=1 -DLOAD_WEBP_DYNAMIC=\"libwebp.so.4\" -DLOAD_TIF_DYNAMIC=\"libtiff.so.5\" -DLOAD_JPG_DYNAMIC=\"libjpeg.so.9\" -DLOAD_PNG_DYNAMIC=\"libpng16.so.16\" -I.     -I/usr/local/include -I/usr/local/include/libpng16 -g -O2 -D_REENTRANT -I/usr/local/include/SDL2 -MT IMG_png.lo -MD -MP -MF .deps/IMG_png.Tpo -c -o IMG_png.lo IMG_png.c
+libtool: compile:  gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DPACKAGE=\"SDL2_image\" -DVERSION=\"2.0.1\" -DLOAD_JPG=1 -DLOAD_PNG=1 -DLOAD_TIF=1 -DLOAD_WEBP=1 -DLOAD_BMP=1 -DLOAD_GIF=1 -DLOAD_LBM=1 -DLOAD_PCX=1 -DLOAD_PNM=1 -DLOAD_TGA=1 -DLOAD_XCF=1 -DLOAD_XPM=1 -DLOAD_XV=1 -DLOAD_WEBP_DYNAMIC=\"libwebp.so.4\" -DLOAD_TIF_DYNAMIC=\"libtiff.so.5\" -DLOAD_JPG_DYNAMIC=\"libjpeg.so.9\" -DLOAD_PNG_DYNAMIC=\"libpng16.so.16\" -I. -I/usr/local/include -I/usr/local/include/libpng16 -g -O2 -D_REENTRANT -I/usr/local/include/SDL2 -MT IMG_lbm.lo -MD -MP -MF .deps/IMG_lbm.Tpo -c IMG_lbm.c  -fPIC -DPIC -o .libs/IMG_lbm.o
+libtool: compile:  gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DPACKAGE=\"SDL2_image\" -DVERSION=\"2.0.1\" -DLOAD_JPG=1 -DLOAD_PNG=1 -DLOAD_TIF=1 -DLOAD_WEBP=1 -DLOAD_BMP=1 -DLOAD_GIF=1 -DLOAD_LBM=1 -DLOAD_PCX=1 -DLOAD_PNM=1 -DLOAD_TGA=1 -DLOAD_XCF=1 -DLOAD_XPM=1 -DLOAD_XV=1 -DLOAD_WEBP_DYNAMIC=\"libwebp.so.4\" -DLOAD_TIF_DYNAMIC=\"libtiff.so.5\" -DLOAD_JPG_DYNAMIC=\"libjpeg.so.9\" -DLOAD_PNG_DYNAMIC=\"libpng16.so.16\" -I. -I/usr/local/include -I/usr/local/include/libpng16 -g -O2 -D_REENTRANT -I/usr/local/include/SDL2 -MT IMG_png.lo -MD -MP -MF .deps/IMG_png.Tpo -c IMG_png.c  -fPIC -DPIC -o .libs/IMG_png.o
+mv -f .deps/IMG_bmp.Tpo .deps/IMG_bmp.Plo
+/bin/bash ./libtool  --tag=CC   --mode=compile gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DPACKAGE=\"SDL2_image\" -DVERSION=\"2.0.1\" -DLOAD_JPG=1 -DLOAD_PNG=1 -DLOAD_TIF=1 -DLOAD_WEBP=1 -DLOAD_BMP=1 -DLOAD_GIF=1 -DLOAD_LBM=1 -DLOAD_PCX=1 -DLOAD_PNM=1 -DLOAD_TGA=1 -DLOAD_XCF=1 -DLOAD_XPM=1 -DLOAD_XV=1 -DLOAD_WEBP_DYNAMIC=\"libwebp.so.4\" -DLOAD_TIF_DYNAMIC=\"libtiff.so.5\" -DLOAD_JPG_DYNAMIC=\"libjpeg.so.9\" -DLOAD_PNG_DYNAMIC=\"libpng16.so.16\" -I.     -I/usr/local/include -I/usr/local/include/libpng16 -g -O2 -D_REENTRANT -I/usr/local/include/SDL2 -MT IMG_pnm.lo -MD -MP -MF .deps/IMG_pnm.Tpo -c -o IMG_pnm.lo IMG_pnm.c
+libtool: compile:  gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DPACKAGE=\"SDL2_image\" -DVERSION=\"2.0.1\" -DLOAD_JPG=1 -DLOAD_PNG=1 -DLOAD_TIF=1 -DLOAD_WEBP=1 -DLOAD_BMP=1 -DLOAD_GIF=1 -DLOAD_LBM=1 -DLOAD_PCX=1 -DLOAD_PNM=1 -DLOAD_TGA=1 -DLOAD_XCF=1 -DLOAD_XPM=1 -DLOAD_XV=1 -DLOAD_WEBP_DYNAMIC=\"libwebp.so.4\" -DLOAD_TIF_DYNAMIC=\"libtiff.so.5\" -DLOAD_JPG_DYNAMIC=\"libjpeg.so.9\" -DLOAD_PNG_DYNAMIC=\"libpng16.so.16\" -I. -I/usr/local/include -I/usr/local/include/libpng16 -g -O2 -D_REENTRANT -I/usr/local/include/SDL2 -MT IMG_pcx.lo -MD -MP -MF .deps/IMG_pcx.Tpo -c IMG_pcx.c -o IMG_pcx.o >/dev/null 2>&1
+libtool: compile:  gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DPACKAGE=\"SDL2_image\" -DVERSION=\"2.0.1\" -DLOAD_JPG=1 -DLOAD_PNG=1 -DLOAD_TIF=1 -DLOAD_WEBP=1 -DLOAD_BMP=1 -DLOAD_GIF=1 -DLOAD_LBM=1 -DLOAD_PCX=1 -DLOAD_PNM=1 -DLOAD_TGA=1 -DLOAD_XCF=1 -DLOAD_XPM=1 -DLOAD_XV=1 -DLOAD_WEBP_DYNAMIC=\"libwebp.so.4\" -DLOAD_TIF_DYNAMIC=\"libtiff.so.5\" -DLOAD_JPG_DYNAMIC=\"libjpeg.so.9\" -DLOAD_PNG_DYNAMIC=\"libpng16.so.16\" -I. -I/usr/local/include -I/usr/local/include/libpng16 -g -O2 -D_REENTRANT -I/usr/local/include/SDL2 -MT IMG_pnm.lo -MD -MP -MF .deps/IMG_pnm.Tpo -c IMG_pnm.c  -fPIC -DPIC -o .libs/IMG_pnm.o
+mv -f .deps/IMG_pcx.Tpo .deps/IMG_pcx.Plo
+/bin/bash ./libtool  --tag=CC   --mode=compile gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DPACKAGE=\"SDL2_image\" -DVERSION=\"2.0.1\" -DLOAD_JPG=1 -DLOAD_PNG=1 -DLOAD_TIF=1 -DLOAD_WEBP=1 -DLOAD_BMP=1 -DLOAD_GIF=1 -DLOAD_LBM=1 -DLOAD_PCX=1 -DLOAD_PNM=1 -DLOAD_TGA=1 -DLOAD_XCF=1 -DLOAD_XPM=1 -DLOAD_XV=1 -DLOAD_WEBP_DYNAMIC=\"libwebp.so.4\" -DLOAD_TIF_DYNAMIC=\"libtiff.so.5\" -DLOAD_JPG_DYNAMIC=\"libjpeg.so.9\" -DLOAD_PNG_DYNAMIC=\"libpng16.so.16\" -I.     -I/usr/local/include -I/usr/local/include/libpng16 -g -O2 -D_REENTRANT -I/usr/local/include/SDL2 -MT IMG_tga.lo -MD -MP -MF .deps/IMG_tga.Tpo -c -o IMG_tga.lo IMG_tga.c
+libtool: compile:  gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DPACKAGE=\"SDL2_image\" -DVERSION=\"2.0.1\" -DLOAD_JPG=1 -DLOAD_PNG=1 -DLOAD_TIF=1 -DLOAD_WEBP=1 -DLOAD_BMP=1 -DLOAD_GIF=1 -DLOAD_LBM=1 -DLOAD_PCX=1 -DLOAD_PNM=1 -DLOAD_TGA=1 -DLOAD_XCF=1 -DLOAD_XPM=1 -DLOAD_XV=1 -DLOAD_WEBP_DYNAMIC=\"libwebp.so.4\" -DLOAD_TIF_DYNAMIC=\"libtiff.so.5\" -DLOAD_JPG_DYNAMIC=\"libjpeg.so.9\" -DLOAD_PNG_DYNAMIC=\"libpng16.so.16\" -I. -I/usr/local/include -I/usr/local/include/libpng16 -g -O2 -D_REENTRANT -I/usr/local/include/SDL2 -MT IMG_lbm.lo -MD -MP -MF .deps/IMG_lbm.Tpo -c IMG_lbm.c -o IMG_lbm.o >/dev/null 2>&1
+libtool: compile:  gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DPACKAGE=\"SDL2_image\" -DVERSION=\"2.0.1\" -DLOAD_JPG=1 -DLOAD_PNG=1 -DLOAD_TIF=1 -DLOAD_WEBP=1 -DLOAD_BMP=1 -DLOAD_GIF=1 -DLOAD_LBM=1 -DLOAD_PCX=1 -DLOAD_PNM=1 -DLOAD_TGA=1 -DLOAD_XCF=1 -DLOAD_XPM=1 -DLOAD_XV=1 -DLOAD_WEBP_DYNAMIC=\"libwebp.so.4\" -DLOAD_TIF_DYNAMIC=\"libtiff.so.5\" -DLOAD_JPG_DYNAMIC=\"libjpeg.so.9\" -DLOAD_PNG_DYNAMIC=\"libpng16.so.16\" -I. -I/usr/local/include -I/usr/local/include/libpng16 -g -O2 -D_REENTRANT -I/usr/local/include/SDL2 -MT IMG_tga.lo -MD -MP -MF .deps/IMG_tga.Tpo -c IMG_tga.c  -fPIC -DPIC -o .libs/IMG_tga.o
+libtool: compile:  gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DPACKAGE=\"SDL2_image\" -DVERSION=\"2.0.1\" -DLOAD_JPG=1 -DLOAD_PNG=1 -DLOAD_TIF=1 -DLOAD_WEBP=1 -DLOAD_BMP=1 -DLOAD_GIF=1 -DLOAD_LBM=1 -DLOAD_PCX=1 -DLOAD_PNM=1 -DLOAD_TGA=1 -DLOAD_XCF=1 -DLOAD_XPM=1 -DLOAD_XV=1 -DLOAD_WEBP_DYNAMIC=\"libwebp.so.4\" -DLOAD_TIF_DYNAMIC=\"libtiff.so.5\" -DLOAD_JPG_DYNAMIC=\"libjpeg.so.9\" -DLOAD_PNG_DYNAMIC=\"libpng16.so.16\" -I. -I/usr/local/include -I/usr/local/include/libpng16 -g -O2 -D_REENTRANT -I/usr/local/include/SDL2 -MT IMG_pnm.lo -MD -MP -MF .deps/IMG_pnm.Tpo -c IMG_pnm.c -o IMG_pnm.o >/dev/null 2>&1
+libtool: compile:  gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DPACKAGE=\"SDL2_image\" -DVERSION=\"2.0.1\" -DLOAD_JPG=1 -DLOAD_PNG=1 -DLOAD_TIF=1 -DLOAD_WEBP=1 -DLOAD_BMP=1 -DLOAD_GIF=1 -DLOAD_LBM=1 -DLOAD_PCX=1 -DLOAD_PNM=1 -DLOAD_TGA=1 -DLOAD_XCF=1 -DLOAD_XPM=1 -DLOAD_XV=1 -DLOAD_WEBP_DYNAMIC=\"libwebp.so.4\" -DLOAD_TIF_DYNAMIC=\"libtiff.so.5\" -DLOAD_JPG_DYNAMIC=\"libjpeg.so.9\" -DLOAD_PNG_DYNAMIC=\"libpng16.so.16\" -I. -I/usr/local/include -I/usr/local/include/libpng16 -g -O2 -D_REENTRANT -I/usr/local/include/SDL2 -MT IMG_tga.lo -MD -MP -MF .deps/IMG_tga.Tpo -c IMG_tga.c -o IMG_tga.o >/dev/null 2>&1
+mv -f .deps/IMG_lbm.Tpo .deps/IMG_lbm.Plo
+/bin/bash ./libtool  --tag=CC   --mode=compile gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DPACKAGE=\"SDL2_image\" -DVERSION=\"2.0.1\" -DLOAD_JPG=1 -DLOAD_PNG=1 -DLOAD_TIF=1 -DLOAD_WEBP=1 -DLOAD_BMP=1 -DLOAD_GIF=1 -DLOAD_LBM=1 -DLOAD_PCX=1 -DLOAD_PNM=1 -DLOAD_TGA=1 -DLOAD_XCF=1 -DLOAD_XPM=1 -DLOAD_XV=1 -DLOAD_WEBP_DYNAMIC=\"libwebp.so.4\" -DLOAD_TIF_DYNAMIC=\"libtiff.so.5\" -DLOAD_JPG_DYNAMIC=\"libjpeg.so.9\" -DLOAD_PNG_DYNAMIC=\"libpng16.so.16\" -I.     -I/usr/local/include -I/usr/local/include/libpng16 -g -O2 -D_REENTRANT -I/usr/local/include/SDL2 -MT IMG_tif.lo -MD -MP -MF .deps/IMG_tif.Tpo -c -o IMG_tif.lo IMG_tif.c
+mv -f .deps/IMG_pnm.Tpo .deps/IMG_pnm.Plo
+/bin/bash ./libtool  --tag=CC   --mode=compile gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DPACKAGE=\"SDL2_image\" -DVERSION=\"2.0.1\" -DLOAD_JPG=1 -DLOAD_PNG=1 -DLOAD_TIF=1 -DLOAD_WEBP=1 -DLOAD_BMP=1 -DLOAD_GIF=1 -DLOAD_LBM=1 -DLOAD_PCX=1 -DLOAD_PNM=1 -DLOAD_TGA=1 -DLOAD_XCF=1 -DLOAD_XPM=1 -DLOAD_XV=1 -DLOAD_WEBP_DYNAMIC=\"libwebp.so.4\" -DLOAD_TIF_DYNAMIC=\"libtiff.so.5\" -DLOAD_JPG_DYNAMIC=\"libjpeg.so.9\" -DLOAD_PNG_DYNAMIC=\"libpng16.so.16\" -I.     -I/usr/local/include -I/usr/local/include/libpng16 -g -O2 -D_REENTRANT -I/usr/local/include/SDL2 -MT IMG_xcf.lo -MD -MP -MF .deps/IMG_xcf.Tpo -c -o IMG_xcf.lo IMG_xcf.c
+libtool: compile:  gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DPACKAGE=\"SDL2_image\" -DVERSION=\"2.0.1\" -DLOAD_JPG=1 -DLOAD_PNG=1 -DLOAD_TIF=1 -DLOAD_WEBP=1 -DLOAD_BMP=1 -DLOAD_GIF=1 -DLOAD_LBM=1 -DLOAD_PCX=1 -DLOAD_PNM=1 -DLOAD_TGA=1 -DLOAD_XCF=1 -DLOAD_XPM=1 -DLOAD_XV=1 -DLOAD_WEBP_DYNAMIC=\"libwebp.so.4\" -DLOAD_TIF_DYNAMIC=\"libtiff.so.5\" -DLOAD_JPG_DYNAMIC=\"libjpeg.so.9\" -DLOAD_PNG_DYNAMIC=\"libpng16.so.16\" -I. -I/usr/local/include -I/usr/local/include/libpng16 -g -O2 -D_REENTRANT -I/usr/local/include/SDL2 -MT IMG_xcf.lo -MD -MP -MF .deps/IMG_xcf.Tpo -c IMG_xcf.c  -fPIC -DPIC -o .libs/IMG_xcf.o
+libtool: compile:  gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DPACKAGE=\"SDL2_image\" -DVERSION=\"2.0.1\" -DLOAD_JPG=1 -DLOAD_PNG=1 -DLOAD_TIF=1 -DLOAD_WEBP=1 -DLOAD_BMP=1 -DLOAD_GIF=1 -DLOAD_LBM=1 -DLOAD_PCX=1 -DLOAD_PNM=1 -DLOAD_TGA=1 -DLOAD_XCF=1 -DLOAD_XPM=1 -DLOAD_XV=1 -DLOAD_WEBP_DYNAMIC=\"libwebp.so.4\" -DLOAD_TIF_DYNAMIC=\"libtiff.so.5\" -DLOAD_JPG_DYNAMIC=\"libjpeg.so.9\" -DLOAD_PNG_DYNAMIC=\"libpng16.so.16\" -I. -I/usr/local/include -I/usr/local/include/libpng16 -g -O2 -D_REENTRANT -I/usr/local/include/SDL2 -MT IMG_tif.lo -MD -MP -MF .deps/IMG_tif.Tpo -c IMG_tif.c  -fPIC -DPIC -o .libs/IMG_tif.o
+mv -f .deps/IMG_tga.Tpo .deps/IMG_tga.Plo
+/bin/bash ./libtool  --tag=CC   --mode=compile gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DPACKAGE=\"SDL2_image\" -DVERSION=\"2.0.1\" -DLOAD_JPG=1 -DLOAD_PNG=1 -DLOAD_TIF=1 -DLOAD_WEBP=1 -DLOAD_BMP=1 -DLOAD_GIF=1 -DLOAD_LBM=1 -DLOAD_PCX=1 -DLOAD_PNM=1 -DLOAD_TGA=1 -DLOAD_XCF=1 -DLOAD_XPM=1 -DLOAD_XV=1 -DLOAD_WEBP_DYNAMIC=\"libwebp.so.4\" -DLOAD_TIF_DYNAMIC=\"libtiff.so.5\" -DLOAD_JPG_DYNAMIC=\"libjpeg.so.9\" -DLOAD_PNG_DYNAMIC=\"libpng16.so.16\" -I.     -I/usr/local/include -I/usr/local/include/libpng16 -g -O2 -D_REENTRANT -I/usr/local/include/SDL2 -MT IMG_xpm.lo -MD -MP -MF .deps/IMG_xpm.Tpo -c -o IMG_xpm.lo IMG_xpm.c
+libtool: compile:  gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DPACKAGE=\"SDL2_image\" -DVERSION=\"2.0.1\" -DLOAD_JPG=1 -DLOAD_PNG=1 -DLOAD_TIF=1 -DLOAD_WEBP=1 -DLOAD_BMP=1 -DLOAD_GIF=1 -DLOAD_LBM=1 -DLOAD_PCX=1 -DLOAD_PNM=1 -DLOAD_TGA=1 -DLOAD_XCF=1 -DLOAD_XPM=1 -DLOAD_XV=1 -DLOAD_WEBP_DYNAMIC=\"libwebp.so.4\" -DLOAD_TIF_DYNAMIC=\"libtiff.so.5\" -DLOAD_JPG_DYNAMIC=\"libjpeg.so.9\" -DLOAD_PNG_DYNAMIC=\"libpng16.so.16\" -I. -I/usr/local/include -I/usr/local/include/libpng16 -g -O2 -D_REENTRANT -I/usr/local/include/SDL2 -MT IMG_xpm.lo -MD -MP -MF .deps/IMG_xpm.Tpo -c IMG_xpm.c  -fPIC -DPIC -o .libs/IMG_xpm.o
+libtool: compile:  gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DPACKAGE=\"SDL2_image\" -DVERSION=\"2.0.1\" -DLOAD_JPG=1 -DLOAD_PNG=1 -DLOAD_TIF=1 -DLOAD_WEBP=1 -DLOAD_BMP=1 -DLOAD_GIF=1 -DLOAD_LBM=1 -DLOAD_PCX=1 -DLOAD_PNM=1 -DLOAD_TGA=1 -DLOAD_XCF=1 -DLOAD_XPM=1 -DLOAD_XV=1 -DLOAD_WEBP_DYNAMIC=\"libwebp.so.4\" -DLOAD_TIF_DYNAMIC=\"libtiff.so.5\" -DLOAD_JPG_DYNAMIC=\"libjpeg.so.9\" -DLOAD_PNG_DYNAMIC=\"libpng16.so.16\" -I. -I/usr/local/include -I/usr/local/include/libpng16 -g -O2 -D_REENTRANT -I/usr/local/include/SDL2 -MT IMG_tif.lo -MD -MP -MF .deps/IMG_tif.Tpo -c IMG_tif.c -o IMG_tif.o >/dev/null 2>&1
+libtool: compile:  gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DPACKAGE=\"SDL2_image\" -DVERSION=\"2.0.1\" -DLOAD_JPG=1 -DLOAD_PNG=1 -DLOAD_TIF=1 -DLOAD_WEBP=1 -DLOAD_BMP=1 -DLOAD_GIF=1 -DLOAD_LBM=1 -DLOAD_PCX=1 -DLOAD_PNM=1 -DLOAD_TGA=1 -DLOAD_XCF=1 -DLOAD_XPM=1 -DLOAD_XV=1 -DLOAD_WEBP_DYNAMIC=\"libwebp.so.4\" -DLOAD_TIF_DYNAMIC=\"libtiff.so.5\" -DLOAD_JPG_DYNAMIC=\"libjpeg.so.9\" -DLOAD_PNG_DYNAMIC=\"libpng16.so.16\" -I. -I/usr/local/include -I/usr/local/include/libpng16 -g -O2 -D_REENTRANT -I/usr/local/include/SDL2 -MT IMG_xpm.lo -MD -MP -MF .deps/IMG_xpm.Tpo -c IMG_xpm.c -o IMG_xpm.o >/dev/null 2>&1
+libtool: compile:  gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DPACKAGE=\"SDL2_image\" -DVERSION=\"2.0.1\" -DLOAD_JPG=1 -DLOAD_PNG=1 -DLOAD_TIF=1 -DLOAD_WEBP=1 -DLOAD_BMP=1 -DLOAD_GIF=1 -DLOAD_LBM=1 -DLOAD_PCX=1 -DLOAD_PNM=1 -DLOAD_TGA=1 -DLOAD_XCF=1 -DLOAD_XPM=1 -DLOAD_XV=1 -DLOAD_WEBP_DYNAMIC=\"libwebp.so.4\" -DLOAD_TIF_DYNAMIC=\"libtiff.so.5\" -DLOAD_JPG_DYNAMIC=\"libjpeg.so.9\" -DLOAD_PNG_DYNAMIC=\"libpng16.so.16\" -I. -I/usr/local/include -I/usr/local/include/libpng16 -g -O2 -D_REENTRANT -I/usr/local/include/SDL2 -MT IMG_xcf.lo -MD -MP -MF .deps/IMG_xcf.Tpo -c IMG_xcf.c -o IMG_xcf.o >/dev/null 2>&1
+mv -f .deps/IMG_tif.Tpo .deps/IMG_tif.Plo
+/bin/bash ./libtool  --tag=CC   --mode=compile gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DPACKAGE=\"SDL2_image\" -DVERSION=\"2.0.1\" -DLOAD_JPG=1 -DLOAD_PNG=1 -DLOAD_TIF=1 -DLOAD_WEBP=1 -DLOAD_BMP=1 -DLOAD_GIF=1 -DLOAD_LBM=1 -DLOAD_PCX=1 -DLOAD_PNM=1 -DLOAD_TGA=1 -DLOAD_XCF=1 -DLOAD_XPM=1 -DLOAD_XV=1 -DLOAD_WEBP_DYNAMIC=\"libwebp.so.4\" -DLOAD_TIF_DYNAMIC=\"libtiff.so.5\" -DLOAD_JPG_DYNAMIC=\"libjpeg.so.9\" -DLOAD_PNG_DYNAMIC=\"libpng16.so.16\" -I.     -I/usr/local/include -I/usr/local/include/libpng16 -g -O2 -D_REENTRANT -I/usr/local/include/SDL2 -MT IMG_xv.lo -MD -MP -MF .deps/IMG_xv.Tpo -c -o IMG_xv.lo IMG_xv.c
+libtool: compile:  gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DPACKAGE=\"SDL2_image\" -DVERSION=\"2.0.1\" -DLOAD_JPG=1 -DLOAD_PNG=1 -DLOAD_TIF=1 -DLOAD_WEBP=1 -DLOAD_BMP=1 -DLOAD_GIF=1 -DLOAD_LBM=1 -DLOAD_PCX=1 -DLOAD_PNM=1 -DLOAD_TGA=1 -DLOAD_XCF=1 -DLOAD_XPM=1 -DLOAD_XV=1 -DLOAD_WEBP_DYNAMIC=\"libwebp.so.4\" -DLOAD_TIF_DYNAMIC=\"libtiff.so.5\" -DLOAD_JPG_DYNAMIC=\"libjpeg.so.9\" -DLOAD_PNG_DYNAMIC=\"libpng16.so.16\" -I. -I/usr/local/include -I/usr/local/include/libpng16 -g -O2 -D_REENTRANT -I/usr/local/include/SDL2 -MT IMG_png.lo -MD -MP -MF .deps/IMG_png.Tpo -c IMG_png.c -o IMG_png.o >/dev/null 2>&1
+libtool: compile:  gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DPACKAGE=\"SDL2_image\" -DVERSION=\"2.0.1\" -DLOAD_JPG=1 -DLOAD_PNG=1 -DLOAD_TIF=1 -DLOAD_WEBP=1 -DLOAD_BMP=1 -DLOAD_GIF=1 -DLOAD_LBM=1 -DLOAD_PCX=1 -DLOAD_PNM=1 -DLOAD_TGA=1 -DLOAD_XCF=1 -DLOAD_XPM=1 -DLOAD_XV=1 -DLOAD_WEBP_DYNAMIC=\"libwebp.so.4\" -DLOAD_TIF_DYNAMIC=\"libtiff.so.5\" -DLOAD_JPG_DYNAMIC=\"libjpeg.so.9\" -DLOAD_PNG_DYNAMIC=\"libpng16.so.16\" -I. -I/usr/local/include -I/usr/local/include/libpng16 -g -O2 -D_REENTRANT -I/usr/local/include/SDL2 -MT IMG_xv.lo -MD -MP -MF .deps/IMG_xv.Tpo -c IMG_xv.c  -fPIC -DPIC -o .libs/IMG_xv.o
+libtool: compile:  gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DPACKAGE=\"SDL2_image\" -DVERSION=\"2.0.1\" -DLOAD_JPG=1 -DLOAD_PNG=1 -DLOAD_TIF=1 -DLOAD_WEBP=1 -DLOAD_BMP=1 -DLOAD_GIF=1 -DLOAD_LBM=1 -DLOAD_PCX=1 -DLOAD_PNM=1 -DLOAD_TGA=1 -DLOAD_XCF=1 -DLOAD_XPM=1 -DLOAD_XV=1 -DLOAD_WEBP_DYNAMIC=\"libwebp.so.4\" -DLOAD_TIF_DYNAMIC=\"libtiff.so.5\" -DLOAD_JPG_DYNAMIC=\"libjpeg.so.9\" -DLOAD_PNG_DYNAMIC=\"libpng16.so.16\" -I. -I/usr/local/include -I/usr/local/include/libpng16 -g -O2 -D_REENTRANT -I/usr/local/include/SDL2 -MT IMG_xv.lo -MD -MP -MF .deps/IMG_xv.Tpo -c IMG_xv.c -o IMG_xv.o >/dev/null 2>&1
+mv -f .deps/IMG_xpm.Tpo .deps/IMG_xpm.Plo
+/bin/bash ./libtool  --tag=CC   --mode=compile gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DPACKAGE=\"SDL2_image\" -DVERSION=\"2.0.1\" -DLOAD_JPG=1 -DLOAD_PNG=1 -DLOAD_TIF=1 -DLOAD_WEBP=1 -DLOAD_BMP=1 -DLOAD_GIF=1 -DLOAD_LBM=1 -DLOAD_PCX=1 -DLOAD_PNM=1 -DLOAD_TGA=1 -DLOAD_XCF=1 -DLOAD_XPM=1 -DLOAD_XV=1 -DLOAD_WEBP_DYNAMIC=\"libwebp.so.4\" -DLOAD_TIF_DYNAMIC=\"libtiff.so.5\" -DLOAD_JPG_DYNAMIC=\"libjpeg.so.9\" -DLOAD_PNG_DYNAMIC=\"libpng16.so.16\" -I.     -I/usr/local/include -I/usr/local/include/libpng16 -g -O2 -D_REENTRANT -I/usr/local/include/SDL2 -MT IMG_webp.lo -MD -MP -MF .deps/IMG_webp.Tpo -c -o IMG_webp.lo IMG_webp.c
+libtool: compile:  gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DPACKAGE=\"SDL2_image\" -DVERSION=\"2.0.1\" -DLOAD_JPG=1 -DLOAD_PNG=1 -DLOAD_TIF=1 -DLOAD_WEBP=1 -DLOAD_BMP=1 -DLOAD_GIF=1 -DLOAD_LBM=1 -DLOAD_PCX=1 -DLOAD_PNM=1 -DLOAD_TGA=1 -DLOAD_XCF=1 -DLOAD_XPM=1 -DLOAD_XV=1 -DLOAD_WEBP_DYNAMIC=\"libwebp.so.4\" -DLOAD_TIF_DYNAMIC=\"libtiff.so.5\" -DLOAD_JPG_DYNAMIC=\"libjpeg.so.9\" -DLOAD_PNG_DYNAMIC=\"libpng16.so.16\" -I. -I/usr/local/include -I/usr/local/include/libpng16 -g -O2 -D_REENTRANT -I/usr/local/include/SDL2 -MT IMG_webp.lo -MD -MP -MF .deps/IMG_webp.Tpo -c IMG_webp.c  -fPIC -DPIC -o .libs/IMG_webp.o
+mv -f .deps/IMG_xv.Tpo .deps/IMG_xv.Plo
+gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DPACKAGE=\"SDL2_image\" -DVERSION=\"2.0.1\" -DLOAD_JPG=1 -DLOAD_PNG=1 -DLOAD_TIF=1 -DLOAD_WEBP=1 -DLOAD_BMP=1 -DLOAD_GIF=1 -DLOAD_LBM=1 -DLOAD_PCX=1 -DLOAD_PNM=1 -DLOAD_TGA=1 -DLOAD_XCF=1 -DLOAD_XPM=1 -DLOAD_XV=1 -DLOAD_WEBP_DYNAMIC=\"libwebp.so.4\" -DLOAD_TIF_DYNAMIC=\"libtiff.so.5\" -DLOAD_JPG_DYNAMIC=\"libjpeg.so.9\" -DLOAD_PNG_DYNAMIC=\"libpng16.so.16\" -I.     -I/usr/local/include -I/usr/local/include/libpng16 -g -O2 -D_REENTRANT -I/usr/local/include/SDL2 -MT showimage.o -MD -MP -MF .deps/showimage.Tpo -c -o showimage.o showimage.c
+mv -f .deps/IMG_xcf.Tpo .deps/IMG_xcf.Plo
+libtool: compile:  gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DPACKAGE=\"SDL2_image\" -DVERSION=\"2.0.1\" -DLOAD_JPG=1 -DLOAD_PNG=1 -DLOAD_TIF=1 -DLOAD_WEBP=1 -DLOAD_BMP=1 -DLOAD_GIF=1 -DLOAD_LBM=1 -DLOAD_PCX=1 -DLOAD_PNM=1 -DLOAD_TGA=1 -DLOAD_XCF=1 -DLOAD_XPM=1 -DLOAD_XV=1 -DLOAD_WEBP_DYNAMIC=\"libwebp.so.4\" -DLOAD_TIF_DYNAMIC=\"libtiff.so.5\" -DLOAD_JPG_DYNAMIC=\"libjpeg.so.9\" -DLOAD_PNG_DYNAMIC=\"libpng16.so.16\" -I. -I/usr/local/include -I/usr/local/include/libpng16 -g -O2 -D_REENTRANT -I/usr/local/include/SDL2 -MT IMG_webp.lo -MD -MP -MF .deps/IMG_webp.Tpo -c IMG_webp.c -o IMG_webp.o >/dev/null 2>&1
+mv -f .deps/showimage.Tpo .deps/showimage.Po
+mv -f .deps/IMG_webp.Tpo .deps/IMG_webp.Plo
+mv -f .deps/IMG_png.Tpo .deps/IMG_png.Plo
+/bin/bash ./libtool    --mode=link gcc  -I/usr/local/include -I/usr/local/include/libpng16 -g -O2 -D_REENTRANT -I/usr/local/include/SDL2 -no-undefined -release 2.0 -version-info 0:1:0  -o libSDL2_image.la -rpath /usr/local/lib IMG.lo IMG_bmp.lo IMG_gif.lo IMG_jpg.lo IMG_lbm.lo IMG_pcx.lo IMG_png.lo IMG_pnm.lo IMG_tga.lo IMG_tif.lo IMG_xcf.lo IMG_xpm.lo IMG_xv.lo IMG_webp.lo   -L/usr/local/lib -Wl,-rpath,/usr/local/lib -Wl,--enable-new-dtags -lSDL2
+libtool: link: gcc -shared  .libs/IMG.o .libs/IMG_bmp.o .libs/IMG_gif.o .libs/IMG_jpg.o .libs/IMG_lbm.o .libs/IMG_pcx.o .libs/IMG_png.o .libs/IMG_pnm.o .libs/IMG_tga.o .libs/IMG_tif.o .libs/IMG_xcf.o .libs/IMG_xpm.o .libs/IMG_xv.o .libs/IMG_webp.o   -L/usr/local/lib /usr/local/lib/libSDL2.so -lm -ldl -lpthread -lrt  -Wl,-rpath -Wl,/usr/local/lib -Wl,--enable-new-dtags   -Wl,-soname -Wl,libSDL2_image-2.0.so.0 -o .libs/libSDL2_image-2.0.so.0.0.1
+libtool: link: (cd ".libs" && rm -f "libSDL2_image-2.0.so.0" && ln -s "libSDL2_image-2.0.so.0.0.1" "libSDL2_image-2.0.so.0")
+libtool: link: (cd ".libs" && rm -f "libSDL2_image.so" && ln -s "libSDL2_image-2.0.so.0.0.1" "libSDL2_image.so")
+libtool: link: ar cru .libs/libSDL2_image.a  IMG.o IMG_bmp.o IMG_gif.o IMG_jpg.o IMG_lbm.o IMG_pcx.o IMG_png.o IMG_pnm.o IMG_tga.o IMG_tif.o IMG_xcf.o IMG_xpm.o IMG_xv.o IMG_webp.o
+libtool: link: ranlib .libs/libSDL2_image.a
+libtool: link: ( cd ".libs" && rm -f "libSDL2_image.la" && ln -s "../libSDL2_image.la" "libSDL2_image.la" )
+/bin/bash ./libtool  --tag=CC   --mode=link gcc  -I/usr/local/include -I/usr/local/include/libpng16 -g -O2 -D_REENTRANT -I/usr/local/include/SDL2   -o showimage showimage.o libSDL2_image.la -L/usr/local/lib -Wl,-rpath,/usr/local/lib -Wl,--enable-new-dtags -lSDL2
+libtool: link: gcc -I/usr/local/include -I/usr/local/include/libpng16 -g -O2 -D_REENTRANT -I/usr/local/include/SDL2 -o .libs/showimage showimage.o -Wl,-rpath -Wl,/usr/local/lib -Wl,--enable-new-dtags  ./.libs/libSDL2_image.so -L/usr/local/lib /usr/local/lib/libSDL2.so -lm -ldl -lpthread -lrt
+make[1]: Entering directory '/home/mpsk/data/GRiNa/required/SDL2_image'
+ /bin/mkdir -p '/usr/local/lib'
+ /bin/bash ./libtool   --mode=install /usr/bin/install -c   libSDL2_image.la '/usr/local/lib'
+libtool: install: /usr/bin/install -c .libs/libSDL2_image-2.0.so.0.0.1 /usr/local/lib/libSDL2_image-2.0.so.0.0.1
+libtool: install: (cd /usr/local/lib && { ln -s -f libSDL2_image-2.0.so.0.0.1 libSDL2_image-2.0.so.0 || { rm -f libSDL2_image-2.0.so.0 && ln -s libSDL2_image-2.0.so.0.0.1 libSDL2_image-2.0.so.0; }; })
+libtool: install: (cd /usr/local/lib && { ln -s -f libSDL2_image-2.0.so.0.0.1 libSDL2_image.so || { rm -f libSDL2_image.so && ln -s libSDL2_image-2.0.so.0.0.1 libSDL2_image.so; }; })
+libtool: install: /usr/bin/install -c .libs/libSDL2_image.lai /usr/local/lib/libSDL2_image.la
+libtool: install: /usr/bin/install -c .libs/libSDL2_image.a /usr/local/lib/libSDL2_image.a
+libtool: install: chmod 644 /usr/local/lib/libSDL2_image.a
+libtool: install: ranlib /usr/local/lib/libSDL2_image.a
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:/sbin" ldconfig -n /usr/local/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/local/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+ /bin/mkdir -p '/usr/local/include/SDL2'
+ /usr/bin/install -c -m 644 SDL_image.h '/usr/local/include/SDL2'
+ /bin/mkdir -p '/usr/local/lib/pkgconfig'
+ /usr/bin/install -c -m 644 SDL2_image.pc '/usr/local/lib/pkgconfig'
+make[1]: Leaving directory '/home/mpsk/data/GRiNa/required/SDL2_image'
