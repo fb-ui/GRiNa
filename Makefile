@@ -6,12 +6,12 @@ ifeq ($(OS),Windows_NT)
 LDFLAGS=-lfreeglut -lopengl32 -lGLEW -Wl,--subsystem,windows
 EXECUTABLE=GRiNa.exe
 else
-INCFLAGS=-I/usr/local/include/SDL2 -D_REENTRANT
-LDFLAGS=-L/usr/local/lib -Wl,-rpath,/usr/local/lib -Wl,--enable-new-dtags -lSDL2
-EXECUTABLE=GRiNA
+INCFLAGS=`sdl2-config --cflags`
+LDFLAGS=`sdl2-config --libs`
+EXECUTABLE=GRiNA.out
 endif
 
-LDFLAGS_EXSDLIMG=-lSDL2_image
+LDFLAGS_EXSDLIMG= -lSDL2_image
 
 SRC_PATH = src/
 BIN_PATH = bin/
