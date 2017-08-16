@@ -34,8 +34,8 @@ class Game
 		SDL_Event event;
 		int SCREEN_WIDTH  = 1280;		//画面分辨率 
 		int SCREEN_HEIGHT = 720;
-		ParticleSys particles;
-		Background background;
+		ParticleSys *particles;
+		Background *background;
 		Button *button_start;
 		Button *button_help;
 		//Timer timer;

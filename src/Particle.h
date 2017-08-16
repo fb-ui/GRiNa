@@ -1,5 +1,6 @@
 #ifndef PARTICLE_H
 #define PARTICLE_H
+
 #include <cstdlib>
 #include <string>
 #include <vector>
@@ -33,8 +34,7 @@ typedef struct
 class ParticleSys
 {
 	public:
-		//将指定数量指定状态的粒子压入栈内
-		void Push(int num, int life, Vector2D speed);
+		ParticleSys(int num, int life, int speed_x, int speed_y);
 		//给粒子载入纹理
 		void LoadTexture(const std::string &file, SDL_Renderer *ren);
 		//设定粒子生命值（生命值的设定是为了方便垃圾回收）
@@ -52,13 +52,16 @@ class ParticleSys
 		void Free();
 	private: 
 		Vector2D gravity;
-		int ptwidth, ptheight, ptlife, ptdispersion;
+		Vector2D init_speed;
+		int ptnum, ptwidth, ptheight, ptlife, ptdispersion;
 		const std::string texfile;
+		//将指定数量指定状态的粒子压入栈内
+		void Push(int num, int life, Vector2D speed);
 		//粒子系统主要结构体容器
 		std::vector<Particle> particles;
 		//粒子系统容器使用的迭代器
 		std::vector<Particle>::iterator iter;
-
+		
 		//使用Texture对象替换标准化渲染函数
 		Texture particle_tex;
 };

@@ -10,13 +10,21 @@
 #	mpsk's game engine proj
 *****************************/ 
 
+ParticleSys::ParticleSys(int num, int life, int speed_x, int speed_y)
+{
+	this->ptnum = num;
+	this->ptlife = life;
+	this->init_speed.x = speed_x;
+	this->init_speed.y = speed_y;
+}
+
+
 /*--------------------------
 //向粒子栈压入固定数目的元素 
 */
 void ParticleSys::Push(int num, int life, Vector2D speed)
 {
 	//将粒子压入栈 (按照数量压栈） 
-	ptlife = life;
 	for (int i = 1; i <= num; i++ )
 	{
 		Particle p;
@@ -60,6 +68,7 @@ void ParticleSys::SetAlpha(Uint8 alpha){particle_tex.SetAlpha(alpha);}
 
 void ParticleSys::Render_Central(int x, int y, SDL_Renderer * ren)
 {
+	this->Push(this->ptnum, this->ptlife, this->init_speed);
 	for(iter=particles.begin();iter!=particles.end();iter++)
 	{
 		if(iter->age >= iter->life)

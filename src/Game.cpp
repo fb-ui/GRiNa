@@ -1,8 +1,9 @@
 #include "Game.h"
 #define DEBUG
+
 /*****************************
 #	文件名：	Game.cpp 
-#	日期：		2017-01-17
+#	日期：		2017-08-17
 #	版本号：	0.3.0
 #	功能：		游戏对象 
 #	mpsk's game engine proj
@@ -46,7 +47,9 @@ int Game::Load()
 	//****************************
 	button_start = new Button(0,0,160,50,"Resource/start.png",renderer);
 	button_help = new Button(0,60,160,50,"Resource/start.png",renderer);
-	background.LoadTexture("Resource/background.bmp", renderer);
+	
+	background = new Background();
+	background->LoadTexture("Resource/background.bmp", renderer);
 	//button_start.LoadTexture("Resource/start.png", renderer);
 	//button_help.LoadTexture("Resource/help.png", renderer);
 	//*****************************
@@ -58,10 +61,10 @@ int Game::Load()
 	gravity.x = 0;
 	gravity.y = 0.0005;
 	//初始化粒子系统 
-	//particles.SetRenderer(renderer);
-	particles.LoadTexture("Resource/atom.png", renderer);
-	particles.SetKinematic(SCREEN_WIDTH, SCREEN_HEIGHT, 10, gravity);
-	particles.SetAlpha(128);
+	particles = new ParticleSys(10, 150, 0, 0);
+	particles->LoadTexture("Resource/atom.png", renderer);
+	particles->SetKinematic(SCREEN_WIDTH, SCREEN_HEIGHT, 10, gravity);
+	particles->SetAlpha(128);
 	//重设渲染器 
 	SDL_RenderClear(renderer);
 	//获得图像长高 
@@ -71,22 +74,9 @@ int Game::Load()
 
 
 int Game::Loop()
-{
-
-	//计时器开始计时
-	//timer.start();
-		 
+{		 
 	//清理渲染器 
 	SDL_RenderClear(renderer);
-	
-	//设定粒子速度
-	Vector2D speed;
-	speed.x = 0;
-	speed.y = 0; 
-	
-	//粒子系统压入粒子 
-	particles.Push(10,150,speed); 
-
 
 	while (SDL_PollEvent(&event))
 	{	
@@ -127,44 +117,23 @@ int Game::Loop()
 	
 	//计算渲染顶点 
 	//背景层渲染 
-	/*旧版本背景渲染
-	for (int j = 0 ; SCREEN_WIDTH >= j; j += background.GetWidth() )
-	{
-		for (int k = 0; SCREEN_HEIGHT >= k; k += background.GetHeight())
-		{
-			background.Render(j, k, renderer);
-		} 	
-	}
-	*/
-	background.Render(SCREEN_WIDTH, SCREEN_HEIGHT, renderer);
+	background->Render(SCREEN_WIDTH, SCREEN_HEIGHT, renderer);
 
 	button_help->Render();
 	button_start->Render();
 	//对象层渲染
 
 	//粒子层渲染 
-	particles.Render_Central(SCREEN_WIDTH/2, SCREEN_HEIGHT/2, renderer);
+	particles->Render_Central(SCREEN_WIDTH/2, SCREEN_HEIGHT/2, renderer);
 	//渲染器渲染 
 	SDL_RenderPresent(renderer);
-	//SDL_Delay(100);
-	
-
-	//计算帧数
-	/*
-	timer.queryfreq();
-	timer.stop();
-	tick = timer.ticks()/float(1000);
-	fps = 1/tick;
-	std::cout << tick << " ms" <<std::endl;
-	std::cout << fps*1000 << " fps" <<std::endl;
-	*/
 	return 0;
 }
 
 int Game::Quit()
 {
-	particles.Free();
-	background.Free();
+	particles->Free();
+	background->Free();
 	button_help->Free();
 	button_start->Free();
 
