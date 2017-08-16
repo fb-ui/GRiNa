@@ -33,3 +33,6 @@
 
 #   Logs
 *.log
+
+#   GRiNa Binary
+bin/GRiNa

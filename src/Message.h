@@ -1,8 +1,9 @@
 #ifndef MESSAGE_H
 #define MESSAGE_H
+
 #include <iostream>
 #include <vector>
-
+using namespace std;
 /*****************************
 #	文件名：	Message.h 
 #	日期：		2016-08-06 
@@ -12,21 +13,22 @@
 *****************************/ 
 
 
-//AABBCCDDEE	
-//A表示相关宏种类
-//B表示相关信息功能
-//C表示操作对象 
-#define MSG_TESTIO_SHOWMESSAGE	1000000
-#define	MSG_VIDEO_RENDER_BG00 	1010100
-#define MSG_AUDIO_PLAY_BGM00	1020100
-#define MSG_STAGE_SHOW_SCRIPT	1030100
-
+//	TYPE of message
+#define TYP_SCRPT	0x10
+#define TYP_IMAGE	0x20
+#define TYP_AUDIO	0x30
+#define TYP_ANIMA	0x40
+//	BEHAVIOR of message
+#define BHR_LOAD	0x01
+#define BHR_PLAY	0x02
+#define BHR_PAUS	0x03
+#define BHR_STOP	0x04
 
 
 typedef struct
 {
-	int	msg_type;
-	std::string msg_content;
+	int	property;
+	string content;
 }Message; 
 
 
@@ -35,9 +37,9 @@ class Messages
 	public:
 		void Push(int msgtype, std::string msg); 
 		void Free(); 
-		Message Poll();
+		Message Pull();
 	private:
-		std::vector<Message> messages;
+		vector<Message> messages;
 };
 
 #endif
