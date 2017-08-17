@@ -11,7 +11,32 @@
 #	同时还可以具有Pullevent方法
 ***********************/
 
+Button::Button()
+{
+    this->ren = ren;
+    this->is_pushed = false;
+    this->flag = false;
+}
+
 Button::Button(int x, int y, int w, int h, const std::string file, SDL_Renderer *ren)
+{
+    this->ren = ren;
+    this->is_pushed = false;
+    this->flag = false;
+    this->LoadTexture(file, ren);
+    this->SetPos(x, y, w, h);
+}
+
+
+void Button::SetPos(int x, int y, int w, int h)
+{
+    this->dst.x = x;
+    this->dst.y = y;
+    this->dst.w = w;
+    this->dst.h = h;
+}
+
+void Button::LoadTexture(const std::string file, SDL_Renderer * ren)
 {
     this->tex.Load(file, ren);
     this->tex_w = tex.GetWidth();
@@ -32,13 +57,6 @@ Button::Button(int x, int y, int w, int h, const std::string file, SDL_Renderer 
     this->clip[3].y = this->tex_h/2;
     this->clip[3].w = this->tex_w;
     this->clip[3].h = this->tex_h;
-    this->dst.x = x;
-    this->dst.y = y;
-    this->dst.w = w;
-    this->dst.h = h;
-    this->ren = ren;
-    this->is_pushed = false;
-    this->flag = false;
 }
 
 void Button::Render()
@@ -75,18 +93,18 @@ void Button::MouseMotionEvent(int Mouse_x, int Mouse_y)
 }
 
 //用于处理鼠标消息（1代表鼠标摁下，2代表鼠标松开）
-void Button::MouseButtonEvent(int type)
+Uint32 Button::MouseButtonEvent(int type)
 {
     switch(type)
     {
-        case MOUSEBUTTONDOWN:
+        case MOUSE_BUTTON_DOWN:
         {
 			if(this->flag==1)
             {
 				this->is_pushed = true;
 			}
         }break;
-        case MOUSEBUTTONUP:
+        case MOUSE_BUTTON_UP:
         {
             if(this->is_pushed==1)
 			{

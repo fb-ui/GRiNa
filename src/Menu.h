@@ -1,5 +1,5 @@
-#ifndef GAME_H
-#define GAME_H
+#ifndef MENU_H
+#define MENU_H
 
 #include <stdlib.h>
 #include <iostream> 
@@ -15,42 +15,36 @@
 
 #include "Log.h"
 #include "Vector2D.h"
-//#include "Timer.h"
-//#include "lua_Script.h"
-//#include "Script.h"
-//#include "windows.h"
 
 /*****************************
-#	文件名：	Game.h
-#	日期：		2017-1-15
-#	版本号：	0.3.2
-#	功能：		游戏对象 
+#	文件名：	Menu.h
+#	日期：		2017-8-17
+#	版本号：	0.4.0
+#	功能：		菜单对象 
 #	mpsk's game engine proj
 *****************************/ 
 
-class Game
+class Menu
 {
 	private:
-		SDL_Window *window;
 		SDL_Renderer *renderer;
 		SDL_Event event;
-		int SCREEN_WIDTH  = 1280;		//画面分辨率 
-		int SCREEN_HEIGHT = 720;
-		ParticleSys *particles;
 		Background *background;
 		vector<Button> buttons;
 		Button *button_start;
 		Button *button_help;
-		//Timer timer;
 		float tick;
 		float fps;
-
+		int Loop();
+        
 		int i;
 	public:
+		int SCREEN_WIDTH;		//画面分辨率 
+		int SCREEN_HEIGHT;
 		bool quit = 0;
-		int Init();
-		int Load();
-		int Loop();
+        int Menu::Init(int w, int h, SDL_Renderer *renderer);
+        int Load();
+        int Run();
 		int Quit();
 };
 

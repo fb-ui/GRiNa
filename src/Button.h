@@ -6,8 +6,9 @@
 #include <vector>
 #include <string>
 
-#define MOUSEBUTTONUP 		1001
-#define MOUSEBUTTONDOWN		1002
+#define MOUSE_BUTTON_UP 		0x2000
+#define MOUSE_BUTTON_DOWN		0x2001
+
 
 /*****************************
 #	文件名：	Button.h 
@@ -21,12 +22,15 @@
 ***********************/
 class Button
 {
-	public:	
+	public:
+		Button();
 		Button(int x, int y, int w, int h, const std::string file, SDL_Renderer *ren);
+		void SetPos(int x, int y, int w, int h);
+		void LoadTexture(const std::string file, SDL_Renderer *ren);
 		void Render();
 		//用于处理鼠标消息（0代表位置判断，1代表鼠标摁下，2代表鼠标松开）
 		void MouseMotionEvent(int Mouse_x, int Mouse_y);
-		void MouseButtonEvent(int type);
+		Uint32 MouseButtonEvent(int type);
 		void Free();
 
 	private:

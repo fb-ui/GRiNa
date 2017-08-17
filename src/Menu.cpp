@@ -1,4 +1,4 @@
-#include "Game.h"
+#include "Menu.h"
 #define DEBUG
 using namespace std;
 /*****************************
@@ -9,36 +9,15 @@ using namespace std;
 #	mpsk's game engine proj
 *****************************/ 
 
- int Game::Init()
+ int Menu::Init(int w, int h, SDL_Renderer *renderer)
 {
-	//初始化 
-	if (SDL_Init(SDL_INIT_VIDEO|SDL_INIT_AUDIO) != 0)
-	{
-		logError(cout, "SDL_Init");
-		return 1;
-	}
-	
-	//创建会话窗口 
-	window = SDL_CreateWindow("GRiNA", 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_FULLSCREEN);
-	if (window == NULL) 
-	{
-		logError(cout, "SDL_CreateWindow");
-		SDL_Quit();
-		return 1;
-	}
-	//创建渲染器 
-	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
-	if (renderer == NULL)
-	{
-		SDL_DestroyWindow(window);
-		logError(cout, "SDL_CreateRenderer");
-		SDL_Quit();
-		return 1;
-	}
+    this->renderer = renderer;
+    this->SCREEN_WIDTH = w;
+    this->SCREEN_HEIGHT = h;
 	return 0; 
 }
 
-int Game::Load()
+int Menu::Load()
 {
 	//加载资源 
 	//加载图像资源 	
@@ -50,21 +29,6 @@ int Game::Load()
 	
 	background = new Background();
 	background->LoadTexture("Resource/background.bmp", renderer);
-	//*****************************
-	//粒子系统设置
-	//*****************************	 
-	cout << "initiating particlesys obj..." << endl; 
-	//初始化重力与速度 
-	Vector2D gravity;
-	gravity.x = 0;
-	gravity.y = 0.0005;
-	//初始化粒子系统 
-	//	每次压入个数	粒子寿命	初始x速度	初始y速度
-	particles = new ParticleSys(10, 150, 0, 0);
-	particles->LoadTexture("Resource/atom.png", renderer);
-	//	设置边框	设置重力
-	particles->SetKinematic(SCREEN_WIDTH, SCREEN_HEIGHT, 10, gravity);
-	particles->SetAlpha(128);
 	//重设渲染器 
 	SDL_RenderClear(renderer);
 
@@ -72,7 +36,7 @@ int Game::Load()
 }
 
 
-int Game::Loop()
+int Menu::Loop()
 {		 
 	//清理渲染器 
 	SDL_RenderClear(renderer);
@@ -120,24 +84,18 @@ int Game::Loop()
 	
 	button_help->Render();
 	button_start->Render();
-	//对象层渲染
-
-	//粒子层渲染 
-	particles->Render_Central(SCREEN_WIDTH/2, SCREEN_HEIGHT/2, renderer);
+    //对象层渲染
+    
 	//渲染器渲染 
 	SDL_RenderPresent(renderer);
 	return 0;
 }
 
-int Game::Quit()
+int Menu::Quit()
 {
-	particles->Free();
 	background->Free();
 	button_help->Free();
-	button_start->Free();
-
-	SDL_DestroyRenderer(renderer);
-	SDL_DestroyWindow(window);
-	SDL_Quit();
+    button_start->Free();
+    
 	return 0;
 }

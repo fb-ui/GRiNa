@@ -8,6 +8,11 @@
 #	mpsk's game engine proj
 *****************************/ 
 
+Background::Background()
+{
+    this->type = BG_FLAT;
+}
+
 Background::Background(Uint32 type)
 {
     this->type = type;
@@ -26,13 +31,15 @@ void Background::Render(int Screen_w, int Screen_h, SDL_Renderer *ren)
         this->dst.h = Screen_h;
         this->tex.Render_dst(dst, ren);
     }
-    if(this->type == BG_FLAT)
+    else if(this->type == BG_FLAT)
     {
-        this->dst.x = 0;
-        this->dst.y = 0;
-        this->dst.w = Screen_w;
-        this->dst.h = Screen_h;
-        this->tex.Render_dst(dst, ren);
+        for (int j = 0 ; Screen_w >= j; j += this->tex.GetWidth() )
+        {
+            for (int k = 0; Screen_h >= k; k += this->tex.GetHeight())
+            {
+                this->tex.Render(j, k, ren);
+            } 	
+        }
     }
 }
 

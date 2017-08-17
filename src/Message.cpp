@@ -11,8 +11,8 @@
 void Messages::Push(int msgtype, std::string msg)
 {
 	Message message;
-	message.msg_type = msgtype;
-	message.msg_content = msg;
+	message.property = msgtype;
+	message.content = msg;
 	messages.push_back(message);
 }
 
@@ -23,7 +23,7 @@ void Messages::Free()
 }
 
 
-Message Messages::Poll()
+Message Messages::Pull()
 {
 	Message tmp;
 	std::vector<Message>::iterator iter = messages.begin();

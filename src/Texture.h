@@ -42,11 +42,4 @@ class Texture
 		SDL_Texture *texture;
 };
 
-/*
-typedef struct Tex
-{
-	Texture tex;
-	int num;
-}TEXTURE;
-*/
 #endif
