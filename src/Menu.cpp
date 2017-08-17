@@ -9,7 +9,7 @@ using namespace std;
 #	mpsk's game engine proj
 *****************************/ 
 
- int Menu::Init(int w, int h, SDL_Renderer *renderer)
+int Menu::Init(int w, int h, SDL_Renderer *renderer)
 {
     this->renderer = renderer;
     this->SCREEN_WIDTH = w;

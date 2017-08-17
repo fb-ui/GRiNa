@@ -42,7 +42,7 @@ class Menu
 		int SCREEN_WIDTH;		//画面分辨率 
 		int SCREEN_HEIGHT;
 		bool quit = 0;
-        int Menu::Init(int w, int h, SDL_Renderer *renderer);
+        int Init(int w, int h, SDL_Renderer *renderer);
         int Load();
         int Run();
 		int Quit();
