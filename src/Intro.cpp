@@ -10,7 +10,8 @@ Intro::Intro(SDL_Renderer *ren, int Screen_w, int Screen_h)
 void Intro::Load()
 {
 	this->logo = new Texture();
-	this->logo->Load("Resource/white.bmp", this->ren);
+	this->logo->Load("Resource/logo.jpg", this->ren);
+	this->logo->SetBlendMode(SDL_BLENDMODE_BLEND);
 }
 //  渲染
 void Intro::Loop()
