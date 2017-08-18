@@ -9,33 +9,11 @@ using namespace std;
 #	mpsk's game engine proj
 *****************************/ 
 
- int Game::Init()
+Game::Game(SDL_Renderer *renderer, int w, int h)
 {
-	//初始化 
-	if (SDL_Init(SDL_INIT_VIDEO|SDL_INIT_AUDIO) != 0)
-	{
-		logError(cout, "SDL_Init");
-		return 1;
-	}
-	
-	//创建会话窗口 
-	window = SDL_CreateWindow("GRiNA", 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_FULLSCREEN);
-	if (window == NULL) 
-	{
-		logError(cout, "SDL_CreateWindow");
-		SDL_Quit();
-		return 1;
-	}
-	//创建渲染器 
-	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
-	if (renderer == NULL)
-	{
-		SDL_DestroyWindow(window);
-		logError(cout, "SDL_CreateRenderer");
-		SDL_Quit();
-		return 1;
-	}
-	return 0; 
+	this->renderer = renderer;
+	this->SCREEN_WIDTH = w;
+	this->SCREEN_HEIGHT = h;
 }
 
 int Game::Load()
@@ -68,7 +46,7 @@ int Game::Load()
 	//重设渲染器 
 	SDL_RenderClear(renderer);
 
-	return 0;
+	return 0; 
 }
 
 
@@ -140,8 +118,5 @@ int Game::Quit()
 	button_help->Free();
 	button_start->Free();
 
-	SDL_DestroyRenderer(renderer);
-	SDL_DestroyWindow(window);
-	SDL_Quit();
 	return 0;
 }

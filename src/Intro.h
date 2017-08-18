@@ -5,12 +5,7 @@
 #include <iostream> 
 #include <thread>
 
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_image.h>
-
-#include "Particle.h"
-#include "Button.h"
-#include "Background.h"
+#include "Texture.h"
 
 #include "Log.h"
 #include "Vector2D.h"
@@ -26,19 +21,18 @@
 class Intro
 {
 public:
-    Intro(int Screen_w, int Screen_h, SDL_Renderer *ren);
+    Intro(SDL_Renderer *ren, int Screen_w, int Screen_h);
     //  载入对象
-    void Load(const std::string &file, SDL_Renderer *ren);
+    void Load();
     //  渲染
     void Loop();
     //释放SDL_Texture对象
-    void Free();
+    void Quit();
 private:
     //  Logo
     int Screen_w, Screen_h;
-    Texture *Logo;
-    SDL_Event event;
-    SDL_Renderer *renderer;
+    Texture *logo;
+    SDL_Renderer *ren;
 };
 
 

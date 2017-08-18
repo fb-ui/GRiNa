@@ -1,5 +1,5 @@
 #ifndef BACKGROUND_H
-#define BACKGROUND
+#define BACKGROUND_H
 
 #include "Texture.h"
 

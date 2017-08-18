@@ -1,6 +1,7 @@
 #include "Game.h"
-#include "Button.h"
+#include "Intro.h"
 #include <iostream>
+using namespace std;
 //#define DEBUG
 
 /*****************************
@@ -10,6 +11,44 @@
 #	功能：		主程序 
 #	mpsk's game engine proj
 *****************************/ 
+
+SDL_Window *window;
+SDL_Renderer *renderer;
+int SCREEN_WIDTH=1280, SCREEN_HEIGHT=720;
+
+int Init()
+{
+	//初始化 
+	if (SDL_Init(SDL_INIT_VIDEO|SDL_INIT_AUDIO) != 0)
+	{
+		logError(cout, "SDL_Init");
+		return 1;
+	}
+	
+	//创建会话窗口 
+	window = SDL_CreateWindow("GRiNa", 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, 
+								SDL_WINDOW_FULLSCREEN_DESKTOP|SDL_WINDOW_ALLOW_HIGHDPI|SDL_WINDOW_OPENGL);
+	if (window == NULL) 
+	{
+		logError(cout, "SDL_CreateWindow");
+		SDL_Quit();
+		return 1;
+	}
+	SDL_GL_GetDrawableSize(window, &SCREEN_WIDTH, &SCREEN_HEIGHT);
+	cout << "Screen width is:" << SCREEN_WIDTH << endl;
+	cout << "Screen height is:" << SCREEN_HEIGHT << endl;
+	//创建渲染器 
+	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+	if (renderer == NULL)
+	{
+		SDL_DestroyWindow(window);
+		logError(cout, "SDL_CreateRenderer");
+		SDL_Quit();
+		return 1;
+	}
+	return 0; 
+}
+
 
 int main(int argc, char *argv[] )
 {
@@ -23,24 +62,30 @@ int main(int argc, char *argv[] )
 	return 0;
 #else
 	//正式代码
-	Game game;
+	Init();
+
+	Intro *intro = new Intro(renderer, SCREEN_WIDTH, SCREEN_HEIGHT);
+	intro->Load();
+	intro->Loop();
+
+	SDL_RenderClear(renderer);
+	Game *game = new Game(renderer, SCREEN_WIDTH, SCREEN_HEIGHT);
 	//初始化游戏
-	if(game.Init() != 0)
+	if(game->Load() != 0)
 	{
 		return 1;
 	}	
-	//载入游戏
-	if(game.Load() != 0)
-	{
-		return 1;
-	}
-	std::cout << "starting rendering proc... " << std::endl;
+	cout << "starting rendering proc... " << endl;
 	//执行游戏loop
-	game.Loop();
+	game->Loop();
 	//游戏执行完毕
 	//结束
-	game.Quit();
-	std::cout<<"Game Quit!\n"<<std::endl;
+	intro->Quit();
+	game->Quit();
+	cout<<"Game Quit!\n"<<endl;
+	SDL_DestroyRenderer(renderer);
+	SDL_DestroyWindow(window);
+	SDL_Quit();
 	return 0;
 #endif
 }

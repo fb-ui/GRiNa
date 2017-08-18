@@ -31,11 +31,11 @@
 class Game
 {
 	private:
-		SDL_Window *window;
 		SDL_Renderer *renderer;
+		SDL_Window *window;
 		SDL_Event event;
-		int SCREEN_WIDTH  = 1280;		//画面分辨率 
-		int SCREEN_HEIGHT = 720;
+		int SCREEN_WIDTH;		//画面分辨率 
+		int SCREEN_HEIGHT;
 		ParticleSys *particles;
 		Background *background;
 		vector<Button> buttons;
@@ -48,7 +48,7 @@ class Game
 		int i;
 	public:
 		bool quit = 0;
-		int Init();
+		Game(SDL_Renderer *ren, int w, int h);
 		int Load();
 		int Loop();
 		int Quit();
