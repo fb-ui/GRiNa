@@ -36,10 +36,7 @@ int main(int argc, char *argv[] )
 	}
 	std::cout << "starting rendering proc... " << std::endl;
 	//执行游戏loop
-	while(!game.quit) 
-	{	
-		game.Loop();
-	}
+	game.Loop();
 	//游戏执行完毕
 	//结束
 	game.Quit();

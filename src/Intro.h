@@ -1,5 +1,5 @@
-#ifndef GAME_H
-#define GAME_H
+#ifndef INTRO_H
+#define INTRO_H
 
 #include <stdlib.h>
 #include <iostream> 
@@ -26,14 +26,19 @@
 class Intro
 {
 public:
+    Intro(int Screen_w, int Screen_h, SDL_Renderer *ren);
     //  载入对象
     void Load(const std::string &file, SDL_Renderer *ren);
     //  渲染
-    void Render()
+    void Loop();
     //释放SDL_Texture对象
     void Free();
 private:
-    Texture particle_tex;
+    //  Logo
+    int Screen_w, Screen_h;
+    Texture *Logo;
+    SDL_Event event;
+    SDL_Renderer *renderer;
 };
 
 

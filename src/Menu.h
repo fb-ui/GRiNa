@@ -24,6 +24,12 @@
 #	mpsk's game engine proj
 *****************************/ 
 
+#define	MENU_QUIT		0x0000
+#define MENU_NEWGAME	0x0001
+#define MENU_RESUME		0x0002
+#define MENU_OPTION		0x0003
+#define MENU_ABOUT		0x0004
+
 class Menu
 {
 	private:
@@ -35,7 +41,6 @@ class Menu
 		Button *button_help;
 		float tick;
 		float fps;
-		int Loop();
         
 		int i;
 	public:
@@ -44,7 +49,7 @@ class Menu
 		bool quit = 0;
         int Init(int w, int h, SDL_Renderer *renderer);
         int Load();
-        int Run();
+		Uint32 Loop();
 		int Quit();
 };
 
