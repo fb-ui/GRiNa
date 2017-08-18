@@ -9,12 +9,11 @@ using namespace std;
 #	mpsk's game engine proj
 *****************************/ 
 
-int Menu::Init(int w, int h, SDL_Renderer *renderer)
+Menu::Menu(SDL_Renderer *renderer, int w, int h)
 {
     this->renderer = renderer;
     this->SCREEN_WIDTH = w;
     this->SCREEN_HEIGHT = h;
-	return 0; 
 }
 
 int Menu::Load()
@@ -24,8 +23,11 @@ int Menu::Load()
 	//****************************
 	//纹理对象初始化
 	//****************************
-	button_start = new Button(0,0,160,50,"Resource/start.png",renderer);
-	button_help = new Button(0,60,160,50,"Resource/start.png",renderer);
+	buttons.push_back(Button(0,0,160,50,"Resource/start.png",renderer, MENU_NEWGAME));
+	buttons.push_back(Button(0,60,160,50,"Resource/start.png",renderer, MENU_RESUME));
+	buttons.push_back(Button(0,120,160,50,"Resource/start.png",renderer, MENU_OPTION));
+	buttons.push_back(Button(0,180,160,50,"Resource/start.png",renderer, MENU_ABOUT));
+	buttons.push_back(Button(0,240,160,50,"Resource/start.png",renderer, MENU_QUIT));
 	
 	background = new Background();
 	background->LoadTexture("Resource/background.bmp", renderer);
@@ -63,20 +65,30 @@ Uint32 Menu::Loop()
 					if(event.type == SDL_MOUSEBUTTONDOWN)
 					{
 						//1代表摁下，后期会统一使用宏描述
-						button_start->MouseButtonEvent(MOUSE_BUTTON_DOWN);
-						button_help->MouseButtonEvent(MOUSE_BUTTON_DOWN);
+						for(iter=buttons.begin();iter!=buttons.end();iter++)
+						{
+							(*iter).MouseButtonEvent(MOUSE_BUTTON_DOWN);
+						}
 					}	
 					else
 					{
 						//2代表鼠标按键释放
-						button_start->MouseButtonEvent(MOUSE_BUTTON_UP);
-						button_help->MouseButtonEvent(MOUSE_BUTTON_UP);
+						for(iter=buttons.begin();iter!=buttons.end();iter++)
+						{
+							if((*iter).is_pushed)
+							{
+								return (*iter).id;
+							}
+							(*iter).MouseButtonEvent(MOUSE_BUTTON_UP);
+						}
 					}
 				}
 				case SDL_MOUSEMOTION:
 				{
-					button_start->MouseMotionEvent(event.motion.x, event.motion.y);
-					button_help->MouseMotionEvent(event.motion.x, event.motion.y);
+					for(iter=buttons.begin();iter!=buttons.end();iter++)
+					{
+						(*iter).MouseMotionEvent(event.motion.x, event.motion.y);
+					}
 				}
 			}
 		}
@@ -85,21 +97,24 @@ Uint32 Menu::Loop()
 		//背景层渲染 
 		background->Render(SCREEN_WIDTH, SCREEN_HEIGHT, renderer);
 		
-		button_help->Render();
-		button_start->Render();
+		for(iter=buttons.begin();iter!=buttons.end();iter++)
+		{
+			(*iter).Render();
+		}
 		//对象层渲染
 		
 		//渲染器渲染 
 		SDL_RenderPresent(renderer);
 	}
-	return 0;
 }
 
 int Menu::Quit()
 {
 	background->Free();
-	button_help->Free();
-    button_start->Free();
+	for(iter=buttons.begin();iter!=buttons.end();iter++)
+	{
+		(*iter).Free();
+	}
     
 	return 0;
 }

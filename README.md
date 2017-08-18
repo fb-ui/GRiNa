@@ -6,12 +6,25 @@ For it's mobility, I considered the Graphic modules from type to type.
 Finally I chose the SDL2 for the Graphic Library.
 
 ##  DEV-PROG
-We use C++ to complete this project. And the hierarchy is:
+I use C++ to complete this project. And the hierarchy is:
 *   Hierarchy
     *   Game
     *   GameObject(Animation/Charactor...)
     *   Resource(Texture/Script...)
     *   SDL2 Layer
+*   What I have finished 
+    *   Buttons
+    *   Intro
+    *   Menu
+    *   ParticleSys
+    *   BackGround
+    *   Animations
+*   What I am going to finish
+    *   Sprite
+    *   Charactor
+    *   Script
+    *   Encrypt
+    *   FXs
 
 ##  What is GRiNa?
 GRiNa is a game framework for multi-platform purpose. This framework is mainly designed for Chinese action script. For now stage we have completed the the low level implement.

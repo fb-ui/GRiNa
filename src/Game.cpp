@@ -23,8 +23,8 @@ int Game::Load()
 	//****************************
 	//纹理对象初始化
 	//****************************
-	button_start = new Button(0,0,160,50,"Resource/start.png",renderer);
-	button_help = new Button(0,60,160,50,"Resource/start.png",renderer);
+	button_start = new Button(0,0,160,50,"Resource/start.png",renderer, 0x20001);
+	button_help = new Button(0,60,160,50,"Resource/start.png",renderer, 0x20002);
 	
 	background = new Background();
 	background->LoadTexture("Resource/background.bmp", renderer);
@@ -67,7 +67,7 @@ int Game::Loop()
 					if (event.key.keysym.sym == SDLK_ESCAPE)
 					{
 						this->quit = true;
-						return 0;
+						return GAME_QUIT;
 					}
 				} 
 				case SDL_MOUSEBUTTONUP:
@@ -108,7 +108,7 @@ int Game::Loop()
 		//渲染器渲染 
 		SDL_RenderPresent(renderer);
 	}
-	return 0;
+	return GAME_ESCAPE;
 }
 
 int Game::Quit()

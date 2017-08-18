@@ -11,15 +11,9 @@
 #	同时还可以具有Pullevent方法
 ***********************/
 
-Button::Button()
+Button::Button(int x, int y, int w, int h, const std::string file, SDL_Renderer *ren, Uint32 id)
 {
-    this->ren = ren;
-    this->is_pushed = false;
-    this->flag = false;
-}
-
-Button::Button(int x, int y, int w, int h, const std::string file, SDL_Renderer *ren)
-{
+    this->id = id;
     this->ren = ren;
     this->is_pushed = false;
     this->flag = false;

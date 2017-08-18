@@ -15,11 +15,8 @@
 
 #include "Log.h"
 #include "Vector2D.h"
-//#include "Timer.h"
-//#include "lua_Script.h"
-//#include "Script.h"
-//#include "windows.h"
-
+#define	GAME_QUIT		-1
+#define	GAME_ESCAPE		0
 /*****************************
 #	文件名：	Game.h
 #	日期：		2017-1-15

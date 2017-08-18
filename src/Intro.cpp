@@ -18,7 +18,7 @@ void Intro::Loop()
 {
 	SDL_Event event;
 	//this->logo->SetAlpha(10);
-    for(int alpha=0; alpha<255; alpha++)
+    for(int alpha=0; alpha<255; alpha+=2)
     {
         //清理渲染器 
 		SDL_RenderClear(this->ren);
@@ -36,13 +36,12 @@ void Intro::Loop()
 				} 
 			}
 		}
-		std::cout << alpha << std::endl;
 		this->logo->SetAlpha(alpha);
 		this->logo->Render(Screen_w/2-logo->GetWidth()/2, Screen_h/2-logo->GetWidth()/2, this->ren);
 		SDL_RenderPresent(this->ren);
-		//SDL_Delay(20);
 	}
-	for(int alpha=255; alpha>0; alpha--)
+	SDL_Delay(200);
+	for(int alpha=255; alpha>0; alpha-=2)
     {
         //清理渲染器 
 		SDL_RenderClear(this->ren);
@@ -62,10 +61,8 @@ void Intro::Loop()
 			}
 		}
 		this->logo->SetAlpha(alpha);
-		std::cout << alpha << std::endl;
 		this->logo->Render(Screen_w/2-logo->GetWidth()/2, Screen_h/2-logo->GetWidth()/2, this->ren);
 		SDL_RenderPresent(this->ren);
-		//SDL_Delay(20);
 	}
 	return;
 	

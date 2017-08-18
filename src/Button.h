@@ -23,23 +23,23 @@
 class Button
 {
 	public:
-		Button();
-		Button(int x, int y, int w, int h, const std::string file, SDL_Renderer *ren);
+		Button(int x, int y, int w, int h, const std::string file, SDL_Renderer *ren, Uint32 id);
 		void SetPos(int x, int y, int w, int h);
 		void LoadTexture(const std::string file, SDL_Renderer *ren);
 		void Render();
-		//用于处理鼠标消息（0代表位置判断，1代表鼠标摁下，2代表鼠标松开）
+		//	用于处理鼠标消息（0代表位置判断，1代表鼠标摁下，2代表鼠标松开）
 		void MouseMotionEvent(int Mouse_x, int Mouse_y);
 		Uint32 MouseButtonEvent(int type);
 		void Free();
+		//	按钮id用于触发消息
+		int id;
+		bool is_pushed;
 
 	private:
-		//旧版本判定flag
 		int tex_w, tex_h;
+		bool flag;
 		SDL_Rect dst;
 		SDL_Renderer *ren;
-		bool is_pushed;
-		bool flag;
 		//Texture方法类用于处理按钮纹理
 		Texture tex;
 		SDL_Rect clip[4];

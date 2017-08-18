@@ -1,5 +1,6 @@
 #include "Game.h"
 #include "Intro.h"
+#include "Menu.h"
 #include <iostream>
 using namespace std;
 //#define DEBUG
@@ -49,6 +50,15 @@ int Init()
 	return 0; 
 }
 
+int Quit()
+{
+	cout<<"Game Quit!\n"<<endl;
+	SDL_DestroyRenderer(renderer);
+	SDL_DestroyWindow(window);
+	SDL_Quit();
+	return 0;
+}
+
 
 int main(int argc, char *argv[] )
 {
@@ -67,25 +77,49 @@ int main(int argc, char *argv[] )
 	Intro *intro = new Intro(renderer, SCREEN_WIDTH, SCREEN_HEIGHT);
 	intro->Load();
 	intro->Loop();
+	intro->Quit();
 
 	SDL_RenderClear(renderer);
-	Game *game = new Game(renderer, SCREEN_WIDTH, SCREEN_HEIGHT);
-	//初始化游戏
-	if(game->Load() != 0)
+	while(true)
 	{
-		return 1;
-	}	
-	cout << "starting rendering proc... " << endl;
-	//执行游戏loop
-	game->Loop();
-	//游戏执行完毕
-	//结束
-	intro->Quit();
-	game->Quit();
-	cout<<"Game Quit!\n"<<endl;
-	SDL_DestroyRenderer(renderer);
-	SDL_DestroyWindow(window);
-	SDL_Quit();
+		Menu *menu = new Menu(renderer, SCREEN_WIDTH, SCREEN_HEIGHT);
+		//初始化游戏
+		if(menu->Load() != 0)
+		{
+			return 1;
+		}	
+		cout << "starting rendering proc... " << endl;
+		Uint32 _return = menu->Loop();
+		menu->Quit();
+		cout << _return << endl;
+		//执行游戏loop
+		switch(_return)
+		{
+			case MENU_NEWGAME:
+			{
+				Game *game = new Game(renderer, SCREEN_WIDTH, SCREEN_HEIGHT);
+				game->Load();
+				if(game->Loop()==GAME_QUIT)
+				{
+					game->Quit();
+					Quit();
+					return 0;
+				}
+				game->Quit();
+				break;
+			}
+			case MENU_QUIT:
+			{
+				Quit();
+				return 0;
+			}
+			default:
+			{
+				break;
+			}
+		}
+	}
+	Quit();
 	return 0;
 #endif
 }
