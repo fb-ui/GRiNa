@@ -87,7 +87,7 @@ void Button::MouseMotionEvent(int Mouse_x, int Mouse_y)
 }
 
 //用于处理鼠标消息（1代表鼠标摁下，2代表鼠标松开）
-Uint32 Button::MouseButtonEvent(int type)
+void Button::MouseButtonEvent(int type)
 {
     switch(type)
     {

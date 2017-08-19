@@ -23,10 +23,10 @@ int Game::Load()
 	//****************************
 	//纹理对象初始化
 	//****************************
-	button_start = new Button(0,0,160,50,"Resource/start.png",renderer, 0x20001);
-	button_help = new Button(0,60,160,50,"Resource/start.png",renderer, 0x20002);
+	buttons.push_back(Button(0,0,160,50,"Resource/start.png",renderer, GAME_NEXT));
+	buttons.push_back(Button(0,60,160,50,"Resource/start.png",renderer, GAME_ESCAPE));
 	
-	background = new Background();
+	background = new Background(BG_STITCH);
 	background->LoadTexture("Resource/background.bmp", renderer);
 	//*****************************
 	//粒子系统设置
@@ -34,11 +34,11 @@ int Game::Load()
 	cout << "initiating particlesys obj..." << endl; 
 	//初始化重力与速度 
 	Vector2D gravity;
-	gravity.x = 0;
+	gravity.x = 0.0005;
 	gravity.y = 0.0005;
 	//初始化粒子系统 
 	//	每次压入个数	粒子寿命	初始x速度	初始y速度
-	particles = new ParticleSys(10, 150, 0, 0);
+	particles = new ParticleSys(10, 150, 1, 0);
 	particles->LoadTexture("Resource/atom.png", renderer);
 	//	设置边框	设置重力
 	particles->SetKinematic(SCREEN_WIDTH, SCREEN_HEIGHT, 10, gravity);
@@ -77,20 +77,40 @@ int Game::Loop()
 					if(event.type == SDL_MOUSEBUTTONDOWN)
 					{
 						//1代表摁下，后期会统一使用宏描述
-						button_start->MouseButtonEvent(MOUSE_BUTTON_DOWN);
-						button_help->MouseButtonEvent(MOUSE_BUTTON_DOWN);
+						for(button_iter=buttons.begin();button_iter!=buttons.end();button_iter++)
+						{
+							(*button_iter).MouseButtonEvent(MOUSE_BUTTON_DOWN);
+						}
 					}	
 					else
 					{
 						//2代表鼠标按键释放
-						button_start->MouseButtonEvent(MOUSE_BUTTON_UP);
-						button_help->MouseButtonEvent(MOUSE_BUTTON_UP);
+						for(button_iter=buttons.begin();button_iter!=buttons.end();button_iter++)
+						{
+							if((*button_iter).is_pushed)
+							{
+								switch((*button_iter).id)
+								{
+									case GAME_NEXT:
+									{
+										break;
+									}
+									case GAME_ESCAPE:
+									{
+										return (*button_iter).id;
+									}
+								}
+							}
+							(*button_iter).MouseButtonEvent(MOUSE_BUTTON_UP);
+						}
 					}
 				}
 				case SDL_MOUSEMOTION:
 				{
-					button_start->MouseMotionEvent(event.motion.x, event.motion.y);
-					button_help->MouseMotionEvent(event.motion.x, event.motion.y);
+					for(button_iter=buttons.begin();button_iter!=buttons.end();button_iter++)
+					{
+						(*button_iter).MouseMotionEvent(event.motion.x, event.motion.y);
+					}
 				}
 			}
 		}
@@ -99,8 +119,10 @@ int Game::Loop()
 		//背景层渲染 
 		background->Render(SCREEN_WIDTH, SCREEN_HEIGHT, renderer);
 		
-		button_help->Render();
-		button_start->Render();
+		for(button_iter=buttons.begin();button_iter!=buttons.end();button_iter++)
+		{
+			(*button_iter).Render();
+		}
 		//对象层渲染
 
 		//粒子层渲染 
@@ -115,8 +137,11 @@ int Game::Quit()
 {
 	particles->Free();
 	background->Free();
-	button_help->Free();
-	button_start->Free();
+
+	for(button_iter=buttons.begin();button_iter!=buttons.end();button_iter++)
+	{
+		(*button_iter).Free();
+	}
 
 	return 0;
 }

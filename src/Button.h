@@ -29,7 +29,7 @@ class Button
 		void Render();
 		//	用于处理鼠标消息（0代表位置判断，1代表鼠标摁下，2代表鼠标松开）
 		void MouseMotionEvent(int Mouse_x, int Mouse_y);
-		Uint32 MouseButtonEvent(int type);
+		void MouseButtonEvent(int type);
 		void Free();
 		//	按钮id用于触发消息
 		int id;

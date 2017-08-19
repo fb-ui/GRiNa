@@ -65,29 +65,29 @@ Uint32 Menu::Loop()
 					if(event.type == SDL_MOUSEBUTTONDOWN)
 					{
 						//1代表摁下，后期会统一使用宏描述
-						for(iter=buttons.begin();iter!=buttons.end();iter++)
+						for(button_iter=buttons.begin();button_iter!=buttons.end();button_iter++)
 						{
-							(*iter).MouseButtonEvent(MOUSE_BUTTON_DOWN);
+							(*button_iter).MouseButtonEvent(MOUSE_BUTTON_DOWN);
 						}
 					}	
 					else
 					{
 						//2代表鼠标按键释放
-						for(iter=buttons.begin();iter!=buttons.end();iter++)
+						for(button_iter=buttons.begin();button_iter!=buttons.end();button_iter++)
 						{
-							if((*iter).is_pushed)
+							if((*button_iter).is_pushed)
 							{
-								return (*iter).id;
+								return (*button_iter).id;
 							}
-							(*iter).MouseButtonEvent(MOUSE_BUTTON_UP);
+							(*button_iter).MouseButtonEvent(MOUSE_BUTTON_UP);
 						}
 					}
 				}
 				case SDL_MOUSEMOTION:
 				{
-					for(iter=buttons.begin();iter!=buttons.end();iter++)
+					for(button_iter=buttons.begin();button_iter!=buttons.end();button_iter++)
 					{
-						(*iter).MouseMotionEvent(event.motion.x, event.motion.y);
+						(*button_iter).MouseMotionEvent(event.motion.x, event.motion.y);
 					}
 				}
 			}
@@ -97,9 +97,9 @@ Uint32 Menu::Loop()
 		//背景层渲染 
 		background->Render(SCREEN_WIDTH, SCREEN_HEIGHT, renderer);
 		
-		for(iter=buttons.begin();iter!=buttons.end();iter++)
+		for(button_iter=buttons.begin();button_iter!=buttons.end();button_iter++)
 		{
-			(*iter).Render();
+			(*button_iter).Render();
 		}
 		//对象层渲染
 		
@@ -111,9 +111,9 @@ Uint32 Menu::Loop()
 int Menu::Quit()
 {
 	background->Free();
-	for(iter=buttons.begin();iter!=buttons.end();iter++)
+	for(button_iter=buttons.begin();button_iter!=buttons.end();button_iter++)
 	{
-		(*iter).Free();
+		(*button_iter).Free();
 	}
     
 	return 0;

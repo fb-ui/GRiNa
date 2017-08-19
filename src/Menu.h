@@ -25,7 +25,7 @@
 #define MENU_RESUME		0x0002
 #define MENU_OPTION		0x0003
 #define MENU_ABOUT		0x0004
-#define	MENU_QUIT		0x0005
+#define	MENU_QUIT		0xFFFF
 
 class Menu
 {
@@ -34,7 +34,7 @@ class Menu
 		SDL_Event event;
 		Background *background;
 		list<Button> buttons;
-		list<Button>::iterator iter;
+		list<Button>::iterator button_iter;
 		Button *button_start;
 		Button *button_help;
 		float tick;

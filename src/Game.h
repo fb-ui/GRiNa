@@ -15,8 +15,13 @@
 
 #include "Log.h"
 #include "Vector2D.h"
-#define	GAME_QUIT		-1
-#define	GAME_ESCAPE		0
+
+#define GAME_NEXT		0x0001
+#define GAME_PAUSE		0x0002
+#define GAME_OPTION		0x0003
+#define GAME_SAVE		0x0004
+#define GAME_ESCAPE		0x0005
+#define	GAME_QUIT		0xFFFF
 /*****************************
 #	文件名：	Game.h
 #	日期：		2017-1-15
@@ -36,8 +41,7 @@ class Game
 		ParticleSys *particles;
 		Background *background;
 		vector<Button> buttons;
-		Button *button_start;
-		Button *button_help;
+		vector<Button>::iterator button_iter;
 		//Timer timer;
 		float tick;
 		float fps;
