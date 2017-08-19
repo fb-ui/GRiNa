@@ -1,5 +1,5 @@
 #include "Log.h"
-#include <SDL2/SDL.h>
+#include "../include/SDL.h"
  /*****************************
 #	文件名：	Log.cpp 
 #	日期：		2016-08-06 

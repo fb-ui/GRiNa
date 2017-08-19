@@ -6,8 +6,8 @@
 #include <vector>
 #include "Vector2D.h"
 #include "Texture.h"	
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_image.h>
+#include "../include/SDL.h"
+#include "../include/SDL_image.h"
 
 /*****************************
 #	文件名：	Particle.h

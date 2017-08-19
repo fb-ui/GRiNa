@@ -6,8 +6,8 @@
 #include <thread>
 #include <vector>
 
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_image.h>
+#include "../include/SDL.h"
+#include "../include/SDL_image.h"
 
 #include "Particle.h"
 #include "Button.h"

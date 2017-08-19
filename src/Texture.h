@@ -1,7 +1,7 @@
 #ifndef TEXTURE_H
 #define TEXTURE_H
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_image.h>
+#include "../include/SDL.h"
+#include "../include/SDL_image.h"
 #include "Vector2D.h"
 #include <string>
 
