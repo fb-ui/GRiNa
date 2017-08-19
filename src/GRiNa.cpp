@@ -88,7 +88,6 @@ int main(int argc, char *argv[] )
 		{
 			return 1;
 		}	
-		cout << "starting rendering proc... " << endl;
 		Uint32 _return = menu->Loop();
 		menu->Quit();
 		cout << _return << endl;
