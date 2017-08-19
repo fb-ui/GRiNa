@@ -14,7 +14,15 @@
 #	功能：		脚本对象的定义 	
 #	mpsk's game engine proj
 *****************************/ 
- 
+#define	SCRPT_LOAD_BG			0x0001
+#define SCRPT_LOAD_PARTCLE		0x0002
+#define SCRPT_LOAD_BUTTON 		0x0003
+#define SCRPT_LOAD_DIALOG		0x0004
+#define SCRPT_ACTION_PLAY		0x1001
+#define SCRPT_ACTION_NEXT		0x1002
+#define SCRPT_ACTION_ANIMATION	0x1003
+#define SCRPT_ACTION_JUMP		0x1004
+
 class Script
 {
 	public:
