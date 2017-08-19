@@ -5,8 +5,8 @@ CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
 RES      = src/Engine_private.res
-OBJ      = src/Background.o src/Button.o src/Fish.o src/Game.o src/GRiNa.o src/Intro.o src/Log.o src/Menu.o src/Message.o src/Particle.o src/Script.o src/Texture.o src/Timer.o $(RES)
-LINKOBJ  = src/Background.o src/Button.o src/Fish.o src/Game.o src/GRiNa.o src/Intro.o src/Log.o src/Menu.o src/Message.o src/Particle.o src/Script.o src/Texture.o src/Timer.o $(RES)
+OBJ      = src/Background.o src/Button.o src/Game.o src/GRiNa.o src/Intro.o src/Log.o src/Menu.o src/Message.o src/Particle.o src/Script.o src/Texture.o src/Timer.o $(RES)
+LINKOBJ  = src/Background.o src/Button.o src/Game.o src/GRiNa.o src/Intro.o src/Log.o src/Menu.o src/Message.o src/Particle.o src/Script.o src/Texture.o src/Timer.o $(RES)
 LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -L"lib/dev/SDL/win" -L"lib/dev/SDL_Image/win" -L"lib/dev/lua/win" -lmingw32 -lSDL2main -lSDL2 -llibSDL2_image -llua53
 INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
@@ -30,9 +30,6 @@ src/Background.o: src/Background.cpp
 
 src/Button.o: src/Button.cpp
 	$(CPP) -c src/Button.cpp -o src/Button.o $(CXXFLAGS)
-
-src/Fish.o: src/Fish.cpp
-	$(CPP) -c src/Fish.cpp -o src/Fish.o $(CXXFLAGS)
 
 src/Game.o: src/Game.cpp
 	$(CPP) -c src/Game.cpp -o src/Game.o $(CXXFLAGS)

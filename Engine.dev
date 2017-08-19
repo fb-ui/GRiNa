@@ -5,7 +5,7 @@ Type=1
 Ver=2
 ObjFiles=
 Includes=
-Libs=lib\SDL\x64;lib\SDL_Image;lib\lua
+Libs=lib\dev\SDL\win;lib\dev\SDL_Image\win;lib\dev\lua\win
 PrivateResource=Engine_private.rc
 ResourceIncludes=
 MakeIncludes=
@@ -29,7 +29,7 @@ IncludeVersionInfo=1
 SupportXPThemes=0
 CompilerSet=0
 CompilerSettings=1100000000100000000000000
-UnitCount=27
+UnitCount=25
 
 [VersionInfo]
 Major=0
@@ -42,11 +42,11 @@ CharsetID=1252
 CompanyName=
 FileVersion=0.2.8.121
 =======
-Build=40
+Build=42
 LanguageID=1033
 CharsetID=1252
 CompanyName=
-FileVersion=0.3.2.40
+FileVersion=0.3.2.42
 >>>>>>> refs/remotes/origin/master
 FileDescription=
 InternalName=
@@ -89,26 +89,6 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit19]
-FileName=src\Particle.cpp
-CompileCpp=1
-Folder=Source
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
-[Unit20]
-FileName=src\Particle.h
-CompileCpp=1
-Folder=Header
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
-[Unit21]
 FileName=src\Script.cpp
 CompileCpp=1
 Folder=Source
@@ -118,7 +98,7 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit22]
+[Unit20]
 FileName=src\Script.h
 CompileCpp=1
 Folder=Header
@@ -128,7 +108,7 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit23]
+[Unit21]
 FileName=src\Texture.cpp
 CompileCpp=1
 Folder=Source
@@ -138,7 +118,7 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit24]
+[Unit22]
 FileName=src\Texture.h
 CompileCpp=1
 Folder=Header
@@ -148,10 +128,30 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit25]
+[Unit23]
 FileName=src\Timer.cpp
 CompileCpp=1
 Folder=Source
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit24]
+FileName=src\Timer.h
+CompileCpp=1
+Folder=Header
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit25]
+FileName=src\Vector2D.h
+CompileCpp=1
+Folder=Header
 Compile=1
 Link=1
 Priority=1000
@@ -179,26 +179,6 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit6]
-FileName=src\Fish.cpp
-CompileCpp=1
-Folder=Source
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
-[Unit7]
-FileName=src\Fish.h
-CompileCpp=1
-Folder=Header
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
-[Unit8]
 FileName=src\Game.cpp
 CompileCpp=1
 Folder=Source
@@ -208,7 +188,7 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit9]
+[Unit7]
 FileName=src\Game.h
 CompileCpp=1
 Folder=Header
@@ -218,7 +198,7 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit10]
+[Unit8]
 FileName=src\GRiNa.cpp
 CompileCpp=1
 Folder=
@@ -228,7 +208,7 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit11]
+[Unit9]
 FileName=src\Intro.cpp
 CompileCpp=1
 Folder=Source
@@ -238,7 +218,7 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit12]
+[Unit10]
 FileName=src\Intro.h
 CompileCpp=1
 Folder=Header
@@ -248,7 +228,7 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit13]
+[Unit11]
 FileName=src\Log.cpp
 CompileCpp=1
 Folder=Source
@@ -258,7 +238,7 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit14]
+[Unit12]
 FileName=src\Log.h
 CompileCpp=1
 Folder=Header
@@ -268,7 +248,7 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit15]
+[Unit13]
 FileName=src\Menu.cpp
 CompileCpp=1
 Folder=Source
@@ -278,7 +258,7 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit16]
+[Unit14]
 FileName=src\Menu.h
 CompileCpp=1
 Folder=Header
@@ -288,7 +268,7 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit17]
+[Unit15]
 FileName=src\Message.cpp
 CompileCpp=1
 Folder=Source
@@ -298,8 +278,28 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit18]
+[Unit16]
 FileName=src\Message.h
+CompileCpp=1
+Folder=Header
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit17]
+FileName=src\Particle.cpp
+CompileCpp=1
+Folder=Source
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit18]
+FileName=src\Particle.h
 CompileCpp=1
 Folder=Header
 Compile=1
