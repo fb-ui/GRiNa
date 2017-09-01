@@ -1,5 +1,6 @@
 #ifndef SCRIPT_H
 #define SCRIPT_H
+
 #include <iostream>
 #include <fstream>
 #include <cstdlib>
@@ -23,18 +24,20 @@
 #define SCRPT_ACTION_ANIMATION	0x1003
 #define SCRPT_ACTION_JUMP		0x1004
 
+using namespace std;
+
 class Script
 {
 	public:
 		int Init();
-		int Load(char* file);
+		int Load(const string file);
 		//Message Docode(); 
-		void Docode(); 
-		void Free();
+		int Docode(string &s); 
+		bool Free();
 	private:
 		//lua_State* lua;
 		int linenum;	
-		std::ifstream script; 
+		ifstream script; 
 };
 
 

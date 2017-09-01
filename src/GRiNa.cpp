@@ -64,11 +64,14 @@ int main(int argc, char *argv[] )
 {
 //测试代码	
 #ifdef DEBUG
-	LuaScript script;
-	script.Init();
-	script.Load("main.lua");
-	script.Docode();
-	script.Free();
+	Script script;
+	script.Load("Resource/script.ms");
+	for(int i=0; i<5; i++)
+	{
+		string s;
+		script.Docode(s);
+		cout <<"line "<< i << " is " << s << endl;
+	}
 	return 0;
 #else
 	//正式代码

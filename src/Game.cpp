@@ -23,7 +23,7 @@ int Game::Load()
 	//****************************
 	//纹理对象初始化
 	//****************************
-	buttons.push_back(Button(0,0,160,50,"Resource/start.png",renderer, GAME_NEXT));
+	buttons.push_back(Button(this->SCREEN_WIDTH-200,this->SCREEN_HEIGHT-90,160,50,"Resource/start.png",renderer, GAME_NEXT));
 	buttons.push_back(Button(0,60,160,50,"Resource/start.png",renderer, GAME_ESCAPE));
 	
 	background = new Background(BG_STITCH);

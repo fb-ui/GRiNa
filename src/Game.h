@@ -15,6 +15,8 @@
 
 #include "Log.h"
 #include "Vector2D.h"
+#include "Script.h"
+
 
 #define GAME_NEXT		0x0001
 #define GAME_PAUSE		0x0002

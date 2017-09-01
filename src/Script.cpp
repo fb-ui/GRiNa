@@ -1,5 +1,6 @@
 #include "Script.h"
 #define DEBUG
+using namespace std;
 
 /*****************************
 #	文件名：	Script.cpp
@@ -11,32 +12,29 @@
 
 int Script::Init()
 {
-
-#ifdef DEBUG
-    std::cout << "lua libs loaded..." << std::endl;
-#endif
     return 0;
 }
 
-int Script::Load(char* file)
+int Script::Load(const string file)
 {
-
-#ifdef DEBUG
-    std::cout << "lua file loaded..." << std::endl;
-#endif
+    this->script.open(file, ifstream::binary);
     return 0;
 }
 
-void Script::Docode()
+int Script::Docode(string &s)
 {
-
-#ifdef DEBUG
-    std::cout << "lua code done!" << std::endl;
-#endif
+    //  执行一行以后返回下一行。
+    getline(this->script, s);
+    cout << s << endl;
+    if(this->script.eof())
+        return -1;
+    return 0;
 }
 
-void Script::Free()
+bool Script::Free()
 {
-    
+    this->script.clear();
+    this->script.close();
+    return true;
 }
 

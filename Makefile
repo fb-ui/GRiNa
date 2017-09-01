@@ -8,6 +8,7 @@ EXECUTABLE=GRiNa.exe
 else
 INCFLAGS=`sdl2-config --cflags`
 LDFLAGS=`sdl2-config --libs`
+LDFLAGS+=-lSDL2_ttf
 EXECUTABLE=GRiNA.out
 endif
 
