@@ -21,7 +21,7 @@ class Background
     public:
         Background();
         Background(Uint32 type);
-        void LoadTexture(const std::string &file, SDL_Renderer *ren);
+        void LoadTexture(SDL_RWops *src, SDL_Renderer *ren);
         void Render(int Screen_w, int Screen_h, SDL_Renderer *ren);
         void Free();
     private:

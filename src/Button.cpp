@@ -11,13 +11,13 @@
 #	同时还可以具有Pullevent方法
 ***********************/
 
-Button::Button(int x, int y, int w, int h, const std::string file, SDL_Renderer *ren, Uint32 id)
+Button::Button(int x, int y, int w, int h, SDL_RWops *src, SDL_Renderer *ren, Uint32 id)
 {
     this->id = id;
     this->ren = ren;
     this->is_pushed = false;
     this->flag = false;
-    this->LoadTexture(file, ren);
+    this->LoadTexture(src, ren);
     this->SetPos(x, y, w, h);
 }
 
@@ -30,9 +30,9 @@ void Button::SetPos(int x, int y, int w, int h)
     this->dst.h = h;
 }
 
-void Button::LoadTexture(const std::string file, SDL_Renderer * ren)
+void Button::LoadTexture(SDL_RWops *src, SDL_Renderer * ren)
 {
-    this->tex.Load(file, ren);
+    this->tex.Load(src, ren);
     this->tex_w = tex.GetWidth();
     this->tex_h = tex.GetHeight();
     this->clip[0].x = 0;

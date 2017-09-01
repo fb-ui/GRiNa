@@ -26,6 +26,14 @@ I use C++ to complete this project. And the hierarchy is:
     *   Encrypt
     *   FXs
 
+*   Dev reminder
+    *   Use ttf file to paint custom fonts
+    *   Design a dialog box to test the scripts
+    *   Use the SDL_RWops to storage resources and preload it to memory when start up
+    *   Use encrypted binary files to storage images, scripts and sounds.
+    *   preloaded objects can be fast and flexible
+    *   Scripts should be excutable in global
+
 ##  What is GRiNa?
 GRiNa is a game framework for multi-platform purpose. This framework is mainly designed for Chinese action script. For now stage we have completed the the low level implement.
 

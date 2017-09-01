@@ -9,16 +9,39 @@
 #	功能：		纹理对象实现 
 #	mpsk's game engine proj
 *****************************/ 
-
-
-void Texture::Load(const std::string &file, SDL_Renderer *ren)
+void Texture::Load(SDL_RWops *src, SDL_Renderer *ren)
 {
-	texture = IMG_LoadTexture(ren, file.c_str());
-	if (texture == NULL){
+	SDL_Surface *image;
+	image = IMG_Load_RW(src, 1);
+	if(image == NULL)
+	{
+		logError(std::cout, "LoadTexture");
+	}
+	else
+	{
+		this->texture = SDL_CreateTextureFromSurface(ren, image);
+		if(this->texture == NULL)
+		{
+			logError(std::cout, "LoadTexture");
+			return;
+		}
+		else
+		{
+			SDL_QueryTexture(this->texture, NULL, NULL, &dst.w, &dst.h);
+		}
+		SDL_FreeSurface(image);
+	}
+	return;
+}
+
+void Texture::LoadFromFile(const std::string &file, SDL_Renderer *ren)
+{
+	this->texture = IMG_LoadTexture(ren, file.c_str());
+	if (this->texture == NULL){
 		logError(std::cout, "LoadTexture");
 	}
 	//renderer = ren;
-	SDL_QueryTexture(texture, NULL, NULL, &dst.w, &dst.h);
+	SDL_QueryTexture(this->texture, NULL, NULL, &dst.w, &dst.h);
 }
 
 

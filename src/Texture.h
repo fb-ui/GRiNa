@@ -1,5 +1,6 @@
 #ifndef TEXTURE_H
 #define TEXTURE_H
+
 #include "../include/SDL.h"
 #include "../include/SDL_image.h"
 #include "Vector2D.h"
@@ -18,7 +19,9 @@
 class Texture
 {
 	public:
-		void Load(const std::string &file, SDL_Renderer *ren);
+		void Load(SDL_RWops *src, SDL_Renderer *ren);
+
+		void LoadFromFile(const std::string &file, SDL_Renderer *ren);
 		//释放SDL_Texture对象
 		void Free();
 		//设定颜色模式

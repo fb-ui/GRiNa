@@ -23,9 +23,9 @@
 class Button
 {
 	public:
-		Button(int x, int y, int w, int h, const std::string file, SDL_Renderer *ren, Uint32 id);
+		Button(int x, int y, int w, int h, SDL_RWops *src, SDL_Renderer *ren, Uint32 id);
 		void SetPos(int x, int y, int w, int h);
-		void LoadTexture(const std::string file, SDL_Renderer *ren);
+		void LoadTexture(SDL_RWops *src, SDL_Renderer *ren);
 		void Render();
 		//	用于处理鼠标消息（0代表位置判断，1代表鼠标摁下，2代表鼠标松开）
 		void MouseMotionEvent(int Mouse_x, int Mouse_y);

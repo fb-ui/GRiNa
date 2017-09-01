@@ -18,7 +18,7 @@ Background::Background(Uint32 type)
     this->type = type;
 }
 
-void Background::LoadTexture(const std::string &file, SDL_Renderer *ren){this->tex.Load(file, ren);}
+void Background::LoadTexture(SDL_RWops *src, SDL_Renderer *ren){this->tex.Load(src, ren);}
 
 void Background::Render(int Screen_w, int Screen_h, SDL_Renderer *ren)
 {

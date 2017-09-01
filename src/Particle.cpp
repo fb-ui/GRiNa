@@ -39,10 +39,10 @@ void ParticleSys::Push(int num, int life, Vector2D speed)
 }
 
 //新版本中载入纹理函数中直接设置渲染器
-void ParticleSys::LoadTexture(const std::string &file, SDL_Renderer *ren)
+void ParticleSys::LoadTexture(SDL_RWops *src, SDL_Renderer *ren)
 {
 	//particle_ren = ren;
-	particle_tex.Load(file, ren);
+	particle_tex.Load(src, ren);
 }
 
 void ParticleSys::SetLife(int life)

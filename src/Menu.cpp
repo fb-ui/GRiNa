@@ -1,3 +1,4 @@
+#include "../include/SDL.h"
 #include "Menu.h"
 #define DEBUG
 using namespace std;
@@ -23,14 +24,14 @@ int Menu::Load()
 	//****************************
 	//纹理对象初始化
 	//****************************
-	buttons.push_back(Button(0,0,160,50,"Resource/start.png",renderer, MENU_NEWGAME));
-	buttons.push_back(Button(0,60,160,50,"Resource/start.png",renderer, MENU_RESUME));
-	buttons.push_back(Button(0,120,160,50,"Resource/start.png",renderer, MENU_OPTION));
-	buttons.push_back(Button(0,180,160,50,"Resource/start.png",renderer, MENU_ABOUT));
-	buttons.push_back(Button(0,240,160,50,"Resource/start.png",renderer, MENU_QUIT));
+	buttons.push_back(Button(0,0,160,50,SDL_RWFromFile("Resource/start.png","rb"),renderer, MENU_NEWGAME));
+	buttons.push_back(Button(0,60,160,50,SDL_RWFromFile("Resource/start.png","rb"),renderer, MENU_RESUME));
+	buttons.push_back(Button(0,120,160,50,SDL_RWFromFile("Resource/start.png","rb"),renderer, MENU_OPTION));
+	buttons.push_back(Button(0,180,160,50,SDL_RWFromFile("Resource/start.png","rb"),renderer, MENU_ABOUT));
+	buttons.push_back(Button(0,240,160,50,SDL_RWFromFile("Resource/start.png","rb"),renderer, MENU_QUIT));
 	
 	background = new Background();
-	background->LoadTexture("Resource/background.bmp", renderer);
+	background->LoadTexture(SDL_RWFromFile("Resource/background.bmp","rb"), renderer);
 	//重设渲染器 
 	SDL_RenderClear(renderer);
 

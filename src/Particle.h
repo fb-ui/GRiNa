@@ -36,7 +36,7 @@ class ParticleSys
 	public:
 		ParticleSys(int num, int life, int speed_x, int speed_y);
 		//给粒子载入纹理
-		void LoadTexture(const std::string &file, SDL_Renderer *ren);
+		void LoadTexture(SDL_RWops *src, SDL_Renderer *ren);
 		//设定粒子生命值（生命值的设定是为了方便垃圾回收）
 		//注意：合适的生命值设定有利于改善游戏内存的占用量和游戏运行效率
 		void SetLife(int life);
