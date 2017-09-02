@@ -27,6 +27,9 @@ OBJ = ${patsubst %.cpp, %.o, $(SRC)}
 all:$(OBJ)
 	$(CXX) $(CXXFLAGS) -o $(BIN_PATH)$(EXECUTABLE) $(OBJ) $(INCFLAGS) $(LDFLAGS) $(LDFLAGS_EXSDLIMG)
 
+filegen:
+	$(CXX) $(CXXFLAGS) -o $(BIN_PATH)filegenerator.out src/tools/filegenerator.cpp $(INCFLAGS) $(LDFLAGS) $(LDFLAGS_EXSDLIMG)
+
 $(OBJ):%.o:%.cpp
 	$(CXX) $(CXXFLAGS) $(INCFLAGS_CV2) -o $@ -c $<
 

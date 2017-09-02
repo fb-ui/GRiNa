@@ -4,11 +4,12 @@
 
 /*****************************
 #	文件名：	Texture.cpp
-#	日期：		2016-12-28 
-#	版本号：	0.3.1
+#	日期：		2017-09-01 
+#	版本号：	0.4.1
 #	功能：		纹理对象实现 
 #	mpsk's game engine proj
 *****************************/ 
+
 void Texture::Load(SDL_RWops *src, SDL_Renderer *ren)
 {
 	SDL_Surface *image;
