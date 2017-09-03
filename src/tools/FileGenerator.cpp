@@ -7,6 +7,7 @@
 *****************************/ 
 
 #include "../../include/SDL.h"
+#include "../ResourcePackage.h"
 #include <cstdlib>
 #include <string>
 #include <vector>
@@ -24,16 +25,6 @@ void Usage(char *name)
     cout << "\t-i:\tfor image attribute" << endl;
     cout << "\t-s:\tfor image attribute" << endl;
 }
-
-typedef struct BinContent
-{
-    //  Head of the Binary file
-    char name[NAME_LEN];
-    char type[TYPE_LEN];
-    Sint64 size;
-    //  ptr to the content
-    SDL_RWops *content;
-}BIN;
 
 //  ---------------------------------------------
 //  This function returns the increase of the ptr
