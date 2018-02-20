@@ -10,15 +10,14 @@
 #	文件名：	Texture.h 
 #	日期：		2016-12-28 
 #	版本号：	0.3.1
-#	功能：		纹理对象抽象 
 #	mpsk's game engine proj
 *****************************/ 
-
-
 
 class Texture
 {
 	public:
+		Texture(){};
+		Texture(SDL_RWops *src, SDL_Renderer *ren, int id);
 		void Load(SDL_RWops *src, SDL_Renderer *ren);
 
 		void LoadFromFile(const std::string &file, SDL_Renderer *ren);
@@ -39,6 +38,7 @@ class Texture
 		void Render_dst(SDL_Rect dest, SDL_Renderer *ren);
 		int GetWidth();
 		int GetHeight();
+		int id = 0x0;
 	private:
 		//纹理顶点位置
 		SDL_Rect dst;

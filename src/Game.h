@@ -18,12 +18,18 @@
 #include "Script.h"
 
 
-#define GAME_NEXT		0x0001
-#define GAME_PAUSE		0x0002
-#define GAME_OPTION		0x0003
-#define GAME_SAVE		0x0004
-#define GAME_ESCAPE		0x0005
-#define	GAME_QUIT		0xFFFF
+#define GAME_BUTTON_START		0xF001
+#define GAME_BUTTON_PAUSE		0xF002
+#define GAME_BUTTON_OPTION		0xF003
+#define GAME_BUTTON_SAVE		0xF004
+#define GAME_BUTTON_ESCAPE		0xF005
+#define	GAME_BUTTON_QUIT		0xFFFF
+#define GAME_START				GAME_BUTTON_START
+#define GAME_PAUSE				GAME_BUTTON_PAUSE
+#define GAME_OPTION				GAME_BUTTON_OPTION
+#define GAME_SAVE				GAME_BUTTON_SAVE
+#define GAME_ESCAPE				GAME_BUTTON_ESCAPE
+#define GAME_QUIT				GAME_BUTTON_QUIT
 /*****************************
 #	文件名：	Game.h
 #	日期：		2017-1-15

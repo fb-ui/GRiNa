@@ -27,3 +27,6 @@
 
 #   GRiNa Binary
 *.rpk
+bin/按钮系列.zip
+bin/GRiNA*
+.vscode/

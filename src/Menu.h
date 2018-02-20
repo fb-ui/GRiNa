@@ -21,11 +21,20 @@
 #	mpsk's game engine proj
 *****************************/ 
 
-#define MENU_NEWGAME	0x0001
-#define MENU_RESUME		0x0002
-#define MENU_OPTION		0x0003
-#define MENU_ABOUT		0x0004
+#define MENU_NEWGAME	0xF001
+#define MENU_RESUME		0xF002
+#define MENU_OPTION		0xF003
+#define MENU_ABOUT		0xF004
 #define	MENU_QUIT		0xFFFF
+
+#define MENU_CITY1		0xE001
+#define MENU_CITY2		0xE002
+#define MENU_CITY3		0xE003
+
+#define MENU_MARGIN		60
+#define MENU_BUTTON_W	160
+#define MENU_BUTTON_H	50
+
 
 class Menu
 {
@@ -35,16 +44,17 @@ class Menu
 		Background *background;
 		list<Button> buttons;
 		list<Button>::iterator button_iter;
+		list<Texture> layer;
+		list<Texture>::iterator layer_iter;
 		Button *button_start;
 		Button *button_help;
-		float tick;
-		float fps;
-        
-		int i;
+		//float tick;
+		//float fps;
+		//int i;
 	public:
 		int SCREEN_WIDTH;		//画面分辨率 
 		int SCREEN_HEIGHT;
-		bool quit = 0;
+		bool quit = false;
 		Menu(SDL_Renderer *renderer, int w, int h);
         int Init();
         int Load();

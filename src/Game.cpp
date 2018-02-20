@@ -25,8 +25,9 @@ int Game::Load()
 	//****************************
 	//纹理对象初始化
 	//****************************
-	buttons.push_back(Button(this->SCREEN_WIDTH-200,this->SCREEN_HEIGHT-90,160,50,SDL_RWFromFile("Resource/start.png","rb"),renderer, GAME_NEXT));
-	buttons.push_back(Button(0,60,160,50,SDL_RWFromFile("Resource/start.png","rb"),renderer, GAME_ESCAPE));
+	buttons.push_back(Button(this->SCREEN_WIDTH-200,this->SCREEN_HEIGHT-90,160,50,SDL_RWFromFile("Resource/start.png","rb"),renderer, GAME_BUTTON_START));
+	buttons.push_back(Button(this->SCREEN_WIDTH-200,this->SCREEN_HEIGHT-180,160,50,SDL_RWFromFile("Resource/option.png","rb"),renderer, GAME_BUTTON_OPTION));
+	buttons.push_back(Button(0,60,160,50,SDL_RWFromFile("Resource/quit.png","rb"),renderer, GAME_BUTTON_ESCAPE));
 	
 	background = new Background(BG_STITCH);
 	background->LoadTexture(SDL_RWFromFile("Resource/background.bmp","rb"), renderer);
@@ -69,7 +70,7 @@ int Game::Loop()
 					if (event.key.keysym.sym == SDLK_ESCAPE)
 					{
 						this->quit = true;
-						return GAME_QUIT;
+						return GAME_BUTTON_ESCAPE;
 					}
 				} 
 				case SDL_MOUSEBUTTONUP:
@@ -91,17 +92,7 @@ int Game::Loop()
 						{
 							if((*button_iter).is_pushed)
 							{
-								switch((*button_iter).id)
-								{
-									case GAME_NEXT:
-									{
-										break;
-									}
-									case GAME_ESCAPE:
-									{
-										return (*button_iter).id;
-									}
-								}
+								return (*button_iter).id;
 							}
 							(*button_iter).MouseButtonEvent(MOUSE_BUTTON_UP);
 						}
@@ -132,7 +123,7 @@ int Game::Loop()
 		//渲染器渲染 
 		SDL_RenderPresent(renderer);
 	}
-	return GAME_ESCAPE;
+	return GAME_BUTTON_ESCAPE;
 }
 
 int Game::Quit()
@@ -144,6 +135,5 @@ int Game::Quit()
 	{
 		(*button_iter).Free();
 	}
-
 	return 0;
 }

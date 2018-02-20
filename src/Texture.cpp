@@ -8,7 +8,12 @@
 #	版本号：	0.4.1
 #	功能：		纹理对象实现 
 #	mpsk's game engine proj
-*****************************/ 
+*****************************/
+Texture::Texture(SDL_RWops *src, SDL_Renderer *ren, int id)
+{
+	this->Load(src, ren);
+	this->id = id;
+}
 
 void Texture::Load(SDL_RWops *src, SDL_Renderer *ren)
 {
