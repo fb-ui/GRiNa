@@ -27,3 +27,6 @@
 
 #   GRiNa Binary
 *.rpk
+
+# Ignore required
+required/
