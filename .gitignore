@@ -27,6 +27,11 @@
 
 #   GRiNa Binary
 *.rpk
+
+#   Ignore Binary & Resource file
 bin/按钮系列.zip
 bin/GRiNA*
 .vscode/
+
+#   Ignore required
+required/
