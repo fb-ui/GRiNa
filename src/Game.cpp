@@ -20,6 +20,7 @@ Game::Game(SDL_Renderer *renderer, int w, int h)
 
 int Game::Load()
 {
+	//	TODO:	This will be replaced by scripts
 	//加载资源 
 	//加载图像资源 	
 	//****************************
