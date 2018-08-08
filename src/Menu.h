@@ -5,12 +5,13 @@
 #include <iostream> 
 #include <thread>
 #include <list>
+#include <vector>
 
-#include "Particle.h"
-#include "Button.h"
-#include "Background.h"
+#include "GR_Particle.h"
+#include "GR_Button.h"
+#include "GR_Background.h"
 
-#include "Log.h"
+#include "GR_Log.h"
 #include "Vector2D.h"
 
 /*****************************
@@ -41,13 +42,14 @@ class Menu
 	private:
 		SDL_Renderer *renderer;
 		SDL_Event event;
-		Background *background;
-		list<Button> buttons;
-		list<Button>::iterator button_iter;
-		list<Texture> layer;
-		list<Texture>::iterator layer_iter;
-		Button *button_start;
-		Button *button_help;
+		GR_Background *background;
+		list<GR_Button> buttons;
+		list<GR_Button>::iterator button_iter;
+		list<GR_Texture> layer;
+		list<GR_Texture>::iterator layer_iter;
+		vector<SDL_RWops*> resources;
+		GR_Button *button_start;
+		GR_Button *button_help;
 		//float tick;
 		//float fps;
 		//int i;
@@ -56,6 +58,7 @@ class Menu
 		int SCREEN_HEIGHT;
 		bool quit = false;
 		Menu(SDL_Renderer *renderer, int w, int h);
+		~Menu();
         int Init();
         int Load();
 		Uint32 Loop();

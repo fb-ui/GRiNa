@@ -5,9 +5,9 @@
 #include <iostream> 
 #include <thread>
 
-#include "Texture.h"
+#include "GR_Texture.h"
 
-#include "Log.h"
+#include "GR_Log.h"
 #include "Vector2D.h"
 
 /*****************************
@@ -22,6 +22,7 @@ class Intro
 {
 public:
     Intro(SDL_Renderer *ren, int Screen_w, int Screen_h);
+    ~Intro();
     //  载入对象
     void Load();
     //  渲染
@@ -31,7 +32,7 @@ public:
 private:
     //  Logo
     int Screen_w, Screen_h;
-    Texture *logo;
+    GR_Texture *logo;
     SDL_Renderer *ren;
 };
 

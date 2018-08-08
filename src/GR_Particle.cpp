@@ -1,5 +1,5 @@
-#include "Particle.h"
-#include "Log.h"
+#include "GR_Particle.h"
+#include "GR_Log.h"
 #include <iostream>
 
 /*****************************
@@ -10,19 +10,25 @@
 #	mpsk's game engine proj
 *****************************/ 
 
-ParticleSys::ParticleSys(int num, int life, int speed_x, int speed_y)
+GR_ParticleSys::GR_ParticleSys(int num, int life, int speed_x, int speed_y)
 {
 	this->ptnum = num;
 	this->ptlife = life;
 	this->init_speed.x = speed_x;
 	this->init_speed.y = speed_y;
+	this->particles = new std::vector<Particle>;
+}
+
+GR_ParticleSys::~GR_ParticleSys()
+{
+	this->Free();
 }
 
 
 /*--------------------------
 //向粒子栈压入固定数目的元素 
 */
-void ParticleSys::Push(int num, int life, Vector2D speed)
+void GR_ParticleSys::Push(int num, int life, Vector2D speed)
 {
 	//将粒子压入栈 (按照数量压栈） 
 	for (int i = 1; i <= num; i++ )
@@ -34,26 +40,27 @@ void ParticleSys::Push(int num, int life, Vector2D speed)
 		p.position.y = 0;
 		p.life = ptlife;
 		p.age = 1;
-		particles.push_back(p);
+		this->particles->push_back(p);
 	}
 }
 
 //新版本中载入纹理函数中直接设置渲染器
-void ParticleSys::LoadTexture(SDL_RWops *src, SDL_Renderer *ren)
+void GR_ParticleSys::LoadTexture(SDL_RWops *src, SDL_Renderer *ren)
 {
 	//particle_ren = ren;
-	particle_tex.Load(src, ren);
+	this->particle_tex = new GR_Texture();
+	this->particle_tex->Load(src, ren);
 }
 
-void ParticleSys::SetLife(int life)
+void GR_ParticleSys::SetLife(int life)
 {
-	for(iter=particles.begin();iter!=particles.end();iter++)
+	for(iter=this->particles->begin();iter!=this->particles->end();iter++)
 	{
 		iter->life = life;
 	}
 }
 
-void ParticleSys::SetKinematic(int _width, int _height, int _dispersion, Vector2D _gravity)
+void GR_ParticleSys::SetKinematic(int _width, int _height, int _dispersion, Vector2D _gravity)
 {
 	ptwidth = _width;
 	ptheight = _height;
@@ -62,19 +69,19 @@ void ParticleSys::SetKinematic(int _width, int _height, int _dispersion, Vector2
 }
 
 
-void ParticleSys::SetColor(Uint8 Red, Uint8 Green, Uint8 Blue){particle_tex.SetColor(Red, Green, Blue);}
-void ParticleSys::SetAlpha(Uint8 alpha){particle_tex.SetAlpha(alpha);}
+void GR_ParticleSys::SetColor(Uint8 Red, Uint8 Green, Uint8 Blue){this->particle_tex->SetColor(Red, Green, Blue);}
+void GR_ParticleSys::SetAlpha(Uint8 alpha){this->particle_tex->SetAlpha(alpha);}
 
 
-void ParticleSys::Render_Central(int x, int y, SDL_Renderer * ren)
+void GR_ParticleSys::Render_Central(int x, int y, SDL_Renderer * ren)
 {
 	this->Push(this->ptnum, this->ptlife, this->init_speed);
-	for(iter=particles.begin();iter!=particles.end();iter++)
+	for(iter=this->particles->begin();iter!=this->particles->end();iter++)
 	{
 		if(iter->age >= iter->life)
 		{
 			//弹出第一个元素
-			iter = particles.erase(iter); 
+			iter = this->particles->erase(iter); 
 		}
 		//计算速度与位置 
 		iter->speed.x = iter->speed.x + gravity.x*iter->age;
@@ -83,12 +90,14 @@ void ParticleSys::Render_Central(int x, int y, SDL_Renderer * ren)
 		iter->position.y =iter->speed.y*iter->age + gravity.y*(iter->age^2)/2;
 		//将栈指针指向的元素压入位置栈中
 		iter->age += 1;
-		particle_tex.Render(x + iter->position.x, y + iter->position.y, ren);
+		this->particle_tex->Render(x + iter->position.x, y + iter->position.y, ren);
 	}
 }
-void ParticleSys::Free()
+void GR_ParticleSys::Free()
 {
-	particles.clear();
-	particle_tex.Free();
-	std::cout << "ParticleSys is terminated" << std::endl;
+	this->particles->clear();
+	this->particle_tex->Free();
+	delete this->particle_tex;
+	delete this->particles;
+	std::cout << "GR_ParticleSys is terminated" << std::endl;
 }

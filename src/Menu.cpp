@@ -24,61 +24,81 @@ int Menu::Load()
 	//****************************
 	//纹理对象初始化
 	//****************************
+	this->resources.push_back(SDL_RWFromFile("Resource/start.png","rb"));
+	this->resources.push_back(SDL_RWFromFile("Resource/pause.png","rb"));
+	this->resources.push_back(SDL_RWFromFile("Resource/option.png","rb"));
+	this->resources.push_back(SDL_RWFromFile("Resource/about.png","rb"));
+	this->resources.push_back(SDL_RWFromFile("Resource/quit.png","rb"));
+	this->resources.push_back(SDL_RWFromFile("Resource/city1.png", "rb"));
+	this->resources.push_back(SDL_RWFromFile("Resource/city2.png", "rb"));
+	this->resources.push_back(SDL_RWFromFile("Resource/city3.png", "rb"));
+
 	this->buttons.push_back(
-		Button(this->SCREEN_WIDTH - MENU_MARGIN - MENU_BUTTON_W,
+		GR_Button(this->SCREEN_WIDTH - MENU_MARGIN - MENU_BUTTON_W,
 			this->SCREEN_HEIGHT - 5*MENU_BUTTON_H - MENU_MARGIN,
 			MENU_BUTTON_W, MENU_BUTTON_H,
-			SDL_RWFromFile("Resource/start.png","rb"),
+			//SDL_RWFromFile("Resource/start.png","rb"),
+			this->resources[0],
 			this->renderer, 
 			MENU_NEWGAME));
 	/*
 	this->buttons.push_back(
-		Button(this->SCREEN_WIDTH - MENU_MARGIN - MENU_BUTTON_W,
+		GR_Button(this->SCREEN_WIDTH - MENU_MARGIN - MENU_BUTTON_W,
 			this->SCREEN_HEIGHT - 4*MENU_BUTTON_H - MENU_MARGIN,
 			MENU_BUTTON_W, MENU_BUTTON_H,
-			SDL_RWFromFile("Resource/pause.png","rb"),
+			//SDL_RWFromFile("Resource/pause.png","rb"),
+			this->resources[1],
 			this->renderer, 
 			MENU_RESUME));
 	*/
 	this->buttons.push_back(
-		Button(this->SCREEN_WIDTH - MENU_MARGIN - MENU_BUTTON_W,
+		GR_Button(this->SCREEN_WIDTH - MENU_MARGIN - MENU_BUTTON_W,
 			this->SCREEN_HEIGHT - 3*MENU_BUTTON_H - MENU_MARGIN,
 			MENU_BUTTON_W, MENU_BUTTON_H,
-			SDL_RWFromFile("Resource/option.png","rb"),
+			//SDL_RWFromFile("Resource/option.png","rb"),
+			this->resources[2],
 			this->renderer, 
 			MENU_OPTION));
 	this->buttons.push_back(
-		Button(this->SCREEN_WIDTH - MENU_MARGIN - MENU_BUTTON_W,
+		GR_Button(this->SCREEN_WIDTH - MENU_MARGIN - MENU_BUTTON_W,
 			this->SCREEN_HEIGHT - 2*MENU_BUTTON_H - MENU_MARGIN,
 			MENU_BUTTON_W, MENU_BUTTON_H,
-			SDL_RWFromFile("Resource/about.png","rb"),
+			//SDL_RWFromFile("Resource/about.png","rb"),
+			this->resources[3],
 			this->renderer, 
 			MENU_ABOUT));
 	this->buttons.push_back(
-		Button(this->SCREEN_WIDTH - MENU_MARGIN - MENU_BUTTON_W,
+		GR_Button(this->SCREEN_WIDTH - MENU_MARGIN - MENU_BUTTON_W,
 			this->SCREEN_HEIGHT - 1*MENU_BUTTON_H - MENU_MARGIN,
 			MENU_BUTTON_W, MENU_BUTTON_H,
-			SDL_RWFromFile("Resource/quit.png","rb"),
+			//SDL_RWFromFile("Resource/quit.png","rb"),
+			this->resources[4],
 			this->renderer, 
 			MENU_QUIT));
 
 	this->layer.push_back(
-		Texture(SDL_RWFromFile("Resource/city1.png", "rb"),
+		GR_Texture(
+			//SDL_RWFromFile("Resource/city1.png", "rb"),
+			this->resources[5],
 			this->renderer,
 			MENU_CITY1)
 	);
 	this->layer.push_back(
-		Texture(SDL_RWFromFile("Resource/city2.png", "rb"),
+		GR_Texture(
+			//SDL_RWFromFile("Resource/city2.png", "rb"),
+			this->resources[6],
 			this->renderer,
 			MENU_CITY2)
 	);
 	this->layer.push_back(
-		Texture(SDL_RWFromFile("Resource/city3.png", "rb"),
+		GR_Texture(
+			//SDL_RWFromFile("Resource/city3.png", "rb"),
+			this->resources[7],
 			this->renderer,
 			MENU_CITY3)
 	);
 	
-	this->background = new Background();
+	this->background = new GR_Background();
 	this->background->LoadTexture(SDL_RWFromFile("Resource/background.bmp","rb"), this->renderer);
 	//重设渲染器 
 	SDL_RenderClear(this->renderer);

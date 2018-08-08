@@ -1,7 +1,7 @@
-#ifndef BUTTON_H
-#define BUTTON_H
+#ifndef GR_Button_H
+#define GR_Button_H
 #include "Vector2D.h"
-#include "Texture.h"
+#include "GR_Texture.h"
 #include "Message.h"
 #include <vector>
 #include <string>
@@ -11,19 +11,19 @@
 
 
 /*****************************
-#	文件名：	Button.h 
+#	文件名：	GR_Button.h 
 #	日期：		2017-1-15
 #	版本号：	0.3.2
 #	功能：		按钮对象声明 
 #	mpsk's game engine proj
 #-----------------------------
-#	Button类型有Texture方法类，Audio方法类，CtrlSys方法类
+#	GR_Button类型有GR_Texture方法类，Audio方法类，CtrlSys方法类
 #	同时还可以具有Pullevent方法
 ***********************/
-class Button
+class GR_Button
 {
 	public:
-		Button(int x, int y, int w, int h, SDL_RWops *src, SDL_Renderer *ren, Uint32 id);
+		GR_Button(int x, int y, int w, int h, SDL_RWops *src, SDL_Renderer *ren, Uint32 id);
 		void SetPos(int x, int y, int w, int h);
 		void LoadTexture(SDL_RWops *src, SDL_Renderer *ren);
 		void Render();
@@ -40,9 +40,9 @@ class Button
 		bool flag;
 		SDL_Rect dst;
 		SDL_Renderer *ren;
-		//Texture方法类用于处理按钮纹理
-		Texture tex;
+		//GR_Texture方法类用于处理按钮纹理
 		SDL_Rect clip[4];
+		GR_Texture tex;
 };
 
 #endif

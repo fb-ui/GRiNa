@@ -1,5 +1,5 @@
-#ifndef TEXTURE_H
-#define TEXTURE_H
+#ifndef GR_Texture_H
+#define GR_Texture_H
 
 #include "../include/SDL.h"
 #include "../include/SDL_image.h"
@@ -7,21 +7,21 @@
 #include <string>
 
 /*****************************
-#	文件名：	Texture.h 
+#	文件名：	GR_Texture.h 
 #	日期：		2016-12-28 
 #	版本号：	0.3.1
 #	mpsk's game engine proj
 *****************************/ 
 
-class Texture
+class GR_Texture
 {
 	public:
-		Texture(){};
-		Texture(SDL_RWops *src, SDL_Renderer *ren, int id);
+		GR_Texture(){};
+		GR_Texture(SDL_RWops *src, SDL_Renderer *ren, int id);
 		void Load(SDL_RWops *src, SDL_Renderer *ren);
 
 		void LoadFromFile(const std::string &file, SDL_Renderer *ren);
-		//释放SDL_Texture对象
+		//释放SDL_GR_Texture对象
 		void Free();
 		//设定颜色模式
 		void SetColor(Uint8 red, Uint8 green, Uint8 blue);

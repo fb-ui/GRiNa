@@ -26,11 +26,11 @@ int Game::Load()
 	//****************************
 	//纹理对象初始化
 	//****************************
-	buttons.push_back(Button(this->SCREEN_WIDTH-200,this->SCREEN_HEIGHT-90,160,50,SDL_RWFromFile("Resource/start.png","rb"),renderer, GAME_BUTTON_START));
-	buttons.push_back(Button(this->SCREEN_WIDTH-200,this->SCREEN_HEIGHT-180,160,50,SDL_RWFromFile("Resource/option.png","rb"),renderer, GAME_BUTTON_OPTION));
-	buttons.push_back(Button(0,60,160,50,SDL_RWFromFile("Resource/quit.png","rb"),renderer, GAME_BUTTON_ESCAPE));
+	buttons.push_back(GR_Button(this->SCREEN_WIDTH-200,this->SCREEN_HEIGHT-90,160,50,SDL_RWFromFile("Resource/start.png","rb"),renderer, GAME_BUTTON_START));
+	buttons.push_back(GR_Button(this->SCREEN_WIDTH-200,this->SCREEN_HEIGHT-180,160,50,SDL_RWFromFile("Resource/option.png","rb"),renderer, GAME_BUTTON_OPTION));
+	buttons.push_back(GR_Button(0,60,160,50,SDL_RWFromFile("Resource/quit.png","rb"),renderer, GAME_BUTTON_ESCAPE));
 	
-	background = new Background(BG_STITCH);
+	background = new GR_Background(BG_STITCH);
 	background->LoadTexture(SDL_RWFromFile("Resource/background.bmp","rb"), renderer);
 	//*****************************
 	//粒子系统设置
@@ -42,7 +42,7 @@ int Game::Load()
 	gravity.y = 0.0005;
 	//初始化粒子系统 
 	//	每次压入个数	粒子寿命	初始x速度	初始y速度
-	particles = new ParticleSys(10, 150, 1, 0);
+	particles = new GR_ParticleSys(10, 150, 1, 0);
 	particles->LoadTexture(SDL_RWFromFile("Resource/atom.png","rb"), renderer);
 	//	设置边框	设置重力
 	particles->SetKinematic(SCREEN_WIDTH, SCREEN_HEIGHT, 10, gravity);

@@ -9,13 +9,11 @@
 #include "../include/SDL.h"
 #include "../include/SDL_image.h"
 
-#include "Particle.h"
-#include "Button.h"
-#include "Background.h"
-
-#include "Log.h"
+#include "GR_Particle.h"
+#include "GR_Button.h"
+#include "GR_Background.h"
+#include "GR_Log.h"
 #include "Vector2D.h"
-#include "Script.h"
 
 
 #define GAME_BUTTON_START		0xF001
@@ -46,10 +44,10 @@ class Game
 		SDL_Event event;
 		int SCREEN_WIDTH;		//画面分辨率 
 		int SCREEN_HEIGHT;
-		ParticleSys *particles;
-		Background *background;
-		vector<Button> buttons;
-		vector<Button>::iterator button_iter;
+		GR_ParticleSys *particles;
+		GR_Background *background;
+		vector<GR_Button> buttons;
+		vector<GR_Button>::iterator button_iter;
 		//Timer timer;
 		float tick;
 		float fps;

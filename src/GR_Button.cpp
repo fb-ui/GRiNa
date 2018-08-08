@@ -1,17 +1,17 @@
-#include "Button.h"
+#include "GR_Button.h"
 #include <stdio.h>
 /*****************************
-#	文件名：	Button.h 
+#	文件名：	GR_Button.h 
 #	日期：		2017-1-16 
 #	版本号：	0.3.2 
 #	功能：		按钮对象声明 
 #	mpsk's game engine proj
 #-----------------------------
-#	Button类型有Texture方法类，Audio方法类，CtrlSys方法类
+#	GR_Button类型有GR_Texture方法类，Audio方法类，CtrlSys方法类
 #	同时还可以具有Pullevent方法
 ***********************/
 
-Button::Button(int x, int y, int w, int h, SDL_RWops *src, SDL_Renderer *ren, Uint32 id)
+GR_Button::GR_Button(int x, int y, int w, int h, SDL_RWops *src, SDL_Renderer *ren, Uint32 id)
 {
     this->id = id;
     this->ren = ren;
@@ -22,7 +22,7 @@ Button::Button(int x, int y, int w, int h, SDL_RWops *src, SDL_Renderer *ren, Ui
 }
 
 
-void Button::SetPos(int x, int y, int w, int h)
+void GR_Button::SetPos(int x, int y, int w, int h)
 {
     this->dst.x = x;
     this->dst.y = y;
@@ -30,11 +30,11 @@ void Button::SetPos(int x, int y, int w, int h)
     this->dst.h = h;
 }
 
-void Button::LoadTexture(SDL_RWops *src, SDL_Renderer * ren)
+void GR_Button::LoadTexture(SDL_RWops *src, SDL_Renderer * ren)
 {
     this->tex.Load(src, ren);
-    this->tex_w = tex.GetWidth();
-    this->tex_h = tex.GetHeight();
+    this->tex_w = this->tex.GetWidth();
+    this->tex_h = this->tex.GetHeight();
     this->clip[0].x = 0;
     this->clip[0].y = 0;
     this->clip[0].w = this->tex_w/2;
@@ -53,7 +53,7 @@ void Button::LoadTexture(SDL_RWops *src, SDL_Renderer * ren)
     this->clip[3].h = this->tex_h;
 }
 
-void Button::Render()
+void GR_Button::Render()
 {
     if(this->is_pushed)
     {
@@ -69,12 +69,12 @@ void Button::Render()
     }
 }
 
-void Button::Free()
+void GR_Button::Free()
 {
     this->tex.Free();
 }
 
-void Button::MouseMotionEvent(int Mouse_x, int Mouse_y)
+void GR_Button::MouseMotionEvent(int Mouse_x, int Mouse_y)
 {
     if(Mouse_x>=this->dst.x&&Mouse_x<=this->dst.x+this->tex_w/2&&Mouse_y>=this->dst.y&&Mouse_y<=this->dst.y+this->tex_h/2)
     {
@@ -87,7 +87,7 @@ void Button::MouseMotionEvent(int Mouse_x, int Mouse_y)
 }
 
 //用于处理鼠标消息（1代表鼠标摁下，2代表鼠标松开）
-void Button::MouseButtonEvent(int type)
+void GR_Button::MouseButtonEvent(int type)
 {
     switch(type)
     {

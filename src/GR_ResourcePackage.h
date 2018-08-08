@@ -1,5 +1,5 @@
-#ifndef RESOURCEPACKAGE_H
-#define RESOURCEPACKAGE_H
+#ifndef GR_ResourcePackage_H
+#define GR_ResourcePackage_H
 
 #include "../include/SDL.h"
 #include <string>
@@ -31,7 +31,7 @@ struct BinContent
     SDL_RWops *content;
 };
 
-struct ResourcePackHeader
+struct GR_ResourcePackHeader
 {
     BYTE MAGIC_DESC[2];     //  File Descriptor 'MP'
     BYTE PACK_NAME[16];     //  Package Name within length of 16
@@ -40,7 +40,7 @@ struct ResourcePackHeader
     BYTE NEXT_PTR[4];       //  uint32 ptr
 };
 
-struct ResourcePackNode
+struct GR_ResourcePackNode
 {
     BYTE NAME[16];      //  File name 
     BYTE CRYPT[2];      //  Crypto method 1 byte for method | 1 byte for crypto-bits descriptor
@@ -48,7 +48,7 @@ struct ResourcePackNode
     BYTE RAW_PTR[4];    //  Pointer to Content data
 };
 
-typedef ResourcePackHeader PACKHEADER;
-typedef ResourcePackNode PACKNODE;
+typedef GR_ResourcePackHeader GR_PACKHEADER;
+typedef GR_ResourcePackNode GR_PACKNODE;
 
 #endif
