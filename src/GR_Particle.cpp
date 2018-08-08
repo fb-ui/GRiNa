@@ -44,14 +44,6 @@ void GR_ParticleSys::Push(int num, int life, Vector2D speed)
 	}
 }
 
-//新版本中载入纹理函数中直接设置渲染器
-void GR_ParticleSys::LoadTexture(SDL_RWops *src, SDL_Renderer *ren)
-{
-	//particle_ren = ren;
-	this->particle_tex = new GR_Texture();
-	this->particle_tex->Load(src, ren);
-}
-
 void GR_ParticleSys::SetLife(int life)
 {
 	for(iter=this->particles->begin();iter!=this->particles->end();iter++)
@@ -69,8 +61,8 @@ void GR_ParticleSys::SetKinematic(int _width, int _height, int _dispersion, Vect
 }
 
 
-void GR_ParticleSys::SetColor(Uint8 Red, Uint8 Green, Uint8 Blue){this->particle_tex->SetColor(Red, Green, Blue);}
-void GR_ParticleSys::SetAlpha(Uint8 alpha){this->particle_tex->SetAlpha(alpha);}
+void GR_ParticleSys::SetColor(Uint8 Red, Uint8 Green, Uint8 Blue){this->tex->SetColor(Red, Green, Blue);}
+void GR_ParticleSys::SetAlpha(Uint8 alpha){this->tex->SetAlpha(alpha);}
 
 
 void GR_ParticleSys::Render_Central(int x, int y, SDL_Renderer * ren)
@@ -90,14 +82,14 @@ void GR_ParticleSys::Render_Central(int x, int y, SDL_Renderer * ren)
 		iter->position.y =iter->speed.y*iter->age + gravity.y*(iter->age^2)/2;
 		//将栈指针指向的元素压入位置栈中
 		iter->age += 1;
-		this->particle_tex->Render(x + iter->position.x, y + iter->position.y, ren);
+		this->tex->Render(x + iter->position.x, y + iter->position.y, ren);
 	}
 }
 void GR_ParticleSys::Free()
 {
 	this->particles->clear();
-	this->particle_tex->Free();
-	delete this->particle_tex;
+	this->tex->Free();
+	delete this->tex;
 	delete this->particles;
 	std::cout << "GR_ParticleSys is terminated" << std::endl;
 }

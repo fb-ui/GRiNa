@@ -43,16 +43,11 @@ class Menu
 		SDL_Renderer *renderer;
 		SDL_Event event;
 		GR_Background *background;
-		list<GR_Button> buttons;
-		list<GR_Button>::iterator button_iter;
-		list<GR_Texture> layer;
-		list<GR_Texture>::iterator layer_iter;
+		list<GR_Button*> buttons;
+		list<GR_Button*>::iterator button_iter;
+		list<GR_Texture*> layer;
+		list<GR_Texture*>::iterator layer_iter;
 		vector<SDL_RWops*> resources;
-		GR_Button *button_start;
-		GR_Button *button_help;
-		//float tick;
-		//float fps;
-		//int i;
 	public:
 		int SCREEN_WIDTH;		//画面分辨率 
 		int SCREEN_HEIGHT;

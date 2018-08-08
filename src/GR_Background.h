@@ -2,6 +2,7 @@
 #define GR_Background_H
 
 #include "GR_Texture.h"
+#include "GR_Element.h"
 
 /*****************************
 #	文件名：	GR_Background.h
@@ -16,18 +17,15 @@
 //  平铺
 #define BG_FLAT     0x1001
 
-class GR_Background
+class GR_Background: public GR_Element 
 {
     public:
         GR_Background();
         ~GR_Background();
         GR_Background(Uint32 type);
-        void LoadTexture(SDL_RWops *src, SDL_Renderer *ren);
         void Render(int Screen_w, int Screen_h, SDL_Renderer *ren);
-        void Free();
     private:
         Uint32 type;
-        GR_Texture *tex;
         SDL_Rect dst;
 };
 

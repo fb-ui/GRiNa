@@ -21,6 +21,11 @@ GR_Button::GR_Button(int x, int y, int w, int h, SDL_RWops *src, SDL_Renderer *r
     this->SetPos(x, y, w, h);
 }
 
+GR_Button::~GR_Button()
+{
+    this->Free();
+}
+
 
 void GR_Button::SetPos(int x, int y, int w, int h)
 {
@@ -32,9 +37,10 @@ void GR_Button::SetPos(int x, int y, int w, int h)
 
 void GR_Button::LoadTexture(SDL_RWops *src, SDL_Renderer * ren)
 {
-    this->tex.Load(src, ren);
-    this->tex_w = this->tex.GetWidth();
-    this->tex_h = this->tex.GetHeight();
+    this->tex = new GR_Texture();
+    this->tex->Load(src, ren);
+    this->tex_w = this->tex->GetWidth();
+    this->tex_h = this->tex->GetHeight();
     this->clip[0].x = 0;
     this->clip[0].y = 0;
     this->clip[0].w = this->tex_w/2;
@@ -57,21 +63,16 @@ void GR_Button::Render()
 {
     if(this->is_pushed)
     {
-        this->tex.Render_clip(this->dst, this->clip[2], this->ren);
+        this->tex->Render_clip(this->dst, this->clip[2], this->ren);
     }
     else if(!is_pushed && flag)
     {
-        this->tex.Render_clip(this->dst, this->clip[1], this->ren);
+        this->tex->Render_clip(this->dst, this->clip[1], this->ren);
     }
     else
     {
-        this->tex.Render_clip(this->dst, this->clip[0], this->ren);
+        this->tex->Render_clip(this->dst, this->clip[0], this->ren);
     }
-}
-
-void GR_Button::Free()
-{
-    this->tex.Free();
 }
 
 void GR_Button::MouseMotionEvent(int Mouse_x, int Mouse_y)

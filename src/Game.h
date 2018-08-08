@@ -46,13 +46,8 @@ class Game
 		int SCREEN_HEIGHT;
 		GR_ParticleSys *particles;
 		GR_Background *background;
-		vector<GR_Button> buttons;
-		vector<GR_Button>::iterator button_iter;
-		//Timer timer;
-		float tick;
-		float fps;
-
-		int i;
+		vector<GR_Button*> buttons;
+		vector<GR_Button*>::iterator button_iter;
 	public:
 		bool quit = 0;
 		Game(SDL_Renderer *ren, int w, int h);

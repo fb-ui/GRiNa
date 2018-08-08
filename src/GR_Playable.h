@@ -9,24 +9,26 @@
 
 class GR_Playable
 {
-	private:
+	protected:
 		SDL_Renderer *renderer;
 		SDL_Event event;
 		GR_Background *background;
-		std::list<GR_Button> buttons;
-		std::list<GR_Button>::iterator button_iter;
-		//float tick;
-		//float fps;
-		//int i;
+		list<GR_Button*> buttons;
+		list<GR_Button*>::iterator button_iter;
+		list<GR_Texture*> layer;
+		list<GR_Texture*>::iterator layer_iter;
+		vector<SDL_RWops*> resources;
 	public:
 		int SCREEN_WIDTH;		//画面分辨率 
 		int SCREEN_HEIGHT;
 		bool quit = false;
 		GR_Playable(SDL_Renderer *renderer, int w, int h);
+		~GR_Playable();
         int Init();
         int Load();
 		Uint32 Loop();
 		int Quit();
 };
+
 
 #endif

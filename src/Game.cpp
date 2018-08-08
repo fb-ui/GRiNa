@@ -26,9 +26,9 @@ int Game::Load()
 	//****************************
 	//纹理对象初始化
 	//****************************
-	buttons.push_back(GR_Button(this->SCREEN_WIDTH-200,this->SCREEN_HEIGHT-90,160,50,SDL_RWFromFile("Resource/start.png","rb"),renderer, GAME_BUTTON_START));
-	buttons.push_back(GR_Button(this->SCREEN_WIDTH-200,this->SCREEN_HEIGHT-180,160,50,SDL_RWFromFile("Resource/option.png","rb"),renderer, GAME_BUTTON_OPTION));
-	buttons.push_back(GR_Button(0,60,160,50,SDL_RWFromFile("Resource/quit.png","rb"),renderer, GAME_BUTTON_ESCAPE));
+	buttons.push_back(new GR_Button(this->SCREEN_WIDTH-200,this->SCREEN_HEIGHT-90,160,50,SDL_RWFromFile("Resource/start.png","rb"),renderer, GAME_BUTTON_START));
+	buttons.push_back(new GR_Button(this->SCREEN_WIDTH-200,this->SCREEN_HEIGHT-180,160,50,SDL_RWFromFile("Resource/option.png","rb"),renderer, GAME_BUTTON_OPTION));
+	buttons.push_back(new GR_Button(0,60,160,50,SDL_RWFromFile("Resource/quit.png","rb"),renderer, GAME_BUTTON_ESCAPE));
 	
 	background = new GR_Background(BG_STITCH);
 	background->LoadTexture(SDL_RWFromFile("Resource/background.bmp","rb"), renderer);
@@ -83,7 +83,7 @@ int Game::Loop()
 						//1代表摁下，后期会统一使用宏描述
 						for(button_iter=buttons.begin();button_iter!=buttons.end();button_iter++)
 						{
-							(*button_iter).MouseButtonEvent(MOUSE_BUTTON_DOWN);
+							(*this->button_iter)->MouseButtonEvent(MOUSE_BUTTON_DOWN);
 						}
 					}	
 					else
@@ -91,11 +91,11 @@ int Game::Loop()
 						//2代表鼠标按键释放
 						for(button_iter=buttons.begin();button_iter!=buttons.end();button_iter++)
 						{
-							if((*button_iter).is_pushed)
+							if((*this->button_iter)->is_pushed)
 							{
-								return (*button_iter).id;
+								return (*this->button_iter)->id;
 							}
-							(*button_iter).MouseButtonEvent(MOUSE_BUTTON_UP);
+							(*this->button_iter)->MouseButtonEvent(MOUSE_BUTTON_UP);
 						}
 					}
 				}
@@ -103,7 +103,7 @@ int Game::Loop()
 				{
 					for(button_iter=buttons.begin();button_iter!=buttons.end();button_iter++)
 					{
-						(*button_iter).MouseMotionEvent(event.motion.x, event.motion.y);
+						(*this->button_iter)->MouseMotionEvent(event.motion.x, event.motion.y);
 					}
 				}
 			}
@@ -115,7 +115,7 @@ int Game::Loop()
 		
 		for(button_iter=buttons.begin();button_iter!=buttons.end();button_iter++)
 		{
-			(*button_iter).Render();
+			(*this->button_iter)->Render();
 		}
 		//对象层渲染
 
@@ -134,7 +134,7 @@ int Game::Quit()
 
 	for(button_iter=buttons.begin();button_iter!=buttons.end();button_iter++)
 	{
-		(*button_iter).Free();
+		delete (*this->button_iter);
 	}
 	return 0;
 }

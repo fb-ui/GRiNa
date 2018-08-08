@@ -23,12 +23,6 @@ GR_Background::~GR_Background()
     this->Free();
 }
 
-void GR_Background::LoadTexture(SDL_RWops *src, SDL_Renderer *ren)
-{
-    this->tex = new GR_Texture();
-    this->tex->Load(src, ren);
-}
-
 void GR_Background::Render(int Screen_w, int Screen_h, SDL_Renderer *ren)
 {
     if(this->type == BG_STITCH)
@@ -50,10 +44,4 @@ void GR_Background::Render(int Screen_w, int Screen_h, SDL_Renderer *ren)
             } 	
         }
     }
-}
-
-void GR_Background::Free()
-{
-    this->tex->Free();
-    delete this->tex;
 }

@@ -2,6 +2,7 @@
 #define GR_Button_H
 #include "Vector2D.h"
 #include "GR_Texture.h"
+#include "GR_Element.h"
 #include "Message.h"
 #include <vector>
 #include <string>
@@ -20,17 +21,17 @@
 #	GR_Button类型有GR_Texture方法类，Audio方法类，CtrlSys方法类
 #	同时还可以具有Pullevent方法
 ***********************/
-class GR_Button
+class GR_Button: public GR_Element
 {
 	public:
 		GR_Button(int x, int y, int w, int h, SDL_RWops *src, SDL_Renderer *ren, Uint32 id);
+		~GR_Button();
 		void SetPos(int x, int y, int w, int h);
 		void LoadTexture(SDL_RWops *src, SDL_Renderer *ren);
 		void Render();
 		//	用于处理鼠标消息（0代表位置判断，1代表鼠标摁下，2代表鼠标松开）
 		void MouseMotionEvent(int Mouse_x, int Mouse_y);
 		void MouseButtonEvent(int type);
-		void Free();
 		//	按钮id用于触发消息
 		int id;
 		bool is_pushed;
@@ -42,7 +43,6 @@ class GR_Button
 		SDL_Renderer *ren;
 		//GR_Texture方法类用于处理按钮纹理
 		SDL_Rect clip[4];
-		GR_Texture tex;
 };
 
 #endif

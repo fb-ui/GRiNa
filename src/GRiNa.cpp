@@ -85,12 +85,12 @@ int main(int argc, char *argv[] )
 #else
 	//正式代码
 	Init();
-	/*
+	
 	Intro *intro = new Intro(renderer, SCREEN_WIDTH, SCREEN_HEIGHT);
 	intro->Load();
 	intro->Loop();
 	intro->Quit();
-	*/
+	
 	SDL_RenderClear(renderer);
 	while(true)
 	{

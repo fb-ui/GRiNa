@@ -34,7 +34,7 @@ int Menu::Load()
 	this->resources.push_back(SDL_RWFromFile("Resource/city3.png", "rb"));
 
 	this->buttons.push_back(
-		GR_Button(this->SCREEN_WIDTH - MENU_MARGIN - MENU_BUTTON_W,
+		new GR_Button(this->SCREEN_WIDTH - MENU_MARGIN - MENU_BUTTON_W,
 			this->SCREEN_HEIGHT - 5*MENU_BUTTON_H - MENU_MARGIN,
 			MENU_BUTTON_W, MENU_BUTTON_H,
 			//SDL_RWFromFile("Resource/start.png","rb"),
@@ -43,7 +43,7 @@ int Menu::Load()
 			MENU_NEWGAME));
 	/*
 	this->buttons.push_back(
-		GR_Button(this->SCREEN_WIDTH - MENU_MARGIN - MENU_BUTTON_W,
+		new GR_Button(this->SCREEN_WIDTH - MENU_MARGIN - MENU_BUTTON_W,
 			this->SCREEN_HEIGHT - 4*MENU_BUTTON_H - MENU_MARGIN,
 			MENU_BUTTON_W, MENU_BUTTON_H,
 			//SDL_RWFromFile("Resource/pause.png","rb"),
@@ -52,7 +52,7 @@ int Menu::Load()
 			MENU_RESUME));
 	*/
 	this->buttons.push_back(
-		GR_Button(this->SCREEN_WIDTH - MENU_MARGIN - MENU_BUTTON_W,
+		new GR_Button(this->SCREEN_WIDTH - MENU_MARGIN - MENU_BUTTON_W,
 			this->SCREEN_HEIGHT - 3*MENU_BUTTON_H - MENU_MARGIN,
 			MENU_BUTTON_W, MENU_BUTTON_H,
 			//SDL_RWFromFile("Resource/option.png","rb"),
@@ -60,7 +60,7 @@ int Menu::Load()
 			this->renderer, 
 			MENU_OPTION));
 	this->buttons.push_back(
-		GR_Button(this->SCREEN_WIDTH - MENU_MARGIN - MENU_BUTTON_W,
+		new GR_Button(this->SCREEN_WIDTH - MENU_MARGIN - MENU_BUTTON_W,
 			this->SCREEN_HEIGHT - 2*MENU_BUTTON_H - MENU_MARGIN,
 			MENU_BUTTON_W, MENU_BUTTON_H,
 			//SDL_RWFromFile("Resource/about.png","rb"),
@@ -68,7 +68,7 @@ int Menu::Load()
 			this->renderer, 
 			MENU_ABOUT));
 	this->buttons.push_back(
-		GR_Button(this->SCREEN_WIDTH - MENU_MARGIN - MENU_BUTTON_W,
+		new GR_Button(this->SCREEN_WIDTH - MENU_MARGIN - MENU_BUTTON_W,
 			this->SCREEN_HEIGHT - 1*MENU_BUTTON_H - MENU_MARGIN,
 			MENU_BUTTON_W, MENU_BUTTON_H,
 			//SDL_RWFromFile("Resource/quit.png","rb"),
@@ -77,21 +77,21 @@ int Menu::Load()
 			MENU_QUIT));
 
 	this->layer.push_back(
-		GR_Texture(
+		new GR_Texture(
 			//SDL_RWFromFile("Resource/city1.png", "rb"),
 			this->resources[5],
 			this->renderer,
 			MENU_CITY1)
 	);
 	this->layer.push_back(
-		GR_Texture(
+		new GR_Texture(
 			//SDL_RWFromFile("Resource/city2.png", "rb"),
 			this->resources[6],
 			this->renderer,
 			MENU_CITY2)
 	);
 	this->layer.push_back(
-		GR_Texture(
+		new GR_Texture(
 			//SDL_RWFromFile("Resource/city3.png", "rb"),
 			this->resources[7],
 			this->renderer,
@@ -135,7 +135,7 @@ Uint32 Menu::Loop()
 						//1代表摁下，后期会统一使用宏描述
 						for(button_iter=this->buttons.begin();button_iter!=this->buttons.end();button_iter++)
 						{
-							(*button_iter).MouseButtonEvent(MOUSE_BUTTON_DOWN);
+							(*this->button_iter)->MouseButtonEvent(MOUSE_BUTTON_DOWN);
 						}
 					}	
 					else
@@ -143,11 +143,11 @@ Uint32 Menu::Loop()
 						//2代表鼠标按键释放
 						for(button_iter=this->buttons.begin();button_iter!=this->buttons.end();button_iter++)
 						{
-							if((*button_iter).is_pushed)
+							if((*this->button_iter)->is_pushed)
 							{
-								return (*button_iter).id;
+								return (*this->button_iter)->id;
 							}
-							(*button_iter).MouseButtonEvent(MOUSE_BUTTON_UP);
+							(*this->button_iter)->MouseButtonEvent(MOUSE_BUTTON_UP);
 						}
 					}
 				}
@@ -155,7 +155,7 @@ Uint32 Menu::Loop()
 				{
 					for(button_iter=this->buttons.begin();button_iter!=this->buttons.end();button_iter++)
 					{
-						(*button_iter).MouseMotionEvent(event.motion.x, event.motion.y);
+						(*this->button_iter)->MouseMotionEvent(event.motion.x, event.motion.y);
 					}
 					fx = event.motion.x;
 					fy = event.motion.y;
@@ -170,13 +170,13 @@ Uint32 Menu::Loop()
 		int level = 2;
 		for(this->layer_iter=this->layer.begin();this->layer_iter!=this->layer.end();this->layer_iter++)
 		{
-			this->layer_iter->Render_clip(
+			(*this->layer_iter)->Render_clip(
 				-MENU_MARGIN - 0.1*(fx-this->SCREEN_WIDTH/2)-0.1*level*(fx-this->SCREEN_WIDTH/2), 
-				this->SCREEN_HEIGHT-this->layer_iter->GetHeight()-0.5*level*MENU_MARGIN - level*0.1*(fy-this->SCREEN_HEIGHT/2),
+				this->SCREEN_HEIGHT-(*this->layer_iter)->GetHeight()-0.5*level*MENU_MARGIN - level*0.1*(fy-this->SCREEN_HEIGHT/2),
 				this->SCREEN_WIDTH+2*MENU_MARGIN,
-				this->layer_iter->GetHeight(),
+				(*this->layer_iter)->GetHeight(),
 				0, 0,
-				this->layer_iter->GetWidth(), this->layer_iter->GetHeight(),
+				(*this->layer_iter)->GetWidth(), (*this->layer_iter)->GetHeight(),
 				this->renderer
 				);
 			level--;
@@ -184,7 +184,7 @@ Uint32 Menu::Loop()
 
 		for(button_iter=this->buttons.begin();button_iter!=this->buttons.end();button_iter++)
 		{
-			(*button_iter).Render();
+			(*this->button_iter)->Render();
 		}
 		//对象层渲染
 		
@@ -198,11 +198,11 @@ int Menu::Quit()
 	this->background->Free();
 	for(button_iter=this->buttons.begin();button_iter!=this->buttons.end();button_iter++)
 	{
-		button_iter->Free();
+		delete (*this->button_iter);
 	}
     for(this->layer_iter=this->layer.begin();this->layer_iter!=this->layer.end();this->layer_iter++)
 	{
-		this->layer_iter->Free();
+		delete (*this->layer_iter);
 	}
 	return 0;
 }
