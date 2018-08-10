@@ -39,7 +39,6 @@ class GR_Button: public GR_Element
 	private:
 		int tex_w, tex_h;
 		bool flag;
-		SDL_Rect dst;
 		SDL_Renderer *ren;
 		//GR_Texture方法类用于处理按钮纹理
 		SDL_Rect clip[4];

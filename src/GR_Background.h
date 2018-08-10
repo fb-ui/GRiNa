@@ -24,9 +24,6 @@ class GR_Background: public GR_Element
         ~GR_Background();
         GR_Background(Uint32 type);
         void Render(int Screen_w, int Screen_h, SDL_Renderer *ren);
-    private:
-        Uint32 type;
-        SDL_Rect dst;
 };
 
 #endif

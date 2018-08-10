@@ -28,7 +28,8 @@ int GR_Script::Docode(std::string &s)
     if(this->script.eof())
         return -1;
     //  执行一行以后返回下一行。
-    getline(this->script, s);
+    this->script >> s;
+    //getline(this->script, s);
     //cout << s << endl;
     return 0;
 }
