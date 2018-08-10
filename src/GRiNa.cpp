@@ -4,7 +4,7 @@
 #include "GR_Script.h"
 #include <iostream>
 using namespace std;
-//#define DEBUG
+#define DEBUG
 
 /*****************************
 #	文件名：	GRiNa.cpp 
