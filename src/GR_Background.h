@@ -21,7 +21,6 @@ class GR_Background: public GR_Element
 {
     public:
         GR_Background();
-        ~GR_Background();
         GR_Background(Uint32 type);
         void Render(int Screen_w, int Screen_h, SDL_Renderer *ren);
 };

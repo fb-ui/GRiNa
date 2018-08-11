@@ -10,6 +10,8 @@
 #include "GR_Particle.h"
 #include "GR_Button.h"
 #include "GR_Background.h"
+#include "GR_Element.h"
+#include "GR_Resource.h"
 
 #include "GR_Log.h"
 #include "Vector2D.h"
@@ -42,12 +44,14 @@ class Menu
 	private:
 		SDL_Renderer *renderer;
 		SDL_Event event;
-		GR_Background *background;
-		list<GR_Button*> buttons;
-		list<GR_Button*>::iterator button_iter;
-		list<GR_Texture*> layer;
-		list<GR_Texture*>::iterator layer_iter;
 		vector<SDL_RWops*> resources;
+		GR_Background *background;
+
+		GR_ElementList *button_list;
+		GR_ElementList *plain_list;
+		GR_ResourceManager *res_manager;
+
+		int Quit();
 	public:
 		int SCREEN_WIDTH;		//画面分辨率 
 		int SCREEN_HEIGHT;
@@ -55,9 +59,8 @@ class Menu
 		Menu(SDL_Renderer *renderer, int w, int h);
 		~Menu();
         int Init();
-        int Load();
+        int Load(std::string filename);
 		Uint32 Loop();
-		int Quit();
 };
 
 

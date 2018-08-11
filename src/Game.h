@@ -48,12 +48,12 @@ class Game
 		GR_Background *background;
 		vector<GR_Button*> buttons;
 		vector<GR_Button*>::iterator button_iter;
+		int Quit();
 	public:
 		bool quit = 0;
 		Game(SDL_Renderer *ren, int w, int h);
 		int Load();
 		int Loop();
-		int Quit();
 };
 
 

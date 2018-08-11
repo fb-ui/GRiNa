@@ -129,8 +129,8 @@ int Game::Loop()
 
 int Game::Quit()
 {
-	particles->Free();
-	background->Free();
+	delete particles;
+	delete background;
 
 	for(button_iter=buttons.begin();button_iter!=buttons.end();button_iter++)
 	{

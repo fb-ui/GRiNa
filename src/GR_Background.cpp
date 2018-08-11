@@ -18,10 +18,6 @@ GR_Background::GR_Background(Uint32 type)
     this->type = type;
 }
 
-GR_Background::~GR_Background()
-{
-    this->Free();
-}
 
 void GR_Background::Render(int Screen_w, int Screen_h, SDL_Renderer *ren)
 {

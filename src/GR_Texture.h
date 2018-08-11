@@ -17,7 +17,7 @@ class GR_Texture
 {
 	public:
 		GR_Texture(){};
-		GR_Texture(SDL_RWops *src, SDL_Renderer *ren, int id);
+		GR_Texture(SDL_RWops *src, SDL_Renderer *ren);
 		void Load(SDL_RWops *src, SDL_Renderer *ren);
 
 		void LoadFromFile(const std::string &file, SDL_Renderer *ren);

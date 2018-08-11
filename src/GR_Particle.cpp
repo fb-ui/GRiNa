@@ -88,7 +88,6 @@ void GR_ParticleSys::Render_Central(int x, int y, SDL_Renderer * ren)
 void GR_ParticleSys::Free()
 {
 	this->particles->clear();
-	this->tex->Free();
 	delete this->tex;
 	delete this->particles;
 	std::cout << "GR_ParticleSys is terminated" << std::endl;

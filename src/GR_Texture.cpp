@@ -9,10 +9,9 @@
 #	功能：		纹理对象实现 
 #	mpsk's game engine proj
 *****************************/
-GR_Texture::GR_Texture(SDL_RWops *src, SDL_Renderer *ren, int id)
+GR_Texture::GR_Texture(SDL_RWops *src, SDL_Renderer *ren)
 {
 	this->Load(src, ren);
-	this->id = id;
 }
 
 void GR_Texture::Load(SDL_RWops *src, SDL_Renderer *ren)

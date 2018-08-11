@@ -2,9 +2,10 @@
 #include "Intro.h"
 #include "Menu.h"
 #include "GR_Script.h"
+#include "GR_Resource.h"
 #include <iostream>
 using namespace std;
-#define DEBUG
+//#define DEBUG
 
 /*****************************
 #	文件名：	GRiNa.cpp 
@@ -65,6 +66,7 @@ int main(int argc, char *argv[] )
 {
 //测试代码	
 #ifdef DEBUG
+/*
 	GR_Script script;
 	if(script.Load("Resource/script.grs")!=0)
 	{
@@ -82,6 +84,11 @@ int main(int argc, char *argv[] )
 		cout << i++ << " " << s << endl;
 	}
 	return 0;
+	*/
+	std::cout << "Here~" << std::endl;
+	GR_ResourceManager *res = new GR_ResourceManager("Resource/menu.grconf");
+
+
 #else
 	//正式代码
 	Init();
@@ -96,12 +103,12 @@ int main(int argc, char *argv[] )
 	{
 		Menu *menu = new Menu(renderer, SCREEN_WIDTH, SCREEN_HEIGHT);
 		//初始化游戏
-		if(menu->Load() != 0)
+		if(menu->Load("Resource/menu.grconf") != 0)
 		{
 			return 1;
 		}	
 		Uint32 _return = menu->Loop();
-		menu->Quit();
+		delete menu;
 		cout << _return << endl;
 		//执行游戏loop
 		switch(_return)
@@ -112,11 +119,11 @@ int main(int argc, char *argv[] )
 				game->Load();
 				if(game->Loop()==GAME_QUIT)
 				{
-					game->Quit();
+					delete game;
 					Quit();
 					return 0;
 				}
-				game->Quit();
+				delete game;
 				break;
 			}
 			case MENU_QUIT:
