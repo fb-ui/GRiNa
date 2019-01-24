@@ -1,5 +1,5 @@
-#ifndef SCRIPT_H
-#define SCRIPT_H
+#ifndef GR_Script_H
+#define GR_Script_H
 
 #include <iostream>
 #include <fstream>
@@ -24,15 +24,13 @@
 #define SCRPT_ACTION_ANIMATION	0x1003
 #define SCRPT_ACTION_JUMP		0x1004
 
-using namespace std;
-
-class Script
+class GR_Script
 {
 	public:
 		int Init();
-		int Load(const string file);
+		int Load(const std::string filename);
 		//Message Docode(); 
-		int Docode(string &s); 
+		int Docode(std::string &s); 
 		bool Free();
 	private:
 		//lua_State* lua;

@@ -8,8 +8,8 @@
 // TO CHANGE VERSION INFORMATION, EDIT PROJECT OPTIONS...
 //
 1 VERSIONINFO
-FILEVERSION 0,3,2,42
-PRODUCTVERSION 0,3,2,42
+FILEVERSION 0,3,2,43
+PRODUCTVERSION 0,3,2,43
 FILETYPE VFT_APP
 {
   BLOCK "StringFileInfo"
@@ -17,7 +17,7 @@ FILETYPE VFT_APP
     BLOCK "040904E4"
     {
       VALUE "CompanyName", ""
-      VALUE "FileVersion", "0.3.2.42"
+      VALUE "FileVersion", "0.3.2.43"
       VALUE "FileDescription", ""
       VALUE "InternalName", ""
       VALUE "LegalCopyright", ""

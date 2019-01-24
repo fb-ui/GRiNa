@@ -1,10 +1,11 @@
-#ifndef BACKGROUND_H
-#define BACKGROUND_H
+#ifndef GR_Background_H
+#define GR_Background_H
 
-#include "Texture.h"
+#include "GR_Texture.h"
+#include "GR_Element.h"
 
 /*****************************
-#	文件名：	Background.h
+#	文件名：	GR_Background.h
 #	日期：		2017-1-17
 #	版本号：	0.3.2
 #	功能：		背景对象 
@@ -16,18 +17,12 @@
 //  平铺
 #define BG_FLAT     0x1001
 
-class Background
+class GR_Background: public GR_Element 
 {
     public:
-        Background();
-        Background(Uint32 type);
-        void LoadTexture(SDL_RWops *src, SDL_Renderer *ren);
+        GR_Background();
+        GR_Background(Uint32 type);
         void Render(int Screen_w, int Screen_h, SDL_Renderer *ren);
-        void Free();
-    private:
-        Uint32 type;
-        Texture tex;
-        SDL_Rect dst;
 };
 
 #endif

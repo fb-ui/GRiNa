@@ -1,6 +1,8 @@
 #include "Game.h"
 #include "Intro.h"
 #include "Menu.h"
+#include "GR_Script.h"
+#include "GR_Resource.h"
 #include <iostream>
 using namespace std;
 //#define DEBUG
@@ -22,7 +24,7 @@ int Init()
 	//初始化 
 	if (SDL_Init(SDL_INIT_VIDEO|SDL_INIT_AUDIO) != 0)
 	{
-		logError(cout, "SDL_Init");
+		GR_LogError(cout, "SDL_Init");
 		return 1;
 	}
 	
@@ -31,7 +33,7 @@ int Init()
 								SDL_WINDOW_FULLSCREEN_DESKTOP|SDL_WINDOW_ALLOW_HIGHDPI|SDL_WINDOW_OPENGL);
 	if (window == NULL) 
 	{
-		logError(cout, "SDL_CreateWindow");
+		GR_LogError(cout, "SDL_CreateWindow");
 		SDL_Quit();
 		return 1;
 	}
@@ -43,7 +45,7 @@ int Init()
 	if (renderer == NULL)
 	{
 		SDL_DestroyWindow(window);
-		logError(cout, "SDL_CreateRenderer");
+		GR_LogError(cout, "SDL_CreateRenderer");
 		SDL_Quit();
 		return 1;
 	}
@@ -64,35 +66,49 @@ int main(int argc, char *argv[] )
 {
 //测试代码	
 #ifdef DEBUG
-	Script script;
-	script.Load("Resource/script.ms");
-	for(int i=0; i<5; i++)
+/*
+	GR_Script script;
+	if(script.Load("Resource/script.grs")!=0)
+	{
+		cout << "Error Reading file!" << endl;
+		return -1;
+	}
+	int i = 0;
+	while(1)
 	{
 		string s;
-		script.Docode(s);
-		cout <<"line "<< i << " is " << s << endl;
+		if(script.Docode(s)==-1)
+		{
+			break;
+		}
+		cout << i++ << " " << s << endl;
 	}
 	return 0;
+	*/
+	std::cout << "Here~" << std::endl;
+	GR_ResourceManager *res = new GR_ResourceManager("Resource/menu.grconf");
+
+
 #else
 	//正式代码
 	Init();
-
+	
 	Intro *intro = new Intro(renderer, SCREEN_WIDTH, SCREEN_HEIGHT);
 	intro->Load();
 	intro->Loop();
 	intro->Quit();
-
+	
 	SDL_RenderClear(renderer);
 	while(true)
 	{
 		Menu *menu = new Menu(renderer, SCREEN_WIDTH, SCREEN_HEIGHT);
 		//初始化游戏
-		if(menu->Load() != 0)
+		if(menu->Load("Resource/menu.grconf") != 0)
 		{
 			return 1;
 		}	
 		Uint32 _return = menu->Loop();
-		menu->Quit();
+		delete menu;
 		cout << _return << endl;
 		//执行游戏loop
 		switch(_return)
@@ -103,11 +119,11 @@ int main(int argc, char *argv[] )
 				game->Load();
 				if(game->Loop()==GAME_QUIT)
 				{
-					game->Quit();
+					delete game;
 					Quit();
 					return 0;
 				}
-				game->Quit();
+				delete game;
 				break;
 			}
 			case MENU_QUIT:

@@ -7,10 +7,16 @@ Intro::Intro(SDL_Renderer *ren, int Screen_w, int Screen_h)
 	this->Screen_w = Screen_w;
 	this->Screen_h = Screen_h;
 }
+
+Intro::~Intro()
+{
+	this->Quit();
+}
+
 //  载入对象
 void Intro::Load()
 {
-	this->logo = new Texture();
+	this->logo = new GR_Texture();
 	this->logo->Load(SDL_RWFromFile("Resource/logo.jpg","rb"), this->ren);
 	this->logo->SetBlendMode(SDL_BLENDMODE_BLEND);
 }
@@ -71,5 +77,5 @@ void Intro::Loop()
 //释放SDL_Texture对象
 void Intro::Quit()
 {
-	this->logo->Free();
+	delete this->logo;
 }

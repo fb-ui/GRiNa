@@ -15,70 +15,75 @@ Menu::Menu(SDL_Renderer *renderer, int w, int h)
     this->renderer = renderer;
     this->SCREEN_WIDTH = w;
     this->SCREEN_HEIGHT = h;
+	this->plain_list = new GR_ElementList("plain");
+	this->button_list = new GR_ElementList("button");
+	this->res_manager = nullptr;
 }
 
-int Menu::Load()
+Menu::~Menu()
+{
+	this->Quit();
+}
+
+int Menu::Load(std::string filename)
 {
 	//加载资源 
 	//加载图像资源 	
 	//****************************
 	//纹理对象初始化
 	//****************************
-	this->buttons.push_back(
-		Button(this->SCREEN_WIDTH - MENU_MARGIN - MENU_BUTTON_W,
+
+	this->res_manager = new GR_ResourceManager(filename);
+
+	this->button_list->Push(
+		new GR_Button(this->SCREEN_WIDTH - MENU_MARGIN - MENU_BUTTON_W,
 			this->SCREEN_HEIGHT - 5*MENU_BUTTON_H - MENU_MARGIN,
 			MENU_BUTTON_W, MENU_BUTTON_H,
-			SDL_RWFromFile("Resource/start.png","rb"),
+			this->res_manager->GetResource("button", "button_start"),
 			this->renderer, 
-			MENU_NEWGAME));
-	/*
-	this->buttons.push_back(
-		Button(this->SCREEN_WIDTH - MENU_MARGIN - MENU_BUTTON_W,
-			this->SCREEN_HEIGHT - 4*MENU_BUTTON_H - MENU_MARGIN,
-			MENU_BUTTON_W, MENU_BUTTON_H,
-			SDL_RWFromFile("Resource/pause.png","rb"),
-			this->renderer, 
-			MENU_RESUME));
-	*/
-	this->buttons.push_back(
-		Button(this->SCREEN_WIDTH - MENU_MARGIN - MENU_BUTTON_W,
+			MENU_NEWGAME), "button_start");
+	this->button_list->Push(
+		new GR_Button(this->SCREEN_WIDTH - MENU_MARGIN - MENU_BUTTON_W,
 			this->SCREEN_HEIGHT - 3*MENU_BUTTON_H - MENU_MARGIN,
 			MENU_BUTTON_W, MENU_BUTTON_H,
-			SDL_RWFromFile("Resource/option.png","rb"),
+			this->res_manager->GetResource("button", "button_option"),
 			this->renderer, 
-			MENU_OPTION));
-	this->buttons.push_back(
-		Button(this->SCREEN_WIDTH - MENU_MARGIN - MENU_BUTTON_W,
+			MENU_OPTION), "button_option");
+	this->button_list->Push(
+		new GR_Button(this->SCREEN_WIDTH - MENU_MARGIN - MENU_BUTTON_W,
 			this->SCREEN_HEIGHT - 2*MENU_BUTTON_H - MENU_MARGIN,
 			MENU_BUTTON_W, MENU_BUTTON_H,
-			SDL_RWFromFile("Resource/about.png","rb"),
+			this->res_manager->GetResource("button", "button_about"),
 			this->renderer, 
-			MENU_ABOUT));
-	this->buttons.push_back(
-		Button(this->SCREEN_WIDTH - MENU_MARGIN - MENU_BUTTON_W,
+			MENU_ABOUT), "button_about");
+	this->button_list->Push(
+		new GR_Button(this->SCREEN_WIDTH - MENU_MARGIN - MENU_BUTTON_W,
 			this->SCREEN_HEIGHT - 1*MENU_BUTTON_H - MENU_MARGIN,
 			MENU_BUTTON_W, MENU_BUTTON_H,
-			SDL_RWFromFile("Resource/quit.png","rb"),
+			this->res_manager->GetResource("button", "button_quit"),
 			this->renderer, 
-			MENU_QUIT));
+			MENU_QUIT), "button_quit");
 
-	this->layer.push_back(
-		Texture(SDL_RWFromFile("Resource/city1.png", "rb"),
+	this->plain_list->Push(
+		new GR_Element(
+			this->res_manager->GetResource("plain", "plain_city1"),
 			this->renderer,
-			MENU_CITY1)
+			"city1")
 	);
-	this->layer.push_back(
-		Texture(SDL_RWFromFile("Resource/city2.png", "rb"),
+	this->plain_list->Push(
+		new GR_Element(
+			this->res_manager->GetResource("plain", "plain_city2"),
 			this->renderer,
-			MENU_CITY2)
+			"city2")
 	);
-	this->layer.push_back(
-		Texture(SDL_RWFromFile("Resource/city3.png", "rb"),
+	this->plain_list->Push(
+		new GR_Element(
+			this->res_manager->GetResource("plain", "plain_city3"),
 			this->renderer,
-			MENU_CITY3)
+			"city3")
 	);
 	
-	this->background = new Background();
+	this->background = new GR_Background();
 	this->background->LoadTexture(SDL_RWFromFile("Resource/background.bmp","rb"), this->renderer);
 	//重设渲染器 
 	SDL_RenderClear(this->renderer);
@@ -113,29 +118,29 @@ Uint32 Menu::Loop()
 					if(event.type == SDL_MOUSEBUTTONDOWN)
 					{
 						//1代表摁下，后期会统一使用宏描述
-						for(button_iter=this->buttons.begin();button_iter!=this->buttons.end();button_iter++)
+						for(this->button_list->CursorReset();!this->button_list->CursorEnd();this->button_list->CursorNext())
 						{
-							(*button_iter).MouseButtonEvent(MOUSE_BUTTON_DOWN);
+							((GR_Button*)this->button_list->GetCursor())->MouseButtonEvent(MOUSE_BUTTON_DOWN);
 						}
 					}	
 					else
 					{
 						//2代表鼠标按键释放
-						for(button_iter=this->buttons.begin();button_iter!=this->buttons.end();button_iter++)
+						for(this->button_list->CursorReset();!this->button_list->CursorEnd();this->button_list->CursorNext())
 						{
-							if((*button_iter).is_pushed)
+							if(((GR_Button*)this->button_list->GetCursor())->is_pushed)
 							{
-								return (*button_iter).id;
+								return ((GR_Button*)this->button_list->GetCursor())->id;
 							}
-							(*button_iter).MouseButtonEvent(MOUSE_BUTTON_UP);
+							((GR_Button*)this->button_list->GetCursor())->MouseButtonEvent(MOUSE_BUTTON_UP);
 						}
 					}
 				}
 				case SDL_MOUSEMOTION:
 				{
-					for(button_iter=this->buttons.begin();button_iter!=this->buttons.end();button_iter++)
+					for(this->button_list->CursorReset();!this->button_list->CursorEnd();this->button_list->CursorNext())
 					{
-						(*button_iter).MouseMotionEvent(event.motion.x, event.motion.y);
+						((GR_Button*)this->button_list->GetCursor())->MouseMotionEvent(event.motion.x, event.motion.y);
 					}
 					fx = event.motion.x;
 					fy = event.motion.y;
@@ -148,23 +153,24 @@ Uint32 Menu::Loop()
 		this->background->Render(SCREEN_WIDTH, SCREEN_HEIGHT, this->renderer);
 		
 		int level = 2;
-		for(this->layer_iter=this->layer.begin();this->layer_iter!=this->layer.end();this->layer_iter++)
+		for(this->plain_list->CursorReset();!this->plain_list->CursorEnd();this->plain_list->CursorNext())
 		{
-			this->layer_iter->Render_clip(
+			GR_Element *ptr = this->plain_list->GetCursor();
+			ptr->Render_clip(
 				-MENU_MARGIN - 0.1*(fx-this->SCREEN_WIDTH/2)-0.1*level*(fx-this->SCREEN_WIDTH/2), 
-				this->SCREEN_HEIGHT-this->layer_iter->GetHeight()-0.5*level*MENU_MARGIN - level*0.1*(fy-this->SCREEN_HEIGHT/2),
+				this->SCREEN_HEIGHT - ptr->GetHeight() - 0.5*level*MENU_MARGIN - level*0.1*(fy-this->SCREEN_HEIGHT/2),
 				this->SCREEN_WIDTH+2*MENU_MARGIN,
-				this->layer_iter->GetHeight(),
+				ptr->GetHeight(),
 				0, 0,
-				this->layer_iter->GetWidth(), this->layer_iter->GetHeight(),
+				ptr->GetWidth(), ptr->GetHeight(),
 				this->renderer
 				);
 			level--;
 		}
 
-		for(button_iter=this->buttons.begin();button_iter!=this->buttons.end();button_iter++)
+		for(this->button_list->CursorReset();!this->button_list->CursorEnd();this->button_list->CursorNext())
 		{
-			(*button_iter).Render();
+			((GR_Button*)this->button_list->GetCursor())->Render();
 		}
 		//对象层渲染
 		
@@ -175,14 +181,8 @@ Uint32 Menu::Loop()
 
 int Menu::Quit()
 {
-	this->background->Free();
-	for(button_iter=this->buttons.begin();button_iter!=this->buttons.end();button_iter++)
-	{
-		button_iter->Free();
-	}
-    for(this->layer_iter=this->layer.begin();this->layer_iter!=this->layer.end();this->layer_iter++)
-	{
-		this->layer_iter->Free();
-	}
+	delete this->background;
+	delete this->button_list;
+	delete this->plain_list;
 	return 0;
 }

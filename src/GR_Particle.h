@@ -5,7 +5,8 @@
 #include <string>
 #include <vector>
 #include "Vector2D.h"
-#include "Texture.h"	
+#include "GR_Texture.h"
+#include "GR_Element.h"
 #include "../include/SDL.h"
 #include "../include/SDL_image.h"
 
@@ -31,12 +32,11 @@ typedef struct
 }Particle;
 
 
-class ParticleSys
+class GR_ParticleSys: public GR_Element
 {
 	public:
-		ParticleSys(int num, int life, int speed_x, int speed_y);
-		//给粒子载入纹理
-		void LoadTexture(SDL_RWops *src, SDL_Renderer *ren);
+		GR_ParticleSys(int num, int life, int speed_x, int speed_y);
+		~GR_ParticleSys();
 		//设定粒子生命值（生命值的设定是为了方便垃圾回收）
 		//注意：合适的生命值设定有利于改善游戏内存的占用量和游戏运行效率
 		void SetLife(int life);
@@ -54,16 +54,13 @@ class ParticleSys
 		Vector2D gravity;
 		Vector2D init_speed;
 		int ptnum, ptwidth, ptheight, ptlife, ptdispersion;
-		const std::string texfile;
 		//将指定数量指定状态的粒子压入栈内
 		void Push(int num, int life, Vector2D speed);
 		//粒子系统主要结构体容器
-		std::vector<Particle> particles;
+		std::vector<Particle> *particles;
 		//粒子系统容器使用的迭代器
 		std::vector<Particle>::iterator iter;
 		
-		//使用Texture对象替换标准化渲染函数
-		Texture particle_tex;
 };
 
 

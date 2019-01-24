@@ -5,9 +5,9 @@ CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
 RES      = src/Engine_private.res
-OBJ      = src/Background.o src/Button.o src/Game.o src/GRiNa.o src/Intro.o src/Log.o src/Menu.o src/Message.o src/Particle.o src/Script.o src/Texture.o src/Timer.o $(RES)
-LINKOBJ  = src/Background.o src/Button.o src/Game.o src/GRiNa.o src/Intro.o src/Log.o src/Menu.o src/Message.o src/Particle.o src/Script.o src/Texture.o src/Timer.o $(RES)
-LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -L"lib/dev/SDL/win" -L"lib/dev/SDL_Image/win" -L"lib/dev/lua/win" -lmingw32 -lSDL2main -lSDL2 -llibSDL2_image -llua53 -lSDL2_ttf
+OBJ      = src/Game.o src/GRiNa.o src/Intro.o src/Menu.o src/GR_Background.o src/GR_Button.o src/GR_Element.o src/GR_Log.o src/GR_Particle.o src/GR_Resource.o src/GR_Script.o src/GR_Texture.o $(RES)
+LINKOBJ  = src/Game.o src/GRiNa.o src/Intro.o src/Menu.o src/GR_Background.o src/GR_Button.o src/GR_Element.o src/GR_Log.o src/GR_Particle.o src/GR_Resource.o src/GR_Script.o src/GR_Texture.o $(RES)
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -L"lib/dev/SDL/win" -L"lib/dev/SDL_Image/win" -L"lib/dev/lua/win" -lmingw32 -lSDL2main -lSDL2 -llibSDL2_image -llua53
 INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
 BIN      = bin/Engine.exe
@@ -25,12 +25,6 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
 
-src/Background.o: src/Background.cpp
-	$(CPP) -c src/Background.cpp -o src/Background.o $(CXXFLAGS)
-
-src/Button.o: src/Button.cpp
-	$(CPP) -c src/Button.cpp -o src/Button.o $(CXXFLAGS)
-
 src/Game.o: src/Game.cpp
 	$(CPP) -c src/Game.cpp -o src/Game.o $(CXXFLAGS)
 
@@ -40,26 +34,32 @@ src/GRiNa.o: src/GRiNa.cpp
 src/Intro.o: src/Intro.cpp
 	$(CPP) -c src/Intro.cpp -o src/Intro.o $(CXXFLAGS)
 
-src/Log.o: src/Log.cpp
-	$(CPP) -c src/Log.cpp -o src/Log.o $(CXXFLAGS)
-
 src/Menu.o: src/Menu.cpp
 	$(CPP) -c src/Menu.cpp -o src/Menu.o $(CXXFLAGS)
 
-src/Message.o: src/Message.cpp
-	$(CPP) -c src/Message.cpp -o src/Message.o $(CXXFLAGS)
+src/GR_Background.o: src/GR_Background.cpp
+	$(CPP) -c src/GR_Background.cpp -o src/GR_Background.o $(CXXFLAGS)
 
-src/Particle.o: src/Particle.cpp
-	$(CPP) -c src/Particle.cpp -o src/Particle.o $(CXXFLAGS)
+src/GR_Button.o: src/GR_Button.cpp
+	$(CPP) -c src/GR_Button.cpp -o src/GR_Button.o $(CXXFLAGS)
 
-src/Script.o: src/Script.cpp
-	$(CPP) -c src/Script.cpp -o src/Script.o $(CXXFLAGS)
+src/GR_Element.o: src/GR_Element.cpp
+	$(CPP) -c src/GR_Element.cpp -o src/GR_Element.o $(CXXFLAGS)
 
-src/Texture.o: src/Texture.cpp
-	$(CPP) -c src/Texture.cpp -o src/Texture.o $(CXXFLAGS)
+src/GR_Log.o: src/GR_Log.cpp
+	$(CPP) -c src/GR_Log.cpp -o src/GR_Log.o $(CXXFLAGS)
 
-src/Timer.o: src/Timer.cpp
-	$(CPP) -c src/Timer.cpp -o src/Timer.o $(CXXFLAGS)
+src/GR_Particle.o: src/GR_Particle.cpp
+	$(CPP) -c src/GR_Particle.cpp -o src/GR_Particle.o $(CXXFLAGS)
+
+src/GR_Resource.o: src/GR_Resource.cpp
+	$(CPP) -c src/GR_Resource.cpp -o src/GR_Resource.o $(CXXFLAGS)
+
+src/GR_Script.o: src/GR_Script.cpp
+	$(CPP) -c src/GR_Script.cpp -o src/GR_Script.o $(CXXFLAGS)
+
+src/GR_Texture.o: src/GR_Texture.cpp
+	$(CPP) -c src/GR_Texture.cpp -o src/GR_Texture.o $(CXXFLAGS)
 
 src/Engine_private.res: Engine_private.rc 
 	$(WINDRES) -i Engine_private.rc --input-format=rc -o src/Engine_private.res -O coff 
