@@ -35,3 +35,4 @@ bin/GRiNA*
 
 #   Ignore required
 required/
+*.png
